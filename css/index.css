@@ -130,7 +130,12 @@ a:active{
     color: #9b9b9b;
     text-align: center;
 }
-.main .pannel .pannel-top .partners .partners-company{}
+.main .pannel .pannel-top .partners .partners-company{
+    width:100%;
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+}
 .main .pannel .pannel-top .partners .partners-company ul{
     display: inline-flex;
     flex-direction: row;
