@@ -17,12 +17,29 @@ a:active{
     color:inherit;
 }
 
+/*公共样式*/
+.no-margin{ margin: 0 !important;}
+.no-margin-top{margin-top:0 !important;}
+.no-margin-left{margin-left:0 !important;}
+.no-margin-right{margin-right:0 !important;}
+.no-margin-bottom{margin-bottom:0 !important;}
+
+.no-padding{padding:0 !important;}
+.no-padding-top{padding-top:0 !important;}
+.no-padding-left{padding-left:0 !important;}
+.no-padding-right{padding-right:0 !important;}
+.no-padding-bottom{padding-bottom:0 !important;}
+
+/*******************************************    Header 样式    **************************************************/
 .header{
     display:flex;
     /* font-size:16px; */
     flex-direction: row;
     justify-content: flex-start;
+    /* position:fixed; */
     position:absolute;
+    top: 0; 
+    left: 0;  
     width:100%;
     height:65px;
     color:#fff;
@@ -71,6 +88,7 @@ a:active{
     color:#333;
 }
 
+/*******************************************    页面主题样式    **************************************************/
 .main{
     position:relative;
     width:100%;
@@ -121,9 +139,21 @@ a:active{
 .main .pannel{
     padding-top: 245px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
-.main .pannel .pannel-top{}
+
+/*分割线样式*/
+.main .pannel .divide-line{
+    width: 1192px;
+    border-bottom:1px solid #F5F5F7;
+}
+
+.main .pannel .pannel-top{
+    width: 1192px;
+    padding-bottom: 134px;
+}
 .main .pannel .pannel-top .partners{}
 .main .pannel .pannel-top .partners .partners-title{
     font-size: 14px;
@@ -180,6 +210,7 @@ a:active{
 }
 .main .pannel .resume-tpl .resume-type ul{
     display: inline-flex;
+    /* width: 100%; */
     flex-direction: row;
     align-items: flex-start;
 }
@@ -214,10 +245,226 @@ a:active{
     font-size: 14px;
     color: #9c9c9c;
 }
+ .main .pannel .resume-tpl .resume-btns{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 54px;
+}
+.main .pannel .resume-tpl .resume-btns a{
+    display: inline-block;
+    width: 200px;
+    height: 42px;
+    border-radius: 5px;
+    margin-right: 60px;
+    color:#FFFFFF;
+    font-size: 14px;
+    line-height: 42px; 
+    text-align: center;
+    box-shadow: 0px 0px 20px #ddd;
+}
+.main .pannel .resume-tpl .resume-btns .create-resume{
+    background-color: #F86331;
+}
+.main .pannel .resume-tpl .resume-btns .insert-resume{
+    background-color: #FF4F4C;
+} 
+
+.main .pannel .pannel-content{
+     width: 100%; 
+     padding-top: 33px;
+}
+.main .pannel .pannel-content>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/*区块公共样式*/
+.main .pannel .pannel-content .pannel-content-img{} 
+.main .pannel .pannel-content .pannel-content-desc{
+    display: inline-flex;
+    flex-direction: column;
+} 
+.main .pannel .pannel-content .pannel-content-desc .desc-label{
+    width: 68px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background-color: #FFE6E6;
+    border-radius: 25px;
+    color: #FF4F4C;
+    font-size: 13px;
+}
+.main .pannel .pannel-content .pannel-content-desc .desc-title{
+    width: 373px;
+    font-size: 28px;
+    margin-top: 15px;
+    color: #404040;
+}
+.main .pannel .pannel-content .pannel-content-desc .desc-content{
+    width: 412px;
+    font-size: 15px;
+    margin-top: 24px;
+    color: #9C9C9C;
+}
+.main .pannel .pannel-content .pannel-content-desc .desc-content p{
+    margin-bottom: 20px;
+}
+
+/*区块个性化样式*/
+.main .pannel .pannel-content .pannel-content-profession{
+    padding-left: 18px;
+}
+.main .pannel .pannel-content .pannel-content-profession .pannel-content-desc{
+    padding-left: 109px;
+    padding-top: 142px;
+}
+.main .pannel .pannel-content .pannel-content-efficient .pannel-content-desc{
+    padding-left: 139px;
+    padding-top: 131px;
+    padding-right: 21px;
+}
+.main .pannel .pannel-content .pannel-content-sample{
+    padding-left: 112px;
+}
+.main .pannel .pannel-content .pannel-content-sample .pannel-content-desc{
+    padding-top: 124px;
+    padding-left: 42px;
+}
+.main .pannel .pannel-content .pannel-content-feedback .pannel-content-desc{
+    padding-left: 139px;
+    padding-top: 251px;
+    padding-right: 6px;
+}
+
+.main .pannel .pannel-bottom{
+    padding-top: 126px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .pannel .pannel-bottom .pannel-bottom-title{
+    font-size: 28px;
+    color: #404040;
+}
+.main .pannel .pannel-bottom .pannel-bottom-slogan{
+    font-size: 14px;
+    color: #9B9B9B;
+    margin-top: 15px;
+}
+.main .pannel .pannel-bottom .pannel-bottom-swiper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 62px;
+}
+.main .pannel .pannel-bottom .pannel-bottom-swiper .swiper-btn-left{
+    margin-right: 70px;
+    margin-top: 71px;
+}
+.main .pannel .pannel-bottom .pannel-bottom-swiper .swiper-content{
+    width: 600px;
+    height: 320px;
+}
+
+.main .pannel .pannel-bottom .pannel-bottom-swiper .swiper-btn-right{
+    margin-left: 70px;
+    margin-top: 71px;
+}
+
+/* 合作伙伴 */
+.main .pannel .pannel-bottom .pannel-bottom-company{}
+.main .pannel .pannel-bottom .pannel-bottom-company table td{
+    padding-right: 35px;
+}
+.main .pannel .pannel-bottom .pannel-bottom-company ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.main .pannel .pannel-bottom .pannel-bottom-company ul li{
+    padding-right: 35px;
+}
 
 
+/*******************************************    Footer 样式    **************************************************/
 
-
-
-
-.footer{}
+.footer{
+    position: relative;
+    width: 100%;
+    margin-top:185px;
+}
+.footer .fast-entrance{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:-66px;
+    left: 50%;
+    margin-left: -400px;
+    width: 800px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #FF4F4C;
+    color: #fff;
+    padding-left: 30px;
+    font-size: 18px;
+    box-shadow: 0px 0px 20px #ddd;
+}
+.footer .fast-entrance .fast-entrance-btn{
+    display: inline-block;
+    width: 134px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    color: #FF4F4C;
+    font-size:14px;
+    margin-left: 335px;
+}
+.footer .footer-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 155px;
+    padding-left: 140px;
+}
+.footer .footer-content .footer-logo{}
+.footer .footer-content ul li{
+    font-size: 13px;
+    color: #404040;
+    margin-bottom: 12px;
+}
+.footer .footer-content ul li:nth-child(1){
+    color: #9B9B9B;
+    margin-bottom: 16px;
+}
+.footer .footer-content ul li a{
+    color: inherit;
+}
+.footer .footer-content .footer-contact{margin-left: 178px;}
+.footer .footer-content .footer-about{margin-left: 149px;}
+.footer .footer-content .footer-change-language{margin-left: 324px;}
+.footer .footer-content .footer-change-language a{
+    display: inline-block;
+    text-align: center;
+    width: 127px;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #FF4F4C;
+}
+.footer .copy-right{
+    width: 100%;
+    text-align: center;
+    color: #9B9B9B;
+    font-size: 13px;
+    margin-top: 36px;
+    margin-bottom: 101px;
+}
