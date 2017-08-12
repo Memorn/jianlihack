@@ -1,5 +1,7 @@
 body{
-    width:1440px;
+    /* width:1440px; */
+    width: 100%;
+    margin:0 auto;
     position:relative;
     background:#fbfbfb !important;
     height:2000px;
@@ -88,13 +90,13 @@ a:active{
     color:#333;
 }
 
-/*******************************************    页面主题样式    **************************************************/
+/*******************************************    页面主体样式    **************************************************/
 .main{
     position:relative;
     width:100%;
 }
 .main .banner{
-    background:url('../img/banner.png');
+    background:url('../img/banner.png') no-repeat center;
     width:100%;
     height:871px;
     text-align: center;
@@ -361,16 +363,59 @@ a:active{
     margin-top: 62px;
 }
 .main .pannel .pannel-bottom .pannel-bottom-swiper .swiper-btn-left{
-    margin-right: 70px;
     margin-top: 71px;
 }
 .main .pannel .pannel-bottom .pannel-bottom-swiper .swiper-content{
-    width: 600px;
-    height: 320px;
+    width: 740px;
+     height: 320px; 
+}
+.main .pannel .pannel-bottom .pannel-bottom-swiper .swiper-content .swiper-container{
+    width: 100%;
+    height: 100%;
+}
+.main .pannel .pannel-bottom .pannel-bottom-swiper .swiper-content .swiper-container .slide-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .pannel .pannel-bottom .pannel-bottom-swiper .swiper-content .swiper-container .slide-content .slide-img{
+    width:600px;
+    height: 200px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 31px;
+    padding-right: 31px;
+    text-align: center;
+    color: #595959;
+    font-size: 13px;
+    position: relative;
+}
+.main .pannel .pannel-bottom .pannel-bottom-swiper .swiper-content .swiper-container .slide-content .slide-img .slider-img-avatar{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -24px;
+    bottom: -24px;
+} 
+.main .pannel .pannel-bottom .pannel-bottom-swiper .swiper-content .swiper-container .slide-content .slide-name{
+    margin-top:40px;
+    font-size: 16px;
+    color: #404040;
+}
+.main .pannel .pannel-bottom .pannel-bottom-swiper .swiper-content .swiper-container .slide-content .slide-desc{
+    font-size: 14px;
+    color: #9C9C9C;
 }
 
 .main .pannel .pannel-bottom .pannel-bottom-swiper .swiper-btn-right{
-    margin-left: 70px;
     margin-top: 71px;
 }
 

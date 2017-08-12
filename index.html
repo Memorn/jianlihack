@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>简历黑客</title>
-    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div class="header">
@@ -150,11 +151,48 @@
                 <div class="pannel-bottom-slogan">他们都推荐超级简历</div>
                 <div class="pannel-bottom-swiper">
                     <div class="swiper-btn-left">
-                        <a href="javascript:;"><img src="img/swiper-btn-left.png" alt="左箭头"></a>
+                        <a href="javascript:;" id="swiper-btn-left"><img src="img/swiper-btn-left.png" alt="左箭头"></a>
                     </div>
-                    <div class="swiper-content"></div>
+                    <div class="swiper-content">
+                            <div id="feedback-swiper" class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="slide-content">
+                                            <div class="slide-img">
+                                                第一次写简历并没有什么经验，一位学姐向我推荐了 ResumeHack，里面详述了很多的小问题。面试的时候HR说他们看中的是社团和实践经历，模板刚好把这两点突出了。在校内复赛成绩5/35，昨天收到了华夏银行暑期实习的 offer，对我开始这是一个很好的开始，还会继续使用 ResumeHack。
+                                                <span class="slider-img-avatar"><img src="img/avatar1.png" alt="" width="48px" height="48px"></span>
+                                            </div>
+                                            <div class="slide-name">樊凡</div>
+                                            <div class="slide-desc">大二在读投资本科生</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-content">
+                                            <div class="slide-img">
+                                                作为应届生找工作第一步便是写简历，曾经在网上下载所谓的“简历模版”不仅在格式上生硬，而且照搬他人经历更是给自己求职路上埋坑。相反，简历黑客为我提供的不仅是一份条理清晰的专业化模版，更是在深度发掘自身背景经历的前提下为求职者量身定制的一次包装“整容”，感谢这次试用机会，同时真诚地推荐给将要迈入职场的各位应届生！ 
+                                                <span class="slider-img-avatar"><img src="img/avatar2.png" alt="" width="48px" height="48px"></span>
+                                            </div>
+                                            <div class="slide-name">黄涛Cydia</div>
+                                            <div class="slide-desc">人民大学金融应届生</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-content">
+                                            <div class="slide-img">
+                                                我每年会看上千份简历，好的简历基本上一眼就能看出来。大多数求职者即便失败了也不会意识到，从简历的样式和逻辑他就已经被刷下去了。简历黑客生成的简历非常清晰专业，让人眼前一亮，我希望我收到的每份简历都能是这个样子。
+                                                <span class="slider-img-avatar"><img src="img/avatar3.png" alt="" width="48px" height="48px"></span>
+                                            </div>
+                                            <div class="slide-name">张晓涵</div>
+                                            <div class="slide-desc">私募基金人力资源总监</div>
+                                        </div>
+                                    </div>
+                                <!-- 如果需要分页器 -->
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
                     <div class="swiper-btn-right">
-                        <a href="javascript:;"><img src="img/swiper-btn-right.png" alt="右箭头"></a>
+                        <a href="javascript:;" id="swiper-btn-right"><img src="img/swiper-btn-right.png" alt="右箭头"></a>
                     </div>
                 </div>
                 <div class="pannel-bottom-company">
@@ -211,6 +249,7 @@
         <div class="copy-right">&copy;2017超级简历 wondercv.com|京ICP备17033866号-1</div>
     </div>
     <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-3.4.2.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
