@@ -1,3 +1,10 @@
+*{
+    transition: all 0.5s;
+    -moz-transition: all 0.5s; /* Firefox 4 */
+    -webkit-transition: all 0.5s; /* Safari 和 Chrome */
+    -o-transition: all 0.5s; 
+}
+
 body{
     /* width:1440px; */
     width: 100%;
@@ -32,27 +39,36 @@ a:active{
 .no-padding-right{padding-right:0 !important;}
 .no-padding-bottom{padding-bottom:0 !important;}
 
+.container-fluid{padding:0}
+
 /*******************************************    Header 样式    **************************************************/
 .header{
-    display:flex;
-    /* font-size:16px; */
-    flex-direction: row;
-    justify-content: flex-start;
-    /* position:fixed; */
-    position:absolute;
+    /* display:flex; */
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    position:fixed;
+    /* position:absolute; */
+    margin:0;
     top: 0; 
     left: 0;  
     width:100%;
-    height:65px;
+    height:81px;
     color:#fff;
-    padding:16px 16px 0px 19px;
+    padding:0px 16px 0px 19px;
     z-index: 99;
 }
-.header .logo{}
+.header .logo{
+    display:flex;
+    /* flex-direction: row; */
+    justify-content: flex-start;
+    align-items: center;
+    padding-left:3%;
+    height:100%;
+}
 .header .nav{
-    margin-left: 666px;
-    height: 30px;
-    border-right:1px solid #fff;
+    /* margin-left: 666px; */
+    height: 100%;
+    /* border-right:1px solid #fff; */
 }
 .header .nav ul{
     display: flex;
@@ -64,22 +80,43 @@ a:active{
 .header .nav ul li{
     margin-right:52px;
     cursor:pointer;
+    color:#fff;
+    position: relative;
+}
+.header .nav ul li a{
+    color: inherit;
+    /* position: absolute;
+    top: 50%;
+    margin-top: -8px; */
+}
+.header .nav, .header .nav ul, .header .nav ul li{
+    transition: height,padding-top 0s;
+    -moz-transition: height,padding-top 0s; /* Firefox 4 */
+    -webkit-transition: height,padding-top 0s; /* Safari 和 Chrome */
+    -o-transition: height,padding-top 0s; 
 }
 .header .info{
     /* margin-left:52px; */
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 .header .info ul{
     height: 30px;
     display: flex;
+    margin-left:52px;
     flex-direction: row;
     justify-content: flex-start;
+    border-left:1px solid #fff;
     align-items: center;
 }
 .header .info ul li{
     margin-left:52px;
     cursor:pointer;
 }
-.header .info ul .regist-btn{
+.header .info ul .regist-btn , .header .info ul .resume-btn{
     /* display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -87,8 +124,48 @@ a:active{
     background-color:#fff;
     width:132px;
     height:36px;
-    color:#333;
+    color:#404040;
+} 
+
+.header-move{
+    background-color: #FFF;
 }
+.header-move .login-text{
+    color: #FF4F4C;
+}
+.header-move .nav ,.header-move .nav ul, .header-move .nav ul li{
+    transition: height,padding-top 0s;
+    -moz-transition: height,padding-top 0s; /* Firefox 4 */
+    -webkit-transition: height,padding-top 0s; /* Safari 和 Chrome */
+    -o-transition: height,padding-top 0s; 
+}
+.header-move .nav ul li{
+    color: #404040;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.header-move .nav ul li .nav-border-bottom{
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    border-bottom:3px solid #FF4F4C;
+}
+/* .header-move .nav ul li:hover{
+} */
+.header-move .info ul .regist-btn , .header-move .info ul .resume-btn{
+    background-color: #FF4F4C;
+    color: #FFFFFF ;
+}
+.header-move .info ul .regist-btn , .header-move .info ul .resume-btn:hover{
+    background-color: #FF813A;
+}
+.header-move .info ul{
+    border-left: 1px solid #F5F5F7;
+}
+
 
 /*******************************************    页面主体样式    **************************************************/
 .main{
@@ -96,7 +173,8 @@ a:active{
     width:100%;
 }
 .main .banner{
-    background:url('../img/banner.png') no-repeat center;
+    background:url('../img/banner@2x.png') no-repeat center;
+    background-size:100%;
     width:100%;
     height:871px;
     text-align: center;
@@ -125,7 +203,8 @@ a:active{
 .main .example{
    position: absolute;
    top:363px;
-   left:185px;
+   left:50%;
+   margin-left:-535px;
    /* top:405px;
    left:240px; */
    width:1070px;
@@ -133,7 +212,8 @@ a:active{
    /* width:960px;
    height:622px; */
     /* border:1px solid #333;  */
-   background-image: url('../img/editor.png'); 
+   background-image: url('../img/editor@2x.png'); 
+   background-size: 1070px;
    /* background-position: 49% 38%; */
    border-radius: 3px; 
    /* box-shadow: 0px 0px 20px #ccc; */
@@ -186,6 +266,7 @@ a:active{
 .main .pannel .pannel-top .partners .partners-company ul li:nth-child(5){width:104px;height:121px;}
 .main .pannel .pannel-top .partners .partners-company ul li:nth-child(6){width:119px;height:121px;}
 .main .pannel .pannel-top .partners .partners-company ul li:nth-child(7){width:113px;height:121px;} 
+.main .pannel .pannel-top .partners .partners-company ul li img{width:100%;}
 
 .main .pannel .resume-tpl{
     padding-top: 84px;
@@ -218,31 +299,61 @@ a:active{
 }
 .main .pannel .resume-tpl .resume-type ul li{
     margin-right: 28px;
-}
-.main .pannel .resume-tpl .resume-type ul li a{
-    display: inline-flex;
-    flex-direction:column;
-    align-content: center; 
     width: 270px;
     height: 280px;
-    /* border:1px solid #333; */
     box-shadow: 0px 0px 20px #ddd;
     border-radius: 10px;
     background: #fff;
+}
+.main .pannel .resume-tpl .resume-type ul li .tpl-choose-lan{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main .pannel .resume-tpl .resume-type ul li .tpl-choose-lan a{
+    width: 120px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    margin-top: 34px;
+    font-size: 14px;
+}
+.main .pannel .resume-tpl .resume-type ul li .tpl-choose-lan .zh{
+    background-color:#FF4F4C;
+    color:#FFFFFF;
+}
+.main .pannel .resume-tpl .resume-type ul li .tpl-choose-lan .zh:hover{
+    background-color:#F86331;
+}
+.main .pannel .resume-tpl .resume-type ul li .tpl-choose-lan .en{
+    background-color:#FFFFFF;
+    color:#FF4F4C;
+    border:1px solid #FF4F4C;
+}
+.main .pannel .resume-tpl .resume-type ul li .tpl-content{
+    display: inline-flex;
+    flex-direction:column;
+    align-content: center; 
+    width:100%;
+    height:100%;
+    /* border:1px solid #333; */
     padding-top: 66px;
     padding-left: 22px;
     padding-right: 22px;
 }
-.main .pannel .resume-tpl .resume-type ul li a span{
+.main .pannel .resume-tpl .resume-type ul li  .tpl-content span{
     display: inline-block;
     text-align: center;
 }
-.main .pannel .resume-tpl .resume-type ul li a .tpl-title{
+.main .pannel .resume-tpl .resume-type ul li  .tpl-content .tpl-title{
     margin-top: 26px;
     font-size: 16px;
     color: #3f3f3f;
 }
-.main .pannel .resume-tpl .resume-type ul li a .tpl-desc{
+.main .pannel .resume-tpl .resume-type ul li  .tpl-content .tpl-desc{
     margin-top: 14px;
     font-size: 14px;
     color: #9c9c9c;
@@ -269,8 +380,14 @@ a:active{
 .main .pannel .resume-tpl .resume-btns .create-resume{
     background-color: #F86331;
 }
+.main .pannel .resume-tpl .resume-btns .create-resume:hover{
+    background-color: #FF9C0C;
+}
 .main .pannel .resume-tpl .resume-btns .insert-resume{
     background-color: #FF4F4C;
+} 
+.main .pannel .resume-tpl .resume-btns .insert-resume:hover{
+    background-color: #FF813A;
 } 
 
 .main .pannel .pannel-content{
@@ -319,6 +436,95 @@ a:active{
 .main .pannel .pannel-content .pannel-content-profession{
     padding-left: 18px;
 }
+.main .pannel .pannel-content .pannel-content-profession .profession-img{
+    width: 609px;
+    height: 692px;
+    padding:17px 69px 81px 65px;
+}
+
+
+.main .pannel .pannel-content .pannel-content-profession .profession-img-view{
+    position:relative;
+    width: 100%;
+    height:100%;
+}
+.main .pannel .pannel-content .pannel-content-profession .profession-img-view .view-container{
+    position:relative;
+    transform-style: preserve-3d;
+    transition: none;
+    -moz-transition: none; /* Firefox 4 */
+    -webkit-transition: none; /* Safari 和 Chrome */
+    -o-transition: none; 
+}
+.main .pannel .pannel-content .pannel-content-profession .profession-img-view .view-container .pic1{
+    width:475px;
+    height:594px;
+    background-color:#ff0755;
+    transform: rotateY(0);
+    z-index:9;
+}
+.main .pannel .pannel-content .pannel-content-profession .profession-img-view .view-container .pic2{
+    z-index: 2;
+    width:475px;
+    height:594px;
+    background-color:#55ff55;
+    transform: rotateY(180deg);
+}
+.main .pannel .pannel-content .pannel-content-profession .profession-img-view .view-container .pic1 img,
+.main .pannel .pannel-content .pannel-content-profession .profession-img-view .view-container .pic2 img{
+    width:100%;
+}
+.main .pannel .pannel-content .pannel-content-profession .profession-img-view .view-container .pic1,
+.main .pannel .pannel-content .pannel-content-profession .profession-img-view .view-container .pic2{
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.main .pannel .pannel-content .pannel-content-profession .profession-img-view .slider{
+    box-sizing: border-box;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px #ddd;
+    width: 425px;
+    position: absolute;
+    left: 50%;
+    margin-left: -212px;
+    border-radius: 4rem;
+    height: 4rem;
+    top: 23rem;
+    z-index: 99;
+}
+.main .pannel .pannel-content .pannel-content-profession .profession-img-view .slider .track{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    line-height: 4rem;
+    text-align: center;
+    color: #9C9C9C;
+    font-size: 14px;
+}
+.main .pannel .pannel-content .pannel-content-profession .profession-img-view .slider .track .btn{
+    cursor: col-resize!important; 
+    /* margin-left: -1.4rem; */
+    height: 2.9rem;
+    width: 2.9rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    margin-top: .6rem;
+    background:url('../img/fliper@2x.png') no-repeat;
+    background-size: 2.8rem 2.8rem;
+    transition: none;
+    -moz-transition: none; /* Firefox 4 */
+    -webkit-transition: none; /* Safari 和 Chrome */
+    -o-transition: none; 
+}
+
+
+
+
 .main .pannel .pannel-content .pannel-content-profession .pannel-content-desc{
     padding-left: 109px;
     padding-top: 142px;
@@ -420,7 +626,9 @@ a:active{
 }
 
 /* 合作伙伴 */
-.main .pannel .pannel-bottom .pannel-bottom-company{}
+.main .pannel .pannel-bottom .pannel-bottom-company{
+    margin-top: 60px;
+}
 .main .pannel .pannel-bottom .pannel-bottom-company table td{
     padding-right: 35px;
 }
@@ -492,9 +700,9 @@ a:active{
 .footer .footer-content ul li a{
     color: inherit;
 }
-.footer .footer-content .footer-contact{margin-left: 178px;}
-.footer .footer-content .footer-about{margin-left: 149px;}
-.footer .footer-content .footer-change-language{margin-left: 324px;}
+.footer .footer-content .footer-contact{margin-left: 125px;}
+.footer .footer-content .footer-about{margin-left: 71px;}
+.footer .footer-content .footer-change-language{margin-left: 183px;}
 .footer .footer-content .footer-change-language a{
     display: inline-block;
     text-align: center;
