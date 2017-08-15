@@ -7,25 +7,27 @@
     <title>简历黑客</title>
     <link rel="stylesheet" href="lib/bootstrap.min.css">
     <link rel="stylesheet" href="lib/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
     <div class="container-fluid">
         <div class="header row" id="header">
-            <div class="logo col-md-3">
+            <div class="logo col-md-3 col-sm-4 col-xs-6">
                 <a href="javascript:;">
-                    <img src="img/LOGO@2x.png" alt="logo" width="146" height="47" class="logo-fir">
-                    <img src="img/LOGO-SEC@2x.png" alt="logo" width="146" height="47" class="logo-sec hide">
+                    <img src="img/LOGO@2x.png" alt="logo" width="146px" class="logo-fir">
+                    <img src="img/LOGO-SEC@2x.png" alt="logo" width="146px" class="logo-sec hide">
                 </a>
             </div>
-            <div class="info  col-md-3  pull-right no-padding-left">
+            <div class="info col-md-3 pull-right no-padding-left col-sm-8  col-xs-6">
                 <ul>
-                    <li class="login-text">登录</li>
-                    <!-- <li><a class="regist-btn btn">免费注册</a></li> -->
-                    <li><a class="resume-btn btn">我的简历</a></li>
+                    <li class="login-text"><a href="login.html?type=login">登录</a></li>
+                    <li><a class="regist-btn btn" href="login.html?type=reg">免费注册</a></li>
+                    <!-- <li><a class="resume-btn btn">我的简历</a></li> -->
                 </ul>
             </div>
-            <div class="nav col-md-3 pull-right no-padding-right hidden-sm hidden-xs">
+            <div class="nav col-md-6 pull-right no-padding-right hidden-sm hidden-xs">
                 <ul class="pull-right">
                     <li>
                         <a href="javascript:;">产品介绍</a> 
@@ -44,9 +46,9 @@
         </div>
         <div class="main">
             <div class="banner">
-                <div class="solgan">
+                <h1 class="solgan">
                     让求职成功率翻倍的专业简历工具
-                </div>
+                </h1>
                 <div class="solgan_sub">超级简历是一款免费，强大的简历制作工具，帮助你快速制作一份完美的简历</div>
                 <div class="create-resume">
                     <a href="javascript:;" class="btn create-resume-btn">免费生成专业简历</a>
@@ -114,7 +116,7 @@
                                         <span class="tpl-desc">此模板适用于想要留学考研的学生</span>
                                     </div>
                                     <div class="tpl-choose-lan hide">
-                                        <a href="javascript:;" class="zh">中文模板</a>
+                                        <!-- <a href="javascript:;" class="zh">中文模板</a> -->
                                         <a href="javascript:;" class="en">英文模板</a>
                                     </div>
                                 </li>
@@ -139,7 +141,7 @@
                                 <div class="slider">
                                     <div class="track">
                                         拖动查看简历对比
-                                        <div id="btn" class="btn"></div>
+                                        <div id="slider-btn" class="btn"></div>
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +196,7 @@
                     <div class="pannel-bottom-title">用户反馈</div>
                     <div class="pannel-bottom-slogan">他们都推荐超级简历</div>
                     <div class="pannel-bottom-swiper">
-                        <div class="swiper-btn-left">
+                        <div class="swiper-btn-left hidden-xs hidden-sm">
                             <a href="javascript:;" id="swiper-btn-left"><img src="img/swiper-btn-left.png" alt="左箭头"></a>
                         </div>
                         <div class="swiper-content">
@@ -235,28 +237,28 @@
                                 <div class="swiper-pagination"></div>
                             </div>
                         </div>
-                        <div class="swiper-btn-right">
+                        <div class="swiper-btn-right  hidden-xs hidden-sm">
                             <a href="javascript:;" id="swiper-btn-right"><img src="img/swiper-btn-right.png" alt="右箭头"></a>
                         </div>
                     </div>
                     <div class="pannel-bottom-company">
-                        <ul>
-                            <li><img src="img/partner-logo-ZD@2x.png" width="92px" alt="ZD"></li>
-                            <li><img src="img/partner-logo-GF@2x.png" width="125px" alt="GF"></li>
-                            <li><img src="img/partner-logo-ZhenFund@2x.png" width="114px" alt="ZhenFund"></li>
-                            <li style="padding-right:27px;"><img src="img/partner-logo-McKinsey@2x.png" width="180px" alt="McKinsey"></li>
-                            <li><img src="img/partner-logo-MARS@2x.png" width="98px" alt="MARS"></li>
-                            <li><img src="img/partner-logo-UBS@2x.png" width="90px" alt="UBS"></li>
-                            <li><img src="img/partner-logo-olay@2x.png" width="61px" alt="olay"></li>
+                        <ul class="row">
+                            <li class="col-sm-4 col-xs-4"><img src="img/partner-logo-ZD@2x.png" width="92px" alt="ZD"></li>
+                            <li class="col-sm-4 col-xs-4"><img src="img/partner-logo-GF@2x.png" width="125px" alt="GF"></li>
+                            <li class="col-sm-4 col-xs-4"><img src="img/partner-logo-ZhenFund@2x.png" width="114px" alt="ZhenFund"></li>
+                            <li class="col-sm-4 col-xs-4" style="padding-right:27px;"><img src="img/partner-logo-McKinsey@2x.png" width="180px" alt="McKinsey"></li>
+                            <li class="hidden-sm hidden-xs"><img src="img/partner-logo-MARS@2x.png" width="98px" alt="MARS"></li>
+                            <li class="col-sm-4 col-xs-4"><img src="img/partner-logo-UBS@2x.png" width="90px" alt="UBS"></li>
+                            <li class="hidden-sm hidden-xs"><img src="img/partner-logo-olay@2x.png" width="61px" alt="olay"></li>
                         </ul>
                         <ul>
-                            <li><img src="img/partner-logo-netease@2x.png" width="98px" alt="netease"></li>
-                            <li><img src="img/partner-logo-samsung@2x.png" width="111px" alt="samsung"></li>
-                            <li><img src="img/partner-logo-simenes@2x.png" width="106px" alt="simenes"></li>
-                            <li><img src="img/partner-logo-qunar@2x.png" width="100px" alt="qunar"></li>
-                            <li><img src="img/partner-logo-accenture@2x.png" width="100px" alt="accenture"></li>
-                            <li><img src="img/partner-logo-EY@2x.png" width="114px" alt="EY"></li>
-                            <li class="no-padding-right"><img src="img/partner-logo-huaxing@2x.png" width="123px" alt="huaxing"></li>
+                            <li class="col-sm-4 col-xs-4"><img src="img/partner-logo-netease@2x.png" width="98px" alt="netease"></li>
+                            <li class="col-sm-4 col-xs-4"><img src="img/partner-logo-samsung@2x.png" width="111px" alt="samsung"></li>
+                            <li class="col-sm-4 col-xs-4"><img src="img/partner-logo-simenes@2x.png" width="106px" alt="simenes"></li>
+                            <li class="hidden-sm hidden-xs"><img src="img/partner-logo-qunar@2x.png" width="100px" alt="qunar"></li>
+                            <li class="hidden-sm hidden-xs"><img src="img/partner-logo-accenture@2x.png" width="100px" alt="accenture"></li>
+                            <li class="hidden-sm hidden-xs"><img src="img/partner-logo-EY@2x.png" width="114px" alt="EY"></li>
+                            <li class="no-padding-right col-sm-4 col-xs-4"><img src="img/partner-logo-huaxing@2x.png" width="123px" alt="huaxing"></li>
                         </ul>
                     </div>
                 </div>
@@ -267,63 +269,66 @@
                 现在就用超级简历获得面试
                 <a href="javascript:;" class="fast-entrance-btn">免费注册</a>
             </div>
-            <div class="footer-content">
-                <div class="footer-logo"><img src="img/LOGO-SEC@2x.png" width="178px" alt="LOGO-SEC"></div>
-                <div class="footer-contact">
-                    <ul>
-                        <li>联系我们</li>
-                        <li><a href="javascript:;">在线客服</a></li>
-                        <li><a href="javascript:;">微信</a></li>
-                        <li><a href="javascript:;">微博</a></li>
-                        <li><a href="javascript:;">QQ</a></li>
-                        <li><a href="javascript:;">邮箱</a></li>
-                    </ul>
+            <div class="footer-content row">
+                <div class="footer-logo col-md-2 col-md-offset-1 hidden-xs"><img src="img/LOGO-SEC@2x.png" width="178px" alt="LOGO-SEC"></div>
+                <div class="footer-links col-md-6 row col-xs-12">
+                    <div class="footer-contact col-md-2">
+                        <ul>
+                            <li>联系我们</li>
+                            <li><a href="javascript:;">在线客服</a></li>
+                            <li><a href="javascript:;">微信</a></li>
+                            <li><a href="javascript:;">微博</a></li>
+                            <li><a href="javascript:;">QQ</a></li>
+                            <li><a href="javascript:;">邮箱</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-about col-md-2">
+                        <ul>
+                            <li>关于我们</li>
+                            <li><a href="javascript:;">产品介绍</a></li>
+                            <li><a href="javascript:;">使用条款</a></li>
+                            <li><a href="javascript:;">隐私协议</a></li>
+                            <li><a href="javascript:;">加入我们</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-about col-md-2 hidden-xs">
+                        <ul>
+                            <li>快速进入</li>
+                            <li><a href="javascript:;">我的简历</a></li>
+                            <li><a href="javascript:;">简历攻略</a></li>
+                            <li><a href="javascript:;">导师辅导</a></li>
+                            <li><a href="javascript:;">使用帮助</a></li>
+                            <li><a href="javascript:;">下载App</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-about col-md-2 hidden-xs">
+                        <ul>
+                            <li>合作伙伴</li>
+                            <li><a href="javascript:;">智联招聘</a></li>
+                            <li><a href="javascript:;">BOSS直聘</a></li>
+                            <li><a href="javascript:;">拉勾</a></li>
+                            <li><a href="javascript:;">猎聘</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-about col-md-2 hidden-xs">
+                        <ul>
+                            <li>友情链接</li>
+                            <li><a href="javascript:;">智联招聘</a></li>
+                            <li><a href="javascript:;">BOSS直聘</a></li>
+                            <li><a href="javascript:;">拉勾</a></li>
+                            <li><a href="javascript:;">猎聘</a></li>
+                            <li><a href="javascript:;">实习僧</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer-about">
-                    <ul>
-                        <li>关于我们</li>
-                        <li><a href="javascript:;">产品介绍</a></li>
-                        <li><a href="javascript:;">使用条款</a></li>
-                        <li><a href="javascript:;">隐私协议</a></li>
-                        <li><a href="javascript:;">加入我们</a></li>
-                    </ul>
-                </div>
-                <div class="footer-about">
-                    <ul>
-                        <li>联系我们</li>
-                        <li><a href="javascript:;">在线客服</a></li>
-                        <li><a href="javascript:;">微信</a></li>
-                        <li><a href="javascript:;">微博</a></li>
-                        <li><a href="javascript:;">QQ</a></li>
-                        <li><a href="javascript:;">邮箱</a></li>
-                    </ul>
-                </div>
-                <div class="footer-about">
-                    <ul>
-                        <li>关于我们</li>
-                        <li><a href="javascript:;">产品介绍</a></li>
-                        <li><a href="javascript:;">使用条款</a></li>
-                        <li><a href="javascript:;">隐私协议</a></li>
-                        <li><a href="javascript:;">加入我们</a></li>
-                    </ul>
-                </div>
-                <div class="footer-about">
-                    <ul>
-                        <li>关于我们</li>
-                        <li><a href="javascript:;">产品介绍</a></li>
-                        <li><a href="javascript:;">使用条款</a></li>
-                        <li><a href="javascript:;">隐私协议</a></li>
-                        <li><a href="javascript:;">加入我们</a></li>
-                    </ul>
-                </div>
-                <div class="footer-change-language"><a href="javascript:;">切换语言</a></div>
+                <div class="footer-change-language col-md-2 col-xs-12"><a href="javascript:;">切换语言</a></div>
             </div>
             <div class="copy-right">&copy;2017超级简历 wondercv.com|京ICP备17033866号-1</div>
         </div>
     </div>
     <script src="lib/jquery.min.js"></script>
     <script src="lib/swiper-3.4.2.min.js"></script>
-    <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script>
+    <script src="lib/draggabilly.pkgd.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>

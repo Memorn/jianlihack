@@ -1,0 +1,74 @@
+*{
+    transition: all 0.5s;
+    -moz-transition: all 0.5s; /* Firefox 4 */
+    -webkit-transition: all 0.5s; /* Safari 和 Chrome */
+    -o-transition: all 0.5s; 
+}
+
+body{
+    /* width:1440px; */
+    width: 100%;
+    margin:0 auto;
+    position:relative;
+    background:#fbfbfb !important;
+    height:2000px;
+    font-family: PingFangSC-Regular;
+}
+ul,li{
+    list-style: none;
+    padding:0px;
+    margin:0px;
+}
+a{
+    text-decoration:none !important;
+}
+a:active{
+    color:inherit;
+}
+
+/*公共样式*/
+.no-margin{ margin: 0 !important;}
+.no-margin-top{margin-top:0 !important;}
+.no-margin-left{margin-left:0 !important;}
+.no-margin-right{margin-right:0 !important;}
+.no-margin-bottom{margin-bottom:0 !important;}
+
+.no-padding{padding:0 !important;}
+.no-padding-top{padding-top:0 !important;}
+.no-padding-left{padding-left:0 !important;}
+.no-padding-right{padding-right:0 !important;}
+.no-padding-bottom{padding-bottom:0 !important;}
+
+.container-fluid{padding:0}
+
+/*input placeholder 样式*/
+input::-webkit-contacts-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+}
+input,textarea{
+    background: #FCFCFC;
+    border: 1px solid #F5F5F7;
+    padding: 11px 18px;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance:none;
+}
+input:focus,textarea:focus{
+    border: 1px solid #FF4F4C;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+    color: #9C9C9C;
+}
+input:-moz-placeholder, textarea:-moz-placeholder { 
+    color: #9C9C9C;
+}
+input::-moz-placeholder, textarea::-moz-placeholder { 
+    color: #9C9C9C;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+    color: #9C9C9C;
+}

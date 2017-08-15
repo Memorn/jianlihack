@@ -1,0 +1,170 @@
+.container{
+    width: 100%;
+    padding-top: 56px;
+    background: #FFFFFF;
+    color: #404040;
+}
+
+@media (min-width: 600px){
+    .container{
+        width: 600px;
+    }
+}
+
+.header .header-logo{
+    text-align: center;
+}
+.tab-bar{
+    width: 66.66%;
+    margin: 0 auto;
+    margin-top: 56px;
+}
+.tab-bar .registered, .tab-bar .login{
+    text-align: center;
+}
+.tab-bar .tab-btn{
+    display: inline-block;
+    padding-bottom: 14px;
+    width: 80px;
+    height: 36px;
+    border-bottom: 2px solid #FFFFFF;
+    cursor: pointer;
+}
+.tab-bar .tab-btn.active{
+    border-bottom: 2px solid #FF4F4C;
+}
+
+/*form-content 公共样式*/
+.form-content{width: 100%;padding-top: 22px;}
+.form-content .form-inputs{width: 66.66%;margin: 0 auto;}
+.form-content .form-input{
+    width: 100%;
+    height: 42px;
+    margin-bottom: 14px; 
+}
+.form-content .form-inputs .form-input input{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.form-content .form-inputs .input-with-btn{
+    position: relative;
+}
+.form-content .form-inputs .input-with-btn .get-code-btn{
+    position: absolute;
+    bottom:0;
+    right: 0;
+    display: inline-block;
+    width: 141px;
+    height: 100%;
+    line-height: 42px;
+    text-align: center;
+    color: #50A4FF;
+    font-size: 14px;
+    cursor: pointer;
+    border-left:1px solid #F5F5F7;
+}
+
+/*form-content 按钮样式*/
+.form-content .login-btn, .form-content .registered-btn{
+    width: 66.66%;
+    height: 42px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.form-content .login-btn a, .form-content .registered-btn a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 42px;
+    text-align: center;
+    color: #FFFFFF;
+    background: rgb(255, 79, 76);
+}
+.form-content .login-btn a:hover, .form-content .registered-btn a:hover{
+    background-color: rgba(255, 79, 76, 0.85)
+}
+
+/*form-content 底部信息样式*/
+.form-content .bottom-msg{
+    width: 66.66%;
+    margin: 0 auto;
+}
+.form-content .bottom-msg .bttom-msg-agree{
+    color: #9C9C9C;
+    font-size: 13px;
+}
+.form-content .bottom-msg .bttom-msg-agree a{
+    color: inherit;
+    text-decoration: underline !important;
+}
+.form-content .bottom-msg .bttom-msg-change-way{
+    color: #595959;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.form-content .bottom-msg .bttom-msg-change-way a{
+    color: inherit;
+}
+.form-content .bottom-msg .bttom-msg-change-way a:hover{
+    color: #000000;
+}
+.form-content .bottom-msg .bttom-msg-forget{
+    color: #50A4FF;
+    font-size: 14px;
+    text-align: right;
+}
+.form-content .bottom-msg .bttom-msg-forget a{
+    color: inherit;
+}
+
+
+.footer{width: 100%;}
+.footer .footer-top{
+    width: 66.66%;
+    margin: 0 auto;
+    height: 22px;
+    padding-top: 40px;
+}
+.footer .footer-top .footer-top-line{
+    margin-top: 10px;
+    border-top: 1px solid #F5F5F7;    
+}
+.footer .footer-top .footer-top-text{
+    color: #9C9C9C;
+    font-size: 12px;
+    text-align: center;
+}
+.footer .footer-fast-login{
+    width: 66.66%;
+    margin: 0 auto;
+    padding-top: 34px;
+    margin-bottom: 61px;
+}
+.footer .footer-fast-login .footer-fast-login-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .footer-fast-login .footer-fast-login-btn a{
+    display: inline-block;
+    width: 51px;
+    height: 51px;
+    line-height: 51px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #DCDCDC;
+    border:1px solid #DCDCDC;
+    transition: color 0s;
+    -moz-transition: color 0s; /* Firefox 4 */
+    -webkit-transition: color 0s; /* Safari 和 Chrome */
+    -o-transition: color 0s; 
+}
+.footer .footer-fast-login .footer-fast-login-btn a:hover{
+    color: #9C9C9C;
+    border:1px solid #9C9C9C;
+}
+
+
+

@@ -43,7 +43,7 @@ $(function(){
   var fliperResume = function(){
     var mouseDownX,mouseDownY,initX,initY,flag,deg = false;    
 
-    var $draggable = $('#btn').draggabilly({
+    var $draggable = $('#slider-btn').draggabilly({
         axis: 'x',
         containment: '.track'
     });
@@ -56,12 +56,17 @@ $(function(){
     $draggable.on( 'dragMove', function( event, pointer ) {
         if(flag) {  
             var mouseMoveX = pointer.pageX; 
-            var j = 180 * ((mouseMoveX-mouseDownX)/326) + deg;
+            var sliderWidth =  navigator.userAgent.indexOf('Safari') > -1 ? 324 : 425;
+            var j = 180 * ((mouseMoveX-mouseDownX)/sliderWidth) + deg;
             
             if(j>=0 && j<=180){
-                $("#view-container").attr("style","transform: rotateY("+j+"deg)");
-
-                // $("#view-container").rotate(j);
+                $("#view-container").attr("style","transform: rotateY("+j+"deg)");                
+            }
+            if(j <= 10){
+                $('#slider-btn').removeClass('btn-left');
+            }
+            if(j >= 170){
+                $('#slider-btn').addClass('btn-left');
             }
         }  
 
@@ -73,8 +78,8 @@ $(function(){
 
   //简历模板hover效果
   var resumeTplHover = function(){
-      $tpls = $('#resume-tpl').find('li');
-      $tpls.bind('mouseover',function(){
+    $tpls = $('#resume-tpl').find('li');
+    $tpls.bind('mouseover',function(){
         $(this).children('.tpl-content').addClass('hide');
         $(this).children('.tpl-choose-lan').removeClass('hide');
     });
@@ -106,6 +111,38 @@ $(function(){
     }
     feedbackSwiper();
   }  
+
+  //判断浏览器类型添加类名以处理兼容性问题
+  var compatibleFun = function(){
+    // debugger
+    function myBrowser(){
+        var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+        var isOpera = userAgent.indexOf("Opera") > -1;
+        if (isOpera) {
+            return "Opera"
+        }; //判断是否Opera浏览器
+        if (userAgent.indexOf("Firefox") > -1) {
+            return "FF";
+        } //判断是否Firefox浏览器
+        if (userAgent.indexOf("Chrome") > -1){
+      return "Chrome";
+     }
+        if (userAgent.indexOf("Safari") > -1) {
+            return "Safari";
+        } //判断是否Safari浏览器
+        if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
+            return "IE";
+        }; //判断是否IE浏览器
+    }
+
+    var curBrowser = myBrowser();
+    if(curBrowser == 'Safari'){
+        $('body').addClass('well-safari');
+    }
+    
+  };
+
+  compatibleFun();
 
   swiperStart();
   filpOver();

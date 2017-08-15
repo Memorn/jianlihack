@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简历黑客</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header row">
+            <div class="header-logo col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
+                <img src="img/LOGO-SEC@2x.png" width="162px" alt="">
+            </div>
+        </div>
+        <div class="tab-bar row">
+            <div class="registered col-md-6 col-xs-6">
+                <span class="tab-btn active" id="tab-btn-reg">注册</span>
+            </div>
+            <div class="login col-md-6 col-xs-6">
+                <span class="tab-btn" id="tab-btn-login">登录</span>
+            </div>
+        </div>
+        <div class="form-content">
+            <div id="registered-form" class="registered-form"> <!--注册表单-->
+                <div id="tel-number-registered" class="tel-number-registered"> <!-- 手机号注册-->
+                    <div class="form-inputs">
+                        <div class="form-input">
+                            <input type="text" placeholder="手机号"> <!--手机号-->
+                        </div>
+                        <div class="form-input">
+                            <input type="password" placeholder="密码（不少于6位）"> <!--密码-->
+                         </div>
+                        <div class="form-input input-with-btn">
+                            <input type="text" placeholder="短信验证码"> <!--验证码-->
+                            <a class="get-code-btn">获取验证码</a>
+                        </div>
+                    </div>
+                    <div class="registered-btn">
+                        <a href="javascript:;">免费注册</a>
+                    </div>
+                    <div class="bottom-msg">
+                        <div class="bttom-msg-agree">点击「免费注册」将视为您同意超级简历的<a href="javascript:;">使用条款</a></div>
+                        <div id="btn-use-email" class="bttom-msg-change-way"><a href="javascript:;">使用邮箱注册</a></div>
+                    </div>
+                </div>
+                <div id="email-registered" class="email-registered hide"> <!-- 邮箱注册 -->
+                    <div class="form-inputs">
+                        <div class="form-input">
+                            <input type="text" placeholder="邮箱"> <!--账号-->
+                        </div>
+                        <div class="form-input">
+                            <input type="password" placeholder="密码（不少于6位）"> <!--密码-->
+                        </div>
+                    </div>
+                    <div class="registered-btn">
+                        <a href="javascript:;">免费注册</a>
+                    </div>
+                    <div class="bottom-msg">
+                        <div class="bttom-msg-agree">点击「免费注册」将视为您同意超级简历的<a href="javascript:;">使用条款</a></div>
+                        <div id="btn-use-tel" class="bttom-msg-change-way"><a href="javascript:;">使用手机号注册</a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="login-form" class="login-form hide"> <!-- 登录表单 -->
+                <div id="login-by-password" class="login-by-password"> <!-- 账号密码表单 -->
+                    <div class="form-inputs">
+                        <div class="form-input">
+                            <input type="text" placeholder="邮箱或手机号"> <!--账号-->
+                        </div>
+                        <div class="form-input">
+                            <input type="password" placeholder="密码（不少于6位）"> <!--密码-->
+                        </div>
+                    </div>
+                    <div class="login-btn">
+                        <a href="javascript:;">登录</a>
+                    </div>
+                    <div class="bottom-msg row">
+                        <div id="btn-use-code" class="bttom-msg-change-way no-margin-top no-padding col-md-4 col-sm-4 col-xs-6"><a href="javascript:;">手机验证码登录</a></div>
+                        <div class="bttom-msg-forget no-margin-top no-padding col-md-4 col-sm-4 col-xs-6 pull-right"><a href="javascript:;">忘记密码？</a></div>
+                        <div class="bttom-msg-change-way no-padding col-md-12 col-sm-12 col-xs-12"><a href="javascript:;">尚未收到验证邮件？</a></div>
+                    </div>
+                </div>
+                <div id="login-by-verification-code" class="login-by-verification-code hide"> <!-- 验证码登录 -->
+                    <div class="form-inputs">
+                        <div class="form-input">
+                            <input type="text" placeholder="手机号"> <!--账号-->
+                        </div>
+                        <div class="form-input input-with-btn">
+                            <input type="text" placeholder="短信验证码"> <!--验证码-->
+                            <a class="get-code-btn">获取验证码</a>
+                        </div>
+                    </div>
+                    <div class="login-btn">
+                        <a href="javascript:;">登录</a>
+                    </div>
+                    <div class="bottom-msg">
+                        <div id="btn-use-account" class="bttom-msg-change-way no-margin-top"><a href="javascript:;">密码登录（手机号或邮箱）</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-top row">
+                <span class="footer-top-line col-md-3 col-xs-2"></span>
+                <span class="footer-top-text col-md-6 col-xs-8">社交账户快速登录</span>
+                <span class="footer-top-line col-md-3 col-xs-2"></span>
+            </div>
+            <div class="footer-fast-login row">
+                <div class="footer-fast-login-btn col-md-6 col-xs-6">
+                    <a href="javascript:;"><i class="fa fa-weixin" aria-hidden="true"></i></a>
+                </div>
+                <div class="footer-fast-login-btn col-md-6 col-xs-6">
+                    <a href="javascript:;"><i class="fa fa-qq" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="lib/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
