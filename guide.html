@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简历黑客</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/guide.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header row">
+            <div class="header-logo col-md-3 col-xs-6">
+                <img src="img/LOGO-SEC@2x.png" width="167px" alt="LOGO"/>
+            </div>
+            <div class="header-nav col-md-7 hidden-xs hidden-sm">
+                <ul>
+                    <li><a href="javascript:;">1.引导填写</a></li>
+                    <li><a href="javascript:;">2.检查优化</a></li>
+                    <li><a href="javascript:;">3.导师辅导</a></li>
+                </ul>
+            </div>
+            <div class="header-personal-center col-md-2 col-xs-6">
+                <div class="header-personal-center-menu dropdown pull-right">
+                    <a href="javascript:;" class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="personal-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                        个人中心
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li>
+                            <a href="#">
+                                <span class="menu-item-icon"><i class="fa fa-trophy" aria-hidden="true"></i></span>
+                                我的订单
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="menu-item-icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                                简历攻略
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="menu-item-icon"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                                常见问题
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="menu-item-icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+                                账户设置
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="menu-item-icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                                登出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="no-resume">
+                <div class="resume-tpl" id="resume-tpl">
+                        <div class="resume-title">选择你的简历模板</div>
+                        <div class="resume-slogan">更合适的模板能大大提高你的求职成功率</div>
+                        <div class="resume-type">
+                            <ul class="row">
+                                <li class="col-md-3 col-sm-6">
+                                    <div class="tpl-content">
+                                        <span class="tpl-img"><img src="img/tpl-college.png" alt=""/></span>
+                                        <span class="tpl-title">学生实习模板</span>
+                                        <span class="tpl-desc">此模板试用于学生找实习，第一次工作，或者工作经历比较欠缺的同学</span>
+                                    </div>
+                                    <div class="tpl-choose-lan hide">
+                                        <a href="javascript:;" class="zh">中文模板</a>
+                                        <a href="javascript:;" class="en">英文模板</a>
+                                    </div>
+                                </li>
+                                <li class="col-md-3 col-sm-6">
+                                   <div class="tpl-content">
+                                        <span class="tpl-img"><img src="img/tpl-classic.png" alt=""/></span>
+                                        <span class="tpl-title">经典工作模板</span>
+                                        <span class="tpl-desc">此模板适合工作经验一年以上，有工作经验想要变动工作的人士，适用于全行业</span>
+                                   </div>
+                                   <div class="tpl-choose-lan hide">
+                                        <a href="javascript:;" class="zh">中文模板</a>
+                                        <a href="javascript:;" class="en">英文模板</a>
+                                    </div>
+                                </li>
+                                <li class="col-md-3 col-sm-6">
+                                   <div class="tpl-content">
+                                        <span class="tpl-img"><img src="img/tpl-investment.png" alt=""/></span>
+                                        <span class="tpl-title">投行咨询模板</span>
+                                        <span class="tpl-desc">此模板针对想要去投行，咨询，四大或外企工作的人士，更多针对性引导和案例</span>
+                                    </div>
+                                    <div class="tpl-choose-lan hide">
+                                        <a href="javascript:;" class="zh">中文模板</a>
+                                        <a href="javascript:;" class="en">英文模板</a>
+                                    </div>
+                                </li>
+                                <li class="col-md-3 col-sm-6">
+                                   <div class="tpl-content">
+                                        <span class="tpl-img"><img src="img/tpl-plane.png" alt=""/></span>
+                                        <span class="tpl-title">留学英文模板</span>
+                                        <span class="tpl-desc">此模板适用于想要留学考研的学生</span>
+                                    </div>
+                                    <div class="tpl-choose-lan hide">
+                                        <!-- <a href="javascript:;" class="zh">中文模板</a> -->
+                                        <a href="javascript:;" class="en">英文模板</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="resume-btns row">
+                            <div class="col-md-6 col-xs-12">
+                                <a href="javascript:;" class="insert-resume">导入已有简历</a>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                                <a href="javascript:;" class="create-resume no-margin-right">创建新的简历</a> 
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="has-resume"></div>
+        </div>
+    </div>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="js/guide.js"></script>
+</body>
+</html>
