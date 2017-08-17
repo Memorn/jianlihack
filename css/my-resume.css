@@ -3,6 +3,7 @@
     color: rgb(64, 64, 64);
     padding: 0;
     padding-bottom: 260px;
+    font-weight: 100;
 }
 
 /******************** 页头样式 ********************/
@@ -15,8 +16,9 @@
 .header .header-logo{
     height: 100%;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    padding-left: 32px;
 }
 
 .header .header-nav{
@@ -51,7 +53,8 @@
 }
 .header .header-personal-center .header-personal-center-menu a .personal-icon{
     color: #FF4F4C;
-    font-size: 20px
+    font-size: 20px;
+    margin-right: 11px;
 }
 .header .header-personal-center .header-personal-center-menu .dropdown-menu{
     width: 185px;
@@ -193,6 +196,18 @@
 }
 
 /****** 已有简历样式 ******/
+.main .has-resume .resume-tpl .resume-type{
+    margin-top: 14px;
+}
+.main .has-resume .resume-tpl .resume-type ul li{
+    margin-top: 70px;
+}
+.main .has-resume .resume-tpl .resume-type ul li>div{
+    box-shadow:none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    border: 1px solid #F0F0F2;
+}
 .main .has-resume .resume-tpl .resume-type ul li .create-resume{
     display: inline-flex;
     flex-direction: column;
@@ -239,7 +254,7 @@
     height: 20px;
     line-height: 18px;
     text-align: center;
-    border: 1px solid #9C9C9C;
+    border: 1px solid #EBEBEB;
     font-size: 13px;
     margin-left: 34px;
 }
@@ -265,25 +280,67 @@
     border-radius: 2px;
     margin-bottom: 0px;
 }
+.main .has-resume .resume-tpl ul li .create-resume-type a{
+    margin-bottom: 24px;
+}
 .main .has-resume .resume-tpl ul li .tpl-choose-lan .resume-check a:hover{
     background-color:#FF4F4C;
     color:#FFFFFF;
 }
 .main .has-resume .resume-tpl ul li .tpl-choose-lan .resume-info-control{
     text-align: center;
+    margin-bottom: 23px;
 }
 .main .has-resume .resume-tpl ul li .tpl-choose-lan .resume-info-control a{
     color:#9C9C9C;
     font-size: 25px;
     border:none;
     margin-right: 46px;
+    position: relative;
 }
 .main .has-resume .resume-tpl ul li .tpl-choose-lan .resume-info-control a:hover{
-    color: #9C9C9C;
+    color: #FF4F4C;
     background: #FFFFFF;
+}
+.main .has-resume .resume-tpl ul li .tpl-choose-lan .resume-info-control a .resume-info-control-popover{
+    color:#FFFFFF;
+    font-size: 12px;
+    position: absolute;
+    background: #404040;
+    width: 60px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    top: -34px;
+}
+.main .has-resume .resume-tpl ul li .tpl-choose-lan .resume-info-control a .resume-info-control-popover .popover-arrow{
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -3px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #404040;
+}
+.main .has-resume .resume-tpl ul li .tpl-choose-lan .resume-info-control .resume-info-edit .resume-info-control-popover{
+    left: -81%;
+}
+.main .has-resume .resume-tpl ul li .tpl-choose-lan .resume-info-control .resume-info-copy .resume-info-control-popover{
+    left: -56%;
+}
+.main .has-resume .resume-tpl ul li .tpl-choose-lan .resume-info-control .resume-info-del .resume-info-control-popover{
+    left: -110%;
 }
 
 /****** 导入简历 *******/
+.main .insert-resume .resume-tpl ul li>div{
+    box-shadow:none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
 .main .insert-resume .resume-tpl ul li .insert-resume-tpl{
     display: flex;
     flex-direction: column;
@@ -369,7 +426,11 @@
     margin: 0;
     width: 100%;
 }
-#choose-resume-tpl-modal .modal-content .resume-tpl .resume-type ul li{}
+#choose-resume-tpl-modal .modal-content .resume-tpl .resume-type ul li>div{
+    box-shadow:none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
 
 
 @media (max-width: 768px){
