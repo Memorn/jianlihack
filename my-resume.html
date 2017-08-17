@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简历黑客</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/my-resume.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header row">
+            <div class="header-logo col-md-3 col-xs-6">
+                <a href="index.html">
+                    <img src="img/LOGO-SEC@2x.png" width="167px" alt="LOGO"/>
+                </a>
+            </div>
+            <div class="header-nav col-md-7 hidden-xs hidden-sm">
+                <ul>
+                    <li><a href="javascript:;">1.引导填写</a></li>
+                    <li><a href="javascript:;">2.检查优化</a></li>
+                    <li><a href="javascript:;">3.导师辅导</a></li>
+                </ul>
+            </div>
+            <div class="header-personal-center col-md-2 col-xs-6">
+                <div class="header-personal-center-menu dropdown pull-right">
+                    <a href="javascript:;" class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="personal-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                        个人中心
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li>
+                            <a href="#">
+                                <span class="menu-item-icon"><i class="fa fa-trophy" aria-hidden="true"></i></span>
+                                我的订单
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="menu-item-icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                                简历攻略
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="menu-item-icon"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                                常见问题
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="menu-item-icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+                                账户设置
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="menu-item-icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                                登出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="no-resume">
+                <div class="resume-tpl">
+                    <div class="resume-title">选择你的简历模板</div>
+                    <div class="resume-slogan">更合适的模板能大大提高你的求职成功率</div>
+                    <div class="resume-type">
+                        <ul class="row">
+                            <li class="col-md-3 col-sm-6">
+                                <div class="tpl-content">
+                                    <span class="tpl-img"><img src="img/tpl-college.png" alt=""/></span>
+                                    <span class="tpl-title">学生实习模板</span>
+                                    <span class="tpl-desc">此模板试用于学生找实习，第一次工作，或者工作经历比较欠缺的同学</span>
+                                </div>
+                                <div class="tpl-choose-lan hide">
+                                    <a href="javascript:;">中文模板</a>
+                                    <a href="javascript:;" class="no-margin-bottom">英文模板</a>
+                                </div>
+                            </li>
+                            <li class="col-md-3 col-sm-6">
+                                <div class="tpl-content">
+                                    <span class="tpl-img"><img src="img/tpl-classic.png" alt=""/></span>
+                                    <span class="tpl-title">经典工作模板</span>
+                                    <span class="tpl-desc">此模板适合工作经验一年以上，有工作经验想要变动工作的人士，适用于全行业</span>
+                                </div>
+                                <div class="tpl-choose-lan hide">
+                                    <a href="javascript:;">中文模板</a>
+                                    <a href="javascript:;" class="no-margin-bottom">英文模板</a>
+                                </div>
+                            </li>
+                            <li class="col-md-3 col-sm-6">
+                                <div class="tpl-content">
+                                    <span class="tpl-img"><img src="img/tpl-investment.png" alt=""/></span>
+                                    <span class="tpl-title">投行咨询模板</span>
+                                    <span class="tpl-desc">此模板针对想要去投行，咨询，四大或外企工作的人士，更多针对性引导和案例</span>
+                                </div>
+                                <div class="tpl-choose-lan hide">
+                                    <a href="javascript:;">中文模板</a>
+                                    <a href="javascript:;" class="no-margin-bottom">英文模板</a>
+                                </div>
+                            </li>
+                            <li class="col-md-3 col-sm-6">
+                                <div class="tpl-content">
+                                    <span class="tpl-img"><img src="img/tpl-plane.png" alt=""/></span>
+                                    <span class="tpl-title">留学英文模板</span>
+                                    <span class="tpl-desc">此模板适用于想要留学考研的学生</span>
+                                </div>
+                                <div class="tpl-choose-lan hide">
+                                    <!-- <a href="javascript:;" class="zh">中文模板</a> -->
+                                    <a href="javascript:;" class="no-margin-bottom">英文模板</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="resume-btns row">
+                        <div class="col-md-6 col-xs-12">
+                            <a href="javascript:;" class="insert-resume-btn" id="insert-resume-btn">导入已有简历</a>
+                        </div>
+                        <div class="col-md-6 col-xs-12">
+                            <a href="javascript:;" class="create-resume-btn no-margin-right" id="create-resume-btn">创建新的简历</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="has-resume hide">
+                <div class="resume-tpl">
+                    <div class="resume-type">
+                        <ul class="row">
+                            <li class="col-md-3 col-sm-6">
+                                <div class="tpl-content create-resume">
+                                    <span class="create-resume-icon"><img src="img/create-resume-icon@2x.png" width="44px" alt="create-icon"></span>
+                                    <span class="create-resume-text">创建新简历</span>
+                                </div>
+                                <div class="tpl-choose-lan hide">
+                                    <a href="javascript:;">导入模板</a>
+                                    <a href="javascript:;" id="choose-tpl-btn">选择模板</a>
+                                    <a href="javascript:;" class="no-margin-bottom">直接填写</a>
+                                </div>
+                            </li>
+                            <li class="col-md-3 col-sm-6">
+                                <div class="tpl-content resume-exist">
+                                    <div class="resume-name">张三_简历_python工程师_清华PhD_ExGoogler_2017.0710</div>
+                                    <div class="resume-info">
+                                        <span class="resume-time">2017年8月4日 19:22</span>
+                                        <span class="resume-lan">中文</span>
+                                    </div>
+                                </div>
+                                <div class="tpl-choose-lan hide">
+                                    <div class="resume-check">
+                                        <a href="javascript:;">检查优化</a>
+                                        <!-- <a href="javascript:;">继续填写</a> -->
+                                    </div>
+                                    <div class="resume-info-control">
+                                        <a href="javascript:;" class="resume-info-edit"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+                                        <a href="javascript:;" class="resume-info-copy"><i class="fa fa-files-o" aria-hidden="true"></i></a>
+                                        <a href="javascript:;" class="resume-info-del no-margin-right"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-md-3 col-sm-6">
+                                <div class="tpl-content resume-exist">
+                                    <div class="resume-name">张三_简历_python工程师_清华PhD_ExGoogler_2017.0710</div>
+                                    <div class="resume-info">
+                                        <span class="resume-time">2017年8月4日 19:22</span>
+                                        <span class="resume-lan">中文</span>
+                                    </div>
+                                </div>
+                                <div class="tpl-choose-lan hide">
+                                    <div class="resume-check">
+                                        <!-- <a href="javascript:;">检查优化</a> -->
+                                        <a href="javascript:;">继续填写</a>
+                                    </div>
+                                    <div class="resume-info-control">
+                                        <a href="javascript:;" class="resume-info-edit"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+                                        <a href="javascript:;" class="resume-info-copy"><i class="fa fa-files-o" aria-hidden="true"></i></a>
+                                        <a href="javascript:;" class="resume-info-del no-margin-right"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-md-3 col-sm-6">
+                                <div class="tpl-content resume-exist">
+                                    <div class="resume-name">张三_简历_python工程师_清华PhD_ExGoogler_2017.0710</div>
+                                    <div class="resume-info">
+                                        <span class="resume-time">2017年8月4日 19:22</span>
+                                        <span class="resume-lan">中文</span>
+                                    </div>
+                                </div>
+                                <div class="tpl-choose-lan hide">
+                                    <div class="resume-check">
+                                        <a href="javascript:;">检查优化</a>
+                                        <!-- <a href="javascript:;">继续填写</a> -->
+                                    </div>
+                                    <div class="resume-info-control">
+                                        <a href="javascript:;" class="resume-info-edit"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+                                        <a href="javascript:;" class="resume-info-copy"><i class="fa fa-files-o" aria-hidden="true"></i></a>
+                                        <a href="javascript:;" class="resume-info-del no-margin-right"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-md-3 col-sm-6">
+                                <div class="tpl-content resume-exist">
+                                    <div class="resume-name">张三_简历_python工程师_清华PhD_ExGoogler_2017.0710</div>
+                                    <div class="resume-info">
+                                        <span class="resume-time">2017年8月4日 19:22</span>
+                                        <span class="resume-lan">中文</span>
+                                    </div>
+                                </div>
+                                <div class="tpl-choose-lan hide">
+                                    <div class="resume-check">
+                                        <a href="javascript:;">检查优化</a>
+                                        <!-- <a href="javascript:;">继续填写</a> -->
+                                    </div>
+                                    <div class="resume-info-control">
+                                        <a href="javascript:;" class="resume-info-edit"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+                                        <a href="javascript:;" class="resume-info-copy"><i class="fa fa-files-o" aria-hidden="true"></i></a>
+                                        <a href="javascript:;" class="resume-info-del no-margin-right"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="insert-resume hide">
+                <div class="resume-tpl">
+                    <div class="resume-type">
+                        <ul class="row">
+                            <li class="col-md-3 col-sm-6">
+                                <div class="insert-resume-tpl">
+                                    <a href="javascript:;">导入已有资料</a>
+                                    <a href="javascript:;" class="no-margin-bottom">上传简历文件</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--模态框——编辑简历信息-->
+            <div id="resume-info-modal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="resume-name">
+                            <label for="">简历名称</label><br>
+                            <input type="text"/ placeholder="简历用途/申请的工作，如贝恩咨询PTA实习">
+                        </div>
+                        <div class="resume-url">
+                            <label for="">所申请工作的招聘链接(URL)</label><br>
+                            <input type="text"/ placeholder="http://">
+                        </div>
+                        <div class="resume-btn">
+                            <a href="javascript:;" class="save-info-btn">保存</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--模态框——选择简历模板-->
+            <div id="choose-resume-tpl-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="resume-tpl">
+                            <div class="resume-type">
+                                <ul class="row">
+                                    <li class="col-md-3 col-sm-6">
+                                        <div class="tpl-content">
+                                            <span class="tpl-img"><img src="img/tpl-college.png" alt=""/></span>
+                                            <span class="tpl-title">学生实习模板</span>
+                                            <span class="tpl-desc">此模板试用于学生找实习，第一次工作，或者工作经历比较欠缺的同学</span>
+                                        </div>
+                                        <div class="tpl-choose-lan hide">
+                                            <a href="javascript:;">中文模板</a>
+                                            <a href="javascript:;" class="no-margin-bottom">英文模板</a>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-3 col-sm-6">
+                                        <div class="tpl-content">
+                                            <span class="tpl-img"><img src="img/tpl-classic.png" alt=""/></span>
+                                            <span class="tpl-title">经典工作模板</span>
+                                            <span class="tpl-desc">此模板适合工作经验一年以上，有工作经验想要变动工作的人士，适用于全行业</span>
+                                        </div>
+                                        <div class="tpl-choose-lan hide">
+                                            <a href="javascript:;">中文模板</a>
+                                            <a href="javascript:;" class="no-margin-bottom">英文模板</a>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-3 col-sm-6">
+                                        <div class="tpl-content">
+                                            <span class="tpl-img"><img src="img/tpl-investment.png" alt=""/></span>
+                                            <span class="tpl-title">投行咨询模板</span>
+                                            <span class="tpl-desc">此模板针对想要去投行，咨询，四大或外企工作的人士，更多针对性引导和案例</span>
+                                        </div>
+                                        <div class="tpl-choose-lan hide">
+                                            <a href="javascript:;">中文模板</a>
+                                            <a href="javascript:;" class="no-margin-bottom">英文模板</a>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-3 col-sm-6">
+                                        <div class="tpl-content">
+                                            <span class="tpl-img"><img src="img/tpl-plane.png" alt=""/></span>
+                                            <span class="tpl-title">留学英文模板</span>
+                                            <span class="tpl-desc">此模板适用于想要留学考研的学生</span>
+                                        </div>
+                                        <div class="tpl-choose-lan hide">
+                                            <!-- <a href="javascript:;" class="zh">中文模板</a> -->
+                                            <a href="javascript:;" class="no-margin-bottom">英文模板</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="js/my-resume.js"></script>
+</body>
+</html>

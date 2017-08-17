@@ -91,8 +91,33 @@ $(function(){
         });
     }
 
+    //点击过去验证码后读秒
+    var getCode = function(){
+
+        var handle4GetCode = function(e){
+            var $this = $(e.target);
+            $this.html('60s');
+            $this.unbind('click');
+            var count = 60;
+            var timeInterval = setInterval(function(){
+                if(count == 0){
+                    clearInterval(timeInterval);
+                    $this.html('获取验证码');
+                    $this.on('click',handle4GetCode);
+                    return;
+                }
+                $this.html(count-- + 's');
+            },1000);
+        };
+
+        $('.get-code-btn').on('click',handle4GetCode);
+
+
+    }
+
 
     //执行方法
     changeTab();
     chooseFormByQuery();
+    getCode();
 });
