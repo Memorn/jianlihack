@@ -18,6 +18,18 @@ $(function(){
             $('#resume-info-modal').modal('show');
         });
     };
+
+    //操作简历图标hover效果
+    var iconHover = function(){
+        $icons = $('.resume-info-control a');
+
+        $icons.on('mouseover',function(){
+            $(this).children('.resume-info-control-popover').removeClass('hide');
+        });
+        $icons.on('mouseout',function(){
+            $(this).children('.resume-info-control-popover').addClass('hide');
+        });
+    }
     
     //点击选择模板弹出弹窗
     var chooseResumeTpl = function(){
@@ -49,6 +61,7 @@ $(function(){
 
     resumeTplHover();
     editResumeInfo();
+    iconHover();
     chooseResumeTpl();
     switchPage();
 });
