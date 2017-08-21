@@ -103,7 +103,10 @@
     margin: 0 auto; 
 }
 .main .resume-tpl .resume-type ul li{
-    text-align: center;
+    /* text-align: center; */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 20px;
 }
 .main .resume-tpl .resume-type ul li>div{
@@ -242,6 +245,7 @@
     line-height: 70px;
     color: #9C9C9C;
     border-top: 1px solid #F5F5F7;
+    padding-left: 16px;
 }
 .main .has-resume .resume-tpl ul li .tpl-content .resume-info .resume-time{
     font-size: 14px;
@@ -335,7 +339,7 @@
     left: -110%;
 }
 
-/****** 导入简历 *******/
+/****** 导入简历弹窗 *******/
 .main .insert-resume .resume-tpl ul li>div{
     box-shadow:none;
     -webkit-box-shadow: none;
@@ -364,6 +368,9 @@
     background-color:#FF4F4C;
     color:#FFFFFF;
 }
+#insert-resume-modal .resume-tpl .resume-type{
+    margin-top: 0;
+} 
 
 
 /******************** 编辑简历信息弹窗样式 ********************/
@@ -447,6 +454,9 @@
     }
     #choose-resume-tpl-modal .modal-dialog{
         min-width: 1164px;
+        margin-top: 200px;
+    }
+    #insert-resume-modal .modal-dialog{
         margin-top: 200px;
     }
 }

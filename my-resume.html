@@ -20,7 +20,7 @@
             </div>
             <div class="header-nav col-md-8 hidden-xs hidden-sm">
                 <ul>
-                    <li><a href="javascript:;">1.引导填写</a></li>
+                    <li><a href="guide.html" target="_blank">1.引导填写</a></li>
                     <li><a href="javascript:;">2.检查优化</a></li>
                     <li><a href="javascript:;">3.导师辅导</a></li>
                 </ul>
@@ -129,19 +129,23 @@
                     </div>
                 </div>
             </div>
-            <div class="has-resume hide">
+            <div class="has-resume insert-resume hide">
                 <div class="resume-tpl">
                     <div class="resume-type">
                         <ul class="row">
-                            <li class="col-md-3 col-sm-6">
+                            <li class="col-md-3 col-sm-6 li-create-resume">
                                 <div class="tpl-content create-resume">
                                     <span class="create-resume-icon"><img src="img/create-resume-icon@2x.png" width="44px" alt="create-icon"></span>
                                     <span class="create-resume-text">创建新简历</span>
                                 </div>
                                 <div class="tpl-choose-lan create-resume-type hide">
-                                    <a href="javascript:;">导入模板</a>
+                                    <a href="javascript:;" id="create-insert-resume-btn">导入模板</a>
                                     <a href="javascript:;" id="choose-tpl-btn">选择模板</a>
                                     <a href="javascript:;" class="no-margin-bottom">直接填写</a>
+                                </div>
+                                <div class="insert-resume-tpl hide">
+                                    <a href="javascript:;">导入已有资料</a>
+                                    <a href="javascript:;" class="no-margin-bottom">上传简历文件</a>
                                 </div>
                             </li>
                             <li class="col-md-3 col-sm-6">
@@ -300,17 +304,22 @@
                     </div>
                 </div>
             </div>
-            <div class="insert-resume hide">
-                <div class="resume-tpl">
-                    <div class="resume-type">
-                        <ul class="row">
-                            <li class="col-md-3 col-sm-6">
-                                <div class="insert-resume-tpl">
-                                    <a href="javascript:;">导入已有资料</a>
-                                    <a href="javascript:;" class="no-margin-bottom">上传简历文件</a>
-                                </div>
-                            </li>
-                        </ul>
+            <!--模态框——编辑简历信息-->
+            <div id="insert-resume-modal" class="modal fade bs-example-modal-sm insert-resume" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="resume-tpl">
+                            <div class="resume-type">
+                                <ul class="row">
+                                    <li class="col-md-12 col-sm-12">
+                                        <div class="insert-resume-tpl">
+                                            <a href="javascript:;">导入已有资料</a>
+                                            <a href="javascript:;" class="no-margin-bottom">上传简历文件</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

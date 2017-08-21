@@ -1,6 +1,8 @@
 $(function(){
     //简历模板hover效果
     var resumeTplHover = function(){
+
+        // $tpls = $('.resume-tpl').find('li:not(.li-create-resume)');
         $tpls = $('.resume-tpl').find('li');
         $tpls.bind('mouseover',function(){
             $(this).children('.tpl-content').addClass('hide');
@@ -9,6 +11,38 @@ $(function(){
         $tpls.bind('mouseout',function(){
             $(this).children('.tpl-content').removeClass('hide');
             $(this).children('.tpl-choose-lan').addClass('hide');
+        });
+
+        $tpls
+    };
+
+    //有简历时点击导入切换卡片内容
+    var createInsertResume = function(){
+        var $liCreateResume = $('.li-create-resume');
+        var $createResume = $liCreateResume.children('.create-resume');
+        var $createResumeType = $liCreateResume.children('.create-resume-type');
+        var $insertResumeTpl = $liCreateResume.children('.insert-resume-tpl');
+
+        $('#create-insert-resume-btn').on('click',function(){
+            $('.resume-tpl').find('li:nth-child(1)').unbind('mouseover');
+            $('.resume-tpl').find('li:nth-child(1)').unbind('mouseout');
+            $createResume.addClass('hide'); 
+            $createResumeType.addClass('hide'); 
+            $insertResumeTpl.removeClass('hide');
+
+            // $insertResumeTpl.on('mouseout',function(){
+            //     $createResume.removeClass('hide'); 
+            //     $createResumeType.addClass('hide'); 
+            //     $insertResumeTpl.addClass('hide');
+            //     // resumeTplHover();
+            // });
+        });
+    };
+
+    //无简历页面点击“导入已有简历”弹窗
+    var insertResume = function(){
+        $('#insert-resume-btn').bind('click',function(){
+            $('#insert-resume-modal').modal('show');
         });
     };
 
@@ -44,22 +78,14 @@ $(function(){
         $('#create-resume-btn').bind('click',function(){
             $('.no-resume').addClass('hide');
             $('.has-resume').addClass('hide');
-            $('.insert-resume').addClass('hide');
 
             $('.has-resume').removeClass('hide');
-        });
-
-        //导入已有简历
-        $('#insert-resume-btn').bind('click',function(){
-            $('.no-resume').addClass('hide');
-            $('.has-resume').addClass('hide');
-            $('.insert-resume').addClass('hide');
-
-            $('.insert-resume').removeClass('hide');
         });
     }
 
     resumeTplHover();
+    insertResume();
+    createInsertResume();
     editResumeInfo();
     iconHover();
     chooseResumeTpl();

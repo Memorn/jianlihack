@@ -2,7 +2,7 @@
     width: 100%;
     color: rgb(64, 64, 64);
     padding: 0;
-    padding-bottom: 260px;
+    padding-bottom: 160px;
     font-weight: 100;
 }
 
@@ -110,6 +110,328 @@
     margin-left: 20px;
     margin-right: 20px;
 }
+
+
+/******************** 引导填写主体样式 ********************/
+
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin:0;
+    /* align-items: center; */
+}
+.main>div{
+    background-color: #FFFFFF;
+    margin-top: 20px;
+}
+
+/*** 左侧部分样式 ***/
+.main .left-panel{
+    position: relative;
+    height: 100%;
+}
+.main .left-panel ul li{
+    width: 100%;
+    /* height: 106px; */
+    border-bottom: 1px solid #F5F5F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .left-panel ul li .left-panel-item{
+    width: 198px;
+    min-height: 26px;
+    margin-top: 42px;
+    margin-bottom: 42px;
+    padding-left: 38px;
+    font-size: 16px;
+    color: #9C9C9C; 
+    line-height: 26px;
+    transition: none;
+    -moz-transition: none; /* Firefox 4 */
+    -webkit-transition: none; /* Safari 和 Chrome */
+    -o-transition: none; 
+}
+.main .left-panel ul li .left-panel-item.active{
+    border-left: 8px solid #FF4F4C;
+    padding-left: 30px;
+    color: #404040;
+}
+.main .left-panel ul li .left-panel-item a{
+    color: inherit;
+    transition: none;
+    -moz-transition: none; /* Firefox 4 */
+    -webkit-transition: none; /* Safari 和 Chrome */
+    -o-transition: none; 
+}
+.main .left-panel ul li .left-panel-item a .item-sub-title{
+    font-size: 12px;
+}
+.main .left-panel ul li .left-panel-item a i{
+    margin-right: 13px;
+}
+
+/** 左侧弹窗样式 **/
+.main .left-panel .left-panel-modal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-color:#FFFFFF;
+    box-shadow: 0px 0px 20px #ccc;
+    -webkit-box-shadow: 0px 0px 20px #ccc;
+    -moz-box-shadow: 0px 0px 20px #ccc; 
+}
+.main .left-panel .left-panel-modal .modal-hide-ctrl{
+    width: 100%;
+    height: 44px;
+    padding-top: 9px;
+    padding-right: 9px;
+}
+.main .left-panel .left-panel-modal .modal-hide-ctrl .modal-hide-btn{
+    display: inline-block;
+    width: 32px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #9C9C9C;
+    font-size: 13px;
+}
+.main .left-panel .left-panel-modal .modal-panel-title{
+    width: 100%;
+    height: 58px;
+    text-align: center;
+    font-size: 14px;
+    color: #404040;
+}
+.main .left-panel .left-panel-modal .modal-panel-content{
+    width: 100%;
+    padding: 0 32px;
+}
+.main .left-panel .left-panel-modal .modal-panel-content select{
+    width: 100%;
+}
+
+/*** 编辑框样式 ***/
+.main .edit-panel{margin-left: 20px;margin-right: 20px;}
+.main .edit-panel .info-title{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .edit-panel .info-content{
+    width: 100%;
+    padding: 0 64px;
+}
+.main .edit-panel .info-content .info-content-item{
+    width: 100%;
+}
+.main .edit-panel .info-content .info-content-item .info-content-item-tag{
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding-bottom: 17px;
+    border-bottom:1px solid #F5F5F7;
+}
+.main .edit-panel .info-content .info-content-item .info-content-item-tag .tag-info{
+    display: flex;
+    flex-direction: column;
+    color: #404040;
+    font-size: 14px;
+}
+.main .edit-panel .info-content .info-content-item .info-content-item-tag .tag-ctrl-bar{
+    text-align: right;
+    padding: 0;
+    color: #DCDCDC;
+}
+.main .edit-panel .info-content .info-content-item .info-content-item-tag .tag-ctrl-bar>span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 23px;
+    text-align: center;
+    border: 1px solid #F5F5F7;
+    cursor: pointer;
+}
+
+.main .edit-panel .info-content .info-content-item .info-content-item-form{
+    width: 100%;
+}
+.main .edit-panel .info-content .info-content-item .info-content-item-form .form-input{
+    width: 100%;
+    margin-top: 40px;
+}
+.main .edit-panel .info-content .info-content-item .info-content-item-form .form-input input{
+    width: 100%;
+}
+.main .edit-panel .info-content .info-content-item .info-content-item-form .form-input textarea{
+    width: 100%;
+    height: 364px;
+}
+.main .edit-panel .info-content .info-content-item .info-content-item-form .form-input.two-inputs{
+    display: inline-flex;
+    justify-content: space-between;   
+}
+.main .edit-panel .info-content .info-content-item .info-content-item-form .form-input.two-inputs input,
+.main .edit-panel .info-content .info-content-item .info-content-item-form .form-input.two-inputs select{
+    width: 45%;
+}
+.main .edit-panel .info-content .info-add-item{
+    width: 100%;
+    margin: 30px 0 0 0; 
+}
+.main .edit-panel .info-content .info-add-item .info-add-item-btn{
+    color: #9C9C9C;
+    font-size: 16px;
+}
+.main .edit-panel .info-content .info-add-item .info-add-item-btn i{
+    color: #FF4F4C;
+    margin-right: 7px;
+}
+/*“其他”相关样式*/
+.main .other-info-content-item{
+    margin-top: 30px;
+}
+.main .other-info-content-item .item-label{
+    width: 100%;
+    margin-bottom: 17px;
+
+}
+.main .other-info-content-item .item-label .item-label-plus{
+    color: #FF4F4C
+}
+.main .other-info-content-item .item-content-tag{
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding-bottom: 17px;
+    border-bottom:1px solid #F5F5F7;
+}
+.main .other-info-content-item .item-content-tag .tag-info{
+    padding: 0;
+    color: #404040;
+    font-size: 14px;
+}
+.main .other-info-content-item .item-content-tag .tag-ctrl-bar{
+    text-align: right;
+    padding: 0;
+    color: #DCDCDC;
+}
+.main .other-info-content-item .item-content-tag .tag-ctrl-bar>span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 23px;
+    text-align: center;
+    border: 1px solid #F5F5F7;
+    cursor: pointer;
+}
+.main .other-info-content-item .item-content .item-content-form{
+    margin-top: 24px; 
+    display: flex;
+    justify-content: space-between;
+}
+.main .other-info-content-item .item-content .item-content-form input:nth-child(1){
+    width: 25%
+}
+.main .other-info-content-item .item-content .item-content-form input:nth-child(2){
+    width: 70%
+}
+
+
+.main .edit-panel .info-footer{
+    width: 100%;
+    padding:0 64px;
+    padding-bottom: 43px;
+    margin-top: 40px;
+}
+.main .edit-panel .info-footer .info-footer-pre a{ 
+    width: 90px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #F5F5F7;
+    border-radius: 2px;
+    color: #9C9C9C;
+    font-size: 16px;
+}
+.main .edit-panel .info-footer .info-footer-save a{
+    width: 90px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #F5F5F7;
+    border-radius: 2px;
+    color: #9C9C9C;
+    font-size: 16px;
+}
+.main .edit-panel .info-footer .info-footer-next a,
+.main .edit-panel .info-footer .info-footer-complete a{
+    width: 260px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #F5F5F7;
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-size: 16px;
+    background-color: rgb(255, 79, 76);
+}
+.main .edit-panel .info-footer .info-footer-next a:hover,
+.main .edit-panel .info-footer .info-footer-complete a:hover{
+    background-color: rgba(255, 79, 76, 0.85)
+}
+
+
+
+/*** 右侧贴士框样式 ***/
+.main .right-panel{height: 100%;}
+.main .right-panel .tips-title{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .right-panel .tips-content{
+    padding: 0 24px;
+    font-size: 14px;
+}
+.main .right-panel .tips-content .tips-item{
+    margin-bottom: 20px;
+}
+.main .right-panel .tips-content .tips-item .tips-item-title{
+    margin-bottom: 21px;
+    width: 100%;
+    cursor: pointer;
+}
+.main .right-panel .tips-content .tips-item .tips-item-title .tips-item-title-icon{
+    color: #9C9C9C;
+}
+.main .right-panel .tips-content .tips-item .tips-item-desc{
+    color: #9C9C9C;
+    display: none;
+}
+
+.main .right-panel .tips-content .tips-item.active .tips-item-title .tips-item-title-icon{
+    transform:rotate(180deg);
+    -ms-transform:rotate(180deg); 	/* IE 9 */
+    -moz-transform:rotate(180deg); 	/* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+    -o-transform:rotate(180deg); 	
+}
+.main .right-panel .tips-content .tips-item.active .tips-item-desc{
+    display: block;
+}
+
 
 
 @media (max-width: 768px){

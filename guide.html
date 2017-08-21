@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>简历黑客</title>
     <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">    
     <link rel="stylesheet" href="css/guide.css">
 </head>
 <body>
@@ -71,11 +72,439 @@
                 </div>
             </div>
         </div>
-        <div class="main">
+        <div class="main row">
+            <div class="left-panel col-md-3">
+                <ul>
+                    <li>
+                        <div class="left-panel-item active">
+                            <a href="javascript:;" class="item-title">基本信息</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left-panel-item">
+                            <a href="javascript:;" class="item-title">教育经历</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left-panel-item">
+                            <a href="javascript:;" class="item-title">工作经历</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left-panel-item">
+                            <a href="javascript:;" class="item-title">活动经历</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left-panel-item">
+                            <a href="javascript:;">
+                                <span  class="item-title">其他</span><br>
+                                <span class="item-sub-title">语言/技能/证书/兴趣</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left-panel-item no-border">
+                            <a href="javascript:;" class="item-title"><i class="fa fa-plus" aria-hidden="true"></i>添加模块</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="left-panel-modal hide">
+                    <div class="modal-hide-ctrl">
+                        <a href="javascript:;" class="modal-hide-btn pull-right">收起</a>
+                    </div>
+                    <div class="modal-panel-title">查看案例</div>
+                    <div class="modal-panel-content">
+                        <div class="modal-panel-content-educate">
+                            <div class="panel-content-select">
+                                <select name="" id="">
+                                    <option value="" disabled selected>语言</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-panel-content-work"></div>
+                        <div class="modal-panel-content-activity"></div>
+                        <div class="modal-panel-content-other"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-panel col-md-5">
+                <div class="basic-info">
+                    <div class="info-title">基本信息</div>
+                    <div class="info-content">
+                        <div class="info-content-item">
+                            <div class="info-content-item-form">
+                                <div class="form-input no-margin-top">
+                                    <input type="text" placeholder="简历名称（简历用途/申请的工作，如：贝恩咨询PTA实习）"/>
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" placeholder="所申请工作的招聘链接（URL）"/>
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" placeholder="姓名（可填写中英文，如：陈媛媛Abbey）"/>
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" placeholder="手机号码"/>
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" placeholder="邮箱"/>
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" placeholder="地址（纸质offer的收件地址）"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-footer row">
+                        <div class="info-footer-save col-md-3"><a href="javascript:;">保存</a></div>
+                        <div class="info-footer-next col-md-6 col-md-offset-3"><a href="javascript:;">下一步：教育经历</a></div>
+                    </div>
+                </div>
+                <div class="educate-info hide">
+                    <div class="info-title">教育经历</div>
+                    <div class="info-content">
+                        <div class="info-content-item">
+                            <!-- <div class="info-content-item-tag row hide">
+                                <div class="tag-info col-md-6">
+                                    <span class="tag-info-title">北京大学</span>
+                                    <span class="tag-info-desc">本科 2015</span>
+                                </div>
+                                <div class="tag-ctrl-bar col-md-6">
+                                    <span class="tag-ahead-btn"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></span>
+                                    <span class="tag-back-btn"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></span>
+                                    <span class="tag-del-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                </div>
+                            </div> -->
+                            <div class="info-content-item-form">
+                                <div class="form-input no-margin-top">
+                                    <input type="text" placeholder="学校名称"/>
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" placeholder="所属专业"/>
+                                </div>
+                                <div class="form-input two-inputs">
+                                    <input type="text" placeholder="学历"/>
+                                    <input type="text" placeholder="毕业时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" placeholder="GPA：xx/4.0"/>
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" placeholder="荣誉（如有）"/>
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" placeholder="相关课程（如有）"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-add-item">
+                            <a href="javascript:;" class="info-add-item-btn"><i class="fa fa-plus" aria-hidden="true"></i>添加更多教育经历</a>
+                        </div>
+                    </div>
+                    <div class="info-footer row">
+                        <div class="info-footer-pre col-md-3"><a href="javascript:;">上一步</a></div>
+                        <div class="info-footer-save col-md-3"><a href="javascript:;">保存</a></div>
+                        <div class="info-footer-next col-md-6"><a href="javascript:;">下一步：工作经历</a></div>
+                    </div>
+                </div>
+                <div class="work-info hide">
+                    <div class="info-title">工作经历</div>
+                    <div class="info-content">
+                        <div class="info-content-item">
+                            <div class="info-content-item-tag row">
+                                <div class="tag-info col-md-6">
+                                    <span class="tag-info-title">普华永道会计事务所</span>
+                                    <span class="tag-info-desc">分析师（2016 - 至今）</span>
+                                </div>
+                                <div class="tag-ctrl-bar col-md-6">
+                                    <span class="tag-ahead-btn"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></span>
+                                    <span class="tag-back-btn"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></span>
+                                    <span class="tag-del-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class="info-content-item-form">
+                                <div class="form-input two-inputs no-margin-top">
+                                    <input type="text" placeholder="公司名称"/>
+                                    <select name="" id="">
+                                        <option value="" disabled selected>所在城市</option>
+                                    </select>
+                                </div>
+                                <div class="form-input two-inputs">
+                                    <input type="text" placeholder="你的职位"/>
+                                    <select name="" id="">
+                                        <option value="" disabled selected>所在部门</option>
+                                    </select>
+                                </div>
+                                <div class="form-input two-inputs">
+                                    <input type="text" placeholder="起始时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
+                                    <input type="text" placeholder="结束时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
+                                </div>
+                                <div class="form-input">
+                                    <textarea name="" id="" placeholder="工作内容"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-content-item">
+                            <div class="info-content-item-tag row">
+                                <div class="tag-info col-md-6">
+                                    <span class="tag-info-title">普华永道会计事务所</span>
+                                    <span class="tag-info-desc">分析师（2016 - 至今）</span>
+                                </div>
+                                <div class="tag-ctrl-bar col-md-6">
+                                    <span class="tag-ahead-btn"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></span>
+                                    <span class="tag-back-btn"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></span>
+                                    <span class="tag-del-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class="info-content-item-form hide">
+                                <div class="form-input two-inputs no-margin-top">
+                                    <input type="text" placeholder="公司名称"/>
+                                    <select name="" id="">
+                                        <option value="" disabled selected>所在城市</option>
+                                    </select>
+                                </div>
+                                <div class="form-input two-inputs">
+                                    <input type="text" placeholder="你的职位"/>
+                                    <select name="" id="">
+                                        <option value="" disabled selected>所在部门</option>
+                                    </select>
+                                </div>
+                                <div class="form-input two-inputs">
+                                    <input type="text" placeholder="起始时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
+                                    <input type="text" placeholder="结束时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
+                                </div>
+                                <div class="form-input">
+                                    <textarea name="" id="" placeholder="工作内容"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-add-item">
+                            <a href="javascript:;" class="info-add-item-btn"><i class="fa fa-plus" aria-hidden="true"></i>添加更多工作经历</a>
+                        </div>
+                    </div>
+                    <div class="info-footer row">
+                        <div class="info-footer-pre col-md-3"><a href="javascript:;">上一步</a></div>
+                        <div class="info-footer-save col-md-3"><a href="javascript:;">保存</a></div>
+                        <div class="info-footer-next col-md-6"><a href="javascript:;">下一步：活动经历</a></div>
+                    </div>
+                </div>
+                <div class="activity-info hide">
+                        <div class="info-title">活动经历</div>
+                        <div class="info-content">
+                            <div class="info-content-item">
+                                <!-- <div class="info-content-item-tag row hide">
+                                    <div class="tag-info col-md-6">
+                                        <span class="tag-info-title">普华永道会计事务所</span>
+                                        <span class="tag-info-desc">分析师（2016 - 至今）</span>
+                                    </div>
+                                    <div class="tag-ctrl-bar col-md-6">
+                                        <span class="tag-ahead-btn"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></span>
+                                        <span class="tag-back-btn"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></span>
+                                        <span class="tag-del-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                    </div>
+                                </div> -->
+                                <div class="info-content-item-form">
+                                    <div class="form-input two-inputs no-margin-top">
+                                        <input type="text" placeholder="组织/活动名称"/>
+                                        <select name="" id="">
+                                            <option value="" disabled selected>所在城市</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-input two-inputs">
+                                        <input type="text" placeholder="你的职位"/>
+                                        <select name="" id="">
+                                            <option value="" disabled selected>所在部门</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-input two-inputs">
+                                        <input type="text" placeholder="起始时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
+                                        <input type="text" placeholder="结束时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
+                                    </div>
+                                    <div class="form-input">
+                                        <textarea name="" id="" placeholder="工作内容"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-add-item">
+                                <a href="javascript:;" class="info-add-item-btn"><i class="fa fa-plus" aria-hidden="true"></i>添加更多活动经历</a>
+                            </div>
+                        </div>
+                        <div class="info-footer row">
+                            <div class="info-footer-pre col-md-3"><a href="javascript:;">上一步</a></div>
+                            <div class="info-footer-save col-md-3"><a href="javascript:;">保存</a></div>
+                            <div class="info-footer-next col-md-6"><a href="javascript:;">下一步：其他</a></div>
+                        </div>
+                </div>
+                <div class="other-info hide">
+                        <div class="info-title">其他</div>
+                        <div class="info-content">
+                            <div class="other-info-content-item no-margin-top">
+                                <div class="item-label">
+                                    <span class="item-label-title">技能</span>
+                                    <span class="item-label-plus pull-right"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-content-tag row">
+                                        <div class="tag-info col-md-6">
+                                            <span class="tag-info-desc">HTML/CSS（可开发简单网站）</span>
+                                        </div>
+                                        <div class="tag-ctrl-bar col-md-6">
+                                            <span class="tag-ahead-btn"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></span>
+                                            <span class="tag-back-btn"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></span>
+                                            <span class="tag-del-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="item-content-form">
+                                        <input type="text" placeholder="技能名称"/>
+                                        <input type="text" placeholder="技能描述"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="other-info-content-item">
+                                <div class="item-label">
+                                    <span class="item-label-title">语言</span>
+                                    <span class="item-label-plus pull-right"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-content-tag row">
+                                        <div class="tag-info col-md-6">
+                                            <span class="tag-info-desc">英语（琉璃）</span>
+                                        </div>
+                                        <div class="tag-ctrl-bar col-md-6">
+                                            <span class="tag-ahead-btn"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></span>
+                                            <span class="tag-back-btn"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></span>
+                                            <span class="tag-del-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="item-content-form">
+                                        <input type="text" placeholder="语言名称"/>
+                                        <input type="text" placeholder="熟练程度"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="other-info-content-item">
+                                <div class="item-label">
+                                    <span class="item-label-title">证书/执照</span>
+                                    <span class="item-label-plus pull-right"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-content-form">
+                                        <input type="text" placeholder="证书名称"/>
+                                        <input type="text" placeholder="证书描述"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="other-info-content-item">
+                                <div class="item-label">
+                                    <span class="item-label-title">兴趣爱好</span>
+                                    <span class="item-label-plus pull-right"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-content-form">
+                                        <input type="text" placeholder="兴趣名称"/>
+                                        <input type="text" placeholder="兴趣描述"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="other-info-content-item">
+                                <div class="item-label">
+                                    <span class="item-label-title">活动</span>
+                                    <span class="item-label-plus pull-right"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-content-form">
+                                        <input type="text" placeholder="活动名称"/>
+                                        <input type="text" placeholder="活动描述"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-footer row">
+                            <div class="info-footer-pre col-md-3"><a href="javascript:;">上一步</a></div>
+                            <div class="info-footer-save col-md-3"><a href="javascript:;">保存</a></div>
+                            <div class="info-footer-complete col-md-6"><a href="javascript:;">完成</a></div>
+                        </div>
+                </div>
+                <div class="customize-info hide">
+                    <div class="info-title">自定义模块</div>
+                    <div class="info-content">
+                        <div class="info-content-item">
+                            <div class="info-content-item-form">
+                                <div class="form-input two-inputs">
+                                    <input type="text" placeholder="组织/活动名称"/>
+                                    <select name="" id="">
+                                        <option value="" disabled selected>所在城市</option>
+                                    </select>
+                                </div>
+                                <div class="form-input two-inputs">
+                                    <input type="text" placeholder="你的职位"/>
+                                    <select name="" id="">
+                                        <option value="" disabled selected>所在部门</option>
+                                    </select>
+                                </div>
+                                <div class="form-input two-inputs">
+                                    <input type="text" placeholder="起始时间"/>
+                                    <input type="text" placeholder="结束时间"/>
+                                </div>
+                                <div class="form-input">
+                                    <textarea name="" id="" placeholder="工作内容"></textarea>
+                                </div>
+                            </div>
+                            <div class="info-add-item">
+                                <a href="javascript:;" class="info-add-item-btn"><i class="fa fa-plus" aria-hidden="true"></i>添加更多条目</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-footer row">
+                        <div class="info-footer-pre col-md-3"><a href="javascript:;">上一步</a></div>
+                        <div class="info-footer-save col-md-3"><a href="javascript:;">保存</a></div>
+                        <div class="info-footer-next col-md-6"><a href="javascript:;">完成</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-panel col-md-3">
+                <div class="tips-title">
+                    填写贴士
+                </div>
+                <div class="tips-content">
+                    <div class="tips-item active">
+                        <div class="tips-item-title">
+                            <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                            <span class="tips-item-title-icon pull-right"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="tips-item-desc">
+                            <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                            <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                        </div>
+                    </div>
+                    <div class="tips-item">
+                        <div class="tips-item-title">
+                            <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                            <span class="tips-item-title-icon pull-right"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="tips-item-desc">
+                            <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                            <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                        </div>
+                    </div>
+                    <div class="tips-item">
+                        <div class="tips-item-title">
+                            <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                            <span class="tips-item-title-icon pull-right"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="tips-item-desc">
+                            <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                            <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="lib/jquery.min.js"></script>
     <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
     <script src="js/guide.js"></script>
 </body>
 </html>
