@@ -11,7 +11,284 @@
     <link rel="stylesheet" href="css/editor.css">
 </head>
 <body>
+    <div class="container">
+        <div class="header row">
+            <div class="header-logo col-md-3 col-xs-6">
+                <a href="index.html">
+                    <img src="img/LOGO-SEC@2x.png" width="115px" alt="LOGO"/>
+                </a>
+            </div>
+            <div class="header-nav col-md-6 hidden-xs hidden-sm">
+                <ul>
+                    <li><a href="javascript:;">1.引导填写</a></li>
+                    <li class="active"><a href="javascript:;">2.智能优化</a></li>
+                    <li><a href="javascript:;">3.导师辅导</a></li>
+                </ul>
+            </div>
+            <div class="header-personal-center col-md-3 col-xs-6">
+                <div class="header-personal-center-menu dropdown pull-right">
+                    <a href="javascript:;" class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="personal-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li>
+                            <a href="#">
+                                <span class="menu-item-icon"><i class="fa fa-trophy" aria-hidden="true"></i></span>
+                                我的订单
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="menu-item-icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                                简历攻略
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="menu-item-icon"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                                常见问题
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="menu-item-icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+                                账户设置
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="menu-item-icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                                登出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-dividing-line pull-right hidden-xs">
+                    <span class="line"></span>
+                </div>
+                <div class="header-my-resume pull-right">
+                    <a href="my-resume.html" target="_blank" class="resume-btn btn pull-right">我的简历</a>
+                </div>
+            </div>
+        </div>
+        <div class="main"> 
+            <div class="main-top row">
+                <div class="main-top-ctrl col-md-6 col-md-offset-6">
+                    <a href="javascript:;" class="main-ctrl-download no-margin-right pull-right">下载</a>
+                    <a href="javascript:;" class="main-ctrl-save pull-right">保存</a>
+                    <a href="javascript:;" class="main-ctrl-check pull-right">检查</a>
+                </div>
+            </div>
+            <div class="main-content row">
+                <div class="left-panel col-md-4">
+                    <div class="resume-score">
+                        <div class="resume-score-top">
+                            <div class="resume-score-top-title">简历专业评分：</div>
+                            <div class="resume-score-top-score">74分</div>
+                        </div>
+                        <div class="resume-score-progress">
+                            <div class="resume-score-progress-bar">
+                                <span class="bar-value"></span>        
+                            </div>
+                        </div>
+                        <div class="resume-score-desc">
+                            <p>陈媛媛（Abbey）你的简历已经比较完善，可以查看下面的详细点评进一步修改，将简历边的更有竞争力</p>
+                        </div>
+                    </div>
+                    <div class="resume-advice">
+                        <div class="resume-advice-top">
+                            <div class="resume-advice-top-title">简历提升建议</div>
+                            <div class="resume-advice-top-btn">
+                                <span class="advice-num">共7条</span>
+                                <span class="btn-icon"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                        <div class="resume-advice-items">
+                            <div class="resume-advice-item">
+                                <div class="advice-item-content">
+                                    <p>部分描述用语比较空洞，建议尽量具体化描述</p>
+                                </div>
+                                <div class="advice-item-link"><a href="javascript:;">具体化描述怎么写？</a></div>
+                                <div class="advice-item-btns">
+                                    <a href="javascript:;" class="btns-edit">修改</a>
+                                    <a href="javascript:;" class="btns-ignore">忽略</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume-active-more">
+                            <a href="javascript:;" class="check-more-btn">查看更多优化建议</a>
+                        </div>
+                    </div>
+                    <div class="resume-match">
+                        <div class="resume-match-top">
+                            <div class="resume-match-top-title">职位智能匹配</div>
+                            <div class="resume-match-top-btn">
+                                <span class="match-num">共5条</span>
+                                <span class="btn-icon"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                        <div class="resume-match-items">
+                            <div class="resume-match-item">
+                                <div class="match-item-content">
+                                    <p>此岗位看重过去达成的项目运营效果，可加强重点描述</p>
+                                </div>
+                                <div class="match-item-btns">
+                                    <a href="javascript:;" class="btns-edit">修改</a>
+                                    <a href="javascript:;" class="btns-ignore">忽略</a>
+                                </div>
+                            </div>
+                            <div class="resume-match-item">
+                                <div class="match-item-content">
+                                    <p>尚未提到、多项目多渠道的管理经验，建议添加，可增加此岗位的匹配度</p>
+                                </div>
+                                <div class="match-item-btns">
+                                    <a href="javascript:;" class="btns-edit">修改</a>
+                                    <a href="javascript:;" class="btns-ignore">忽略</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume-match-more">
+                            <a href="javascript:;" class="check-more-btn">查看更多优化建议</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-panel col-md-8">
+                   <div class="right-panel-control-bar">
+                       <div class="control-bar-color">
+                           <div class="bar-color-selector">
+                               <span class="selector-color"></span>
+                               <span class="selecto-text">主题色</span>
+                               <span class="selecto-icon"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                           </div>
+                           <div class="color-picker hide">
+                                <span class="color-item" title="黑色"></span>
+                                <span class="color-item" title="红色"></span>
+                                <span class="color-item" title="橙色"></span>
+                                <span class="color-item" title="深蓝色"></span>
+                                <span class="color-item" title="深绿色"></span>
+                                <span class="color-item" title="紫色"></span>
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="control-bar-font">
+                            字体
+                            <div class="font-family-selector">
+                                <div class="selector-text">微软雅黑</div>
+                                <div class="selector-icon"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                                <div class="selector-list hide">
+                                    <ul>
+                                        <li>微软雅黑</li>
+                                        <li>思源宋体</li>
+                                        <li>华文楷体</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="font-size-selector">
+                                <div class="selector-text">18pt</div>
+                                <div class="selector-icon"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                                <div class="selector-list hide">
+                                    <ul>
+                                        <li>18pt</li>
+                                        <li>19pt</li>
+                                        <li>20pt</li>
+                                    </ul>
+                                </div>
+                            </div>
+                       </div>
+                       <div class="control-bar-spacing">
+                        行间距
+                        <div class="spacing-selector">
+                            <div class="selector-text">20</div>
+                            <div class="selector-icon"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                            <div class="selector-list hide">
+                                <ul>
+                                    <li>20</li>
+                                    <li>21</li>
+                                    <li>22</li>
+                                </ul>
+                            </div>
+                        </div>
+                       </div>
+                       <div class="control-bar-one-paper">
+                            <a href="javascript:;" class="one-paper-btn"><i class="fa fa-sticky-note-o" aria-hidden="true"></i>自动一页纸</a>
+                        </div>
+                        <div class="control-bar-sort">
+                            <a href="javascript:;" class="one-paper-btn"><i class="fa fa-long-arrow-up" aria-hidden="true"></i><i class="fa fa-long-arrow-down" aria-hidden="true"></i>自动排序</a>
+                       </div>
+                       <div class="control-bar-add-modal">
+                            <div class="add-modal-selector">
+                                <div class="selector-icon"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                                <div class="selector-text">添加模块</div>
+                                <div class="selector-list hide">
+                                    <ul>
+                                        <li>添加头像</li>
+                                        <li>添加校徽</li>
+                                        <li>添加自定义模块</li>
+                                    </ul>
+                                </div>
+                            </div>
+                       </div>
+                   </div>
+                   <div class="right-panel-resume-editor">
+                        <div class="resume-editor-header">
+                            <div class="editor-header-title">陈媛媛（Abbey）</div>
+                            <div class="editor-header-sub-title">188-8888-8888 | abbey.chen@gmail.com</div>
+                            <div class="editor-header-sub-title">北京市朝阳区广顺南大街16号18层</div>
+                        </div>
+                        <div class="resume-editor-content">
+                            <div class="resume-editor-plate">
+                                <div class="resume-editor-plate-title">工作经历</div>
+                                <div class="resume-editor-plate-item">
+                                    <div class="plate-item-tag">
+                                        <div class="tag-first-line">
+                                            <span>普华永道会计事务所</span>
+                                            <span>北京</span>
+                                        </div>
+                                        <div class="tag-second-line">
+                                            <span>项目助理，税务部门</span>
+                                            <span>2015年9月-2017年7月</span>
+                                        </div>
+                                    </div>
+                                    <div class="plate-item-content">
+                                        <ul>
+                                            <li><span class="dot"></span>国华通达为国内前十资产管理平台（AUM超过###亿人民币），涉及新能源、环保、医疗、汽车、互联网+等行业的股权投资</li>
+                                            <li><span class="dot"></span>负责管理公司互联网金融基金募集、投资、LP汇报及投后管理工作，在两年内完成投资项目#个，共投放资金##亿元，其中#个项目后成功上市，包括XXXX有限公司（####.SH）、XXXX有限公司（####.SZ）</li>
+                                            <li><span class="dot"></span>国华通达为国内前十资产管理平台（AUM超过###亿人民币），涉及新能源、环保、医疗、汽车、互联网+等行业的股权投资</li>
+                                            <li><span class="dot"></span>负责管理公司互联网金融基金募集、投资、LP汇报及投后管理工作，在两年内完成投资项目#个，共投放资金##亿元，其中#个项目后成功上市，包括XXXX有限公司（####.SH）、XXXX有限公司（####.SZ）</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="resume-editor-plate-item">
+                                    <div class="plate-item-tag">
+                                        <div class="tag-first-line">
+                                            <span>普华永道会计事务所</span>
+                                            <span>北京</span>
+                                        </div>
+                                        <div class="tag-second-line">
+                                            <span>项目助理，税务部门</span>
+                                            <span>2015年9月-2017年7月</span>
+                                        </div>
+                                    </div>
+                                    <div class="plate-item-content">
+                                        <ul>
+                                            <li><span class="dot"></span>国华通达为国内前十资产管理平台（AUM超过###亿人民币），涉及新能源、环保、医疗、汽车、互联网+等行业的股权投资</li>
+                                            <li><span class="dot"></span>负责管理公司互联网金融基金募集、投资、LP汇报及投后管理工作，在两年内完成投资项目#个，共投放资金##亿元，其中#个项目后成功上市，包括XXXX有限公司（####.SH）、XXXX有限公司（####.SZ）</li>
+                                            <li><span class="dot"></span>国华通达为国内前十资产管理平台（AUM超过###亿人民币），涉及新能源、环保、医疗、汽车、互联网+等行业的股权投资</li>
+                                            <li><span class="dot"></span>负责管理公司互联网金融基金募集、投资、LP汇报及投后管理工作，在两年内完成投资项目#个，共投放资金##亿元，其中#个项目后成功上市，包括XXXX有限公司（####.SH）、XXXX有限公司（####.SZ）</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-footer">1页</div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="lib/jquery.min.js"></script>
+    <script src="lib/tinymce/tinymce.min.js"></script>
+    <script src="lib/tinymce/jquery.tinymce.min.js"></script>
     <script src="js/editor.js"></script> 
 </body>
 </html>

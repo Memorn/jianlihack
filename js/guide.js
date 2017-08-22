@@ -86,10 +86,6 @@ $(function(){
         });
     };
 
-   
-
-    //添加条目方法
-
     //展开条目方法
     var openItem = function(){
         var $tags = $('.info-content-item-tag');
@@ -103,7 +99,6 @@ $(function(){
         });
     };
 
-
     //初始化日期选择器
     var createTimePicker = function(){
         $('.time-picker').datetimepicker({
@@ -113,12 +108,172 @@ $(function(){
         });
     };
 
+    // //教育、工作、活动条目相关操作方法
+    // var editItemsData = {
+    //     educate: [{
+    //         school: '',
+    //         major: '',
+    //         education: '', 
+    //         graduateTime: '',
+    //         GPA: '',
+    //         honor: '',
+    //         course: ''
+    //     }],
+    //     work: [{
+    //         company: '',
+    //         city: '',
+    //         position: '',
+    //         department: '',
+    //         startTime: '',
+    //         endTime: '',
+    //         job: ''
+    //     }],
+    //     active: [{
+    //         organization: '',
+    //         city: '',
+    //         position: '',
+    //         department: '',
+    //         startTime: '',
+    //         endTime: '',
+    //         job: ''
+    //     }],
+    //     customize: [{
+    //         name: '',
+    //         city: '',
+    //         position: '',
+    //         department: '',
+    //         startTime: '',
+    //         endTime: '',
+    //         job: ''
+    //     }]
+    // };
 
+    // var addItem = function(type){
+    //     var newEducateItem = {
+    //             school: '',
+    //             major: '',
+    //             education: '', 
+    //             graduateTime: '',
+    //             GPA: '',
+    //             honor: '',
+    //             course: ''
+    //         },
+    //         newWorkItem = {
+    //             company: '',
+    //             city: '',
+    //             position: '',
+    //             department: '',
+    //             startTime: '',
+    //             endTime: '',
+    //             job: ''
+    //         },
+    //         newActiveItem = {
+    //             organization: '',
+    //             city: '',
+    //             position: '',
+    //             department: '',
+    //             startTime: '',
+    //             endTime: '',
+    //             job: ''
+    //         },
+    //         customize = {
+    //             name: '',
+    //             city: '',
+    //             position: '',
+    //             department: '',
+    //             startTime: '',
+    //             endTime: '',
+    //             job: ''
+    //         };
+
+    //     switch(type){
+    //         case 'eduction':
+    //             editItemsData.educate.push(newEducateItem);
+    //             break;
+    //         case 'work':
+    //             editItemsData.work.push(newWorkItem);
+    //             break;
+    //         case 'active':
+    //             editItemsData.active.push(newActiveItem);
+    //             break;
+    //         case 'customize':
+    //             editItemsData.customize.push(newCustomizeItem);
+    //             break;
+    //     }
+    // };
+    // var delItem = function(type,index){
+    //     editItemsData[type].splice(index,1);
+    // };
+    // var aheadItem = function(type,index){
+    //     var newArr1 = [], 
+    //         newArr2 = [], 
+    //         curArr = editItemsData[type], 
+    //         curItem = editItemsData[type][index];
+
+    //     for(var i=0 ; i<curArr.length; i++){
+    //         if( i < index-1){
+    //            newArr1.push(curArr[i]);
+    //         }else if(i >= index-1 && i !== index){
+    //            newArr2.push(curArr[i]);
+    //         }
+    //     }
+
+    //     editItemsData[type] = [].concat(newArr1,[curItem],newArr2);
+
+    // };
+    // var backItem = function(type,index){
+    //     var newArr1 = [], 
+    //     newArr2 = [], 
+    //     curArr = editItemsData[type], 
+    //     curItem = editItemsData[type][index];
+
+    //     for(var i=0 ; i<curArr.length; i++){
+    //         if( i <= index+1 && i !== index){
+    //         newArr1.push(curArr[i]);
+    //         }else if(i > index+1){
+    //         newArr2.push(curArr[i]);
+    //         }
+    //     }
+
+    //     editItemsData[type] = [].concat(newArr1,[curItem],newArr2);
+    // };
+    // var renderItems = function(type){
+    //     var $educatePanel = $('.edit-panel').children('.educate-info').children('.info-content'),
+    //         $workPanel = $('.edit-panel').children('.work-info').children('.info-content'),
+    //         $activePanel = $('.edit-panel').children('.activity-info').children('.info-content'),
+    //         $customizePanel = $('.edit-panel').children('.customize-info').children('.info-content');
+        
+    //     function renderEducatePanel(){
+
+    //     }
+
+    //     function renderWorkPanel(){}
+        
+    //     function renderActivityPanel(){}
+        
+    //     function renderCustomizePanel(){}
+
+    //     switch(type){
+    //         case 'eduction':
+    //             renderEducatePanel();
+    //             break;
+    //         case 'work':
+    //             renderWorkPanel();
+    //             break;
+    //         case 'active':
+    //             renderActivityPanel();
+    //             break;
+    //         case 'customize':
+    //             renderCustomizePanel();
+    //             break;
+    //     }
+            
+    // };
 
     //执行方法
     switchEditPanel();
     preAndNext();
     tipsOpen();
     createTimePicker();
-    openItem();
+    openItem();    
 });
