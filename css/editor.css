@@ -9,9 +9,10 @@
 /******************** 页头样式 ********************/
 .header{
     width: 100%;
-    height: 78px;
+    height: 56px;
     margin: 0;
     background: #FFFFFF;
+    border-bottom: 1px solid #F5F5F7;
 }
 .header .header-logo{
     height: 100%;
@@ -23,7 +24,7 @@
 
 .header .header-nav{
     height: 100%;
-    line-height: 78px;
+    line-height: 56px;
 }
 .header .header-nav ul{
     display: flex;
@@ -34,15 +35,15 @@
     margin-right: 53px;
 }
 .header .header-nav ul li.active{
-    height:75px;
-    line-height: 75px;
+    height:53px;
+    line-height: 53px;
     border-bottom: 3px solid #FF4F4C;
 }
 .header .header-nav ul li a{
     color: #404040;
 }
 .header .header-nav ul li a:hover{
-    color: #000000;
+    color: #FF4F4C;
 }
 
 .header .header-personal-center{
@@ -63,8 +64,8 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-left: 22px;
-    margin-right: 16px;
+    margin-left: 24px;
+    margin-right: 24px;
 }
 .header .header-personal-center .header-dividing-line .line{
     height: 30px;
@@ -85,6 +86,7 @@
 }
 .header .header-personal-center .header-personal-center-menu{
     height: 100%;
+    line-height: 56px;
     padding-right: 7px;
 }
 .header .header-personal-center .header-personal-center-menu a{
@@ -114,6 +116,8 @@
 /******************** 页面主题样式 ********************/
 .main{
     width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 .main .main-top{
     width : 100%;
@@ -217,6 +221,10 @@
     border-bottom: 1px solid #F5F5F7;
     display: flex;
     justify-content: space-between;
+    transition: none;
+    -moz-transition: none; /* Firefox 4 */
+    -webkit-transition: none; /* Safari 和 Chrome */
+    -o-transition: none; 
 }
 .main .main-content .left-panel .resume-advice .resume-advice-top .resume-advice-top-title,
 .main .main-content .left-panel .resume-match .resume-match-top .resume-match-top-title{
@@ -297,12 +305,12 @@
     color: #404040;
     background: #F5F5F7;
 }
-.main .main-content .left-panel .resume-active .resume-active-more,
+.main .main-content .left-panel .resume-advice .resume-advice-more,
 .main .main-content .left-panel .resume-match .resume-match-more{
     width: 100%;
     padding-top: 26px;
 }
-.main .main-content .left-panel .resume-active .resume-active-more a,
+.main .main-content .left-panel .resume-advice .resume-advice-more a,
 .main .main-content .left-panel .resume-match .resume-match-more a{
     display: block;
     width: 140px;
@@ -314,9 +322,27 @@
     color: #FFFFFF;
     background: rgb(255, 79, 76);
 }
-.main .main-content .left-panel .resume-active .resume-active-more a:hover,
+.main .main-content .left-panel .resume-advice .resume-advice-more a:hover,
 .main .main-content .left-panel .resume-match .resume-match-more a:hover{
     background-color: rgba(255, 79, 76,0.85)
+}
+
+.main .main-content .left-panel .resume-advice.close-panel .resume-advice-top-btn .btn-icon i,
+.main .main-content .left-panel .resume-match.close-panel .resume-match-top-btn .btn-icon i{
+    transform:rotate(180deg);
+    -ms-transform:rotate(180deg); 	/* IE 9 */
+    -moz-transform:rotate(180deg); 	/* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+    -o-transform:rotate(180deg); 
+}
+.main .main-content .left-panel .resume-advice.close-panel .resume-advice-content,
+.main .main-content .left-panel .resume-match.close-panel .resume-match-content{
+    display: none;
+}
+.main .main-content .left-panel .resume-advice.close-panel .resume-advice-top,
+.main .main-content .left-panel .resume-match.close-panel .resume-match-top{
+    padding-bottom: 0px;
+    border-bottom: none;
 }
 
 /***右边编辑器样式***/
@@ -324,12 +350,14 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /**编辑器头部控制器样式**/
 .main .main-content .right-panel .right-panel-control-bar{
     width: 100%;
-    height: 68px;
+    min-height: 68px;
     background: #FFFFFF;
     box-shadow: 0 2px 4px rgba(0,0,0,0.06);
     display: flex;
@@ -338,6 +366,7 @@
     align-items: center;
     padding: 20px 22px;
     font-size: 12px;
+    margin: 0;
 }
 .main .main-content .right-panel .right-panel-control-bar>div{
     height: 28px;
@@ -376,6 +405,7 @@
     padding: 7px 10px;
     background: #FFFFFF;
     border: 1px solid #D8D8D8;
+    z-index: 9;
 }
 .main .main-content .right-panel .right-panel-control-bar .control-bar-color .color-picker .color-item{
     display: inline-block;
@@ -422,6 +452,10 @@
     top: 28px;
     left: 0px;
     text-align: center;
+    z-index: 9;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-family-selector .selector-list li:hover{
+    background: #F5F5F7;
 }
 
 .main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-size-selector{
@@ -450,8 +484,11 @@
     top: 28px;
     left: 0px;
     text-align: center;
+    z-index: 9;
 }
-
+.main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-size-selector .selector-list li:hover{
+    background: #F5F5F7;
+}
 /*间距选择器*/
 .main .main-content .right-panel .right-panel-control-bar .control-bar-spacing{
     display: inline-flex;
@@ -484,6 +521,10 @@
     top: 28px;
     left: 0px;
     text-align: center;
+    z-index: 9;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-spacing .spacing-selector .selector-list li:hover{
+    background: #F5F5F7;
 }
 
 /*自动一页纸*/
@@ -566,6 +607,10 @@
     top: 28px;
     left: 0px;
     text-align: center;
+    z-index: 9;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-add-modal .add-modal-selector .selector-list li:hover{
+    background: #F5F5F7;
 }
 
 /**编辑器主体样式**/
@@ -646,13 +691,165 @@
     margin: 0;
 }
 
-
-
-
 .main .main-content .right-panel .right-panel-resume-editor .page-footer{
     position: absolute;
     bottom: 2px;
     right: 4px;
     color: #FF4F4C;
     font-size: 16px;
+}
+
+
+
+/*** 模态框样式 ***/
+
+/**简历机器人弹窗样式**/
+
+#resume-robot-modal{
+    text-align: center;
+}
+#resume-robot-modal .modal-content-title{
+    font-size: 24px;
+    line-height: 33px;
+    margin-top: 37px;
+}
+#resume-robot-modal .modal-content-price{
+    color: #FF4F4C;
+    font-size: 46px;
+    height: 67px;
+    line-height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#resume-robot-modal .modal-content-price .rmb-icon{
+    font-size: 20px;
+}
+#resume-robot-modal .modal-content-info{
+    line-height: 28px;
+}
+#resume-robot-modal .modal-content-info .time-limit{
+    font-size: 20px;
+}
+#resume-robot-modal .modal-content-info .origin-price{
+    font-size: 16px;
+    text-decoration: line-through;
+}
+#resume-robot-modal .modal-content-btn a{
+    display: inline-block;
+    width: 183px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 15px;
+    background: rgb(255, 79, 76);
+    border-radius: 2px;
+    color: #FFFFFF;
+}
+#resume-robot-modal .modal-content-btn a:hover{
+    background-color: rgba(255, 79, 76, 0.85)
+}
+#resume-robot-modal .modal-content-feature-list{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 22px;
+    margin-bottom: 48px;
+    padding-top: 32px;
+    border-top: 1px solid #F5F5F7;
+}
+#resume-robot-modal .modal-content-feature-list li{
+    width: 100%;
+    margin-bottom: 12px;
+    text-align: left;
+    font-size: 16px;
+    color: #595959;
+}
+#resume-robot-modal .modal-content-feature-list li .list-item-icon{
+    color: #FF4F4C;
+    display: inline-block;
+    width: 10%;
+    font-size: 19px;
+    text-align: right;
+}
+#resume-robot-modal .modal-content-feature-list li .list-item-text{
+    display: inline-block;
+    width: 85%;
+    text-align: center;
+}
+#resume-robot-modal .modal-content-feature-list li .list-item-text:hover{
+    color: #404040;
+    font-size: 18px;
+}
+
+/**确认订单信息弹窗**/
+#resume-confirm-modal{}
+#resume-confirm-modal .confirm-product-title{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 23px;
+    padding-bottom: 24px;
+    font-size: 14px;
+    border-bottom: 1px solid #F5F5F7;
+    text-align: center;
+    font-size: 16px;
+}
+#resume-confirm-modal .confirm-product-info{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid #F5F5F7;
+}
+#resume-confirm-modal .confirm-product-info .product-info-item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    line-height: 32px;
+}
+#resume-confirm-modal .confirm-product-info .product-info-item .item-key{color: #595959}
+#resume-confirm-modal .confirm-product-info .product-info-item .item-value{color: #FF4F4C}
+#resume-confirm-modal .QR-code{
+    width: 100%;
+    padding-top: 58px;
+    text-align: center;
+}
+#resume-confirm-modal .pay-way{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 76px;
+}
+#resume-confirm-modal .pay-way .pay-way-text{
+    font-size: 14px;
+    color:#9C9C9C;
+}
+#resume-confirm-modal .pay-way .pay-way-img{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+@media(min-width: 768px){
+    #resume-robot-modal .modal-dialog,#resume-confirm-modal .modal-dialog{
+        width: 500px;
+    }
+}
+@media(max-width: 768px){
+    .main .main-content .right-panel .right-panel-control-bar{
+        width: 100%;
+        min-height: 68px;
+        background: #FFFFFF;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px 22px;
+        font-size: 12px;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+    .main .main-content .right-panel .right-panel-control-bar>div{
+        margin-top: 10px;
+    }
 }

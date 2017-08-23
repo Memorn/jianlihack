@@ -20,7 +20,7 @@
             </div>
             <div class="header-nav col-md-6 hidden-xs hidden-sm">
                 <ul>
-                    <li><a href="javascript:;">1.引导填写</a></li>
+                    <li><a href="guide.html">1.引导填写</a></li>
                     <li class="active"><a href="javascript:;">2.智能优化</a></li>
                     <li><a href="javascript:;">3.导师辅导</a></li>
                 </ul>
@@ -103,20 +103,22 @@
                                 <span class="btn-icon"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
                             </div>
                         </div>
-                        <div class="resume-advice-items">
-                            <div class="resume-advice-item">
-                                <div class="advice-item-content">
-                                    <p>部分描述用语比较空洞，建议尽量具体化描述</p>
-                                </div>
-                                <div class="advice-item-link"><a href="javascript:;">具体化描述怎么写？</a></div>
-                                <div class="advice-item-btns">
-                                    <a href="javascript:;" class="btns-edit">修改</a>
-                                    <a href="javascript:;" class="btns-ignore">忽略</a>
+                        <div class="resume-advice-content">
+                            <div class="resume-advice-items">
+                                <div class="resume-advice-item">
+                                    <div class="advice-item-content">
+                                        <p>部分描述用语比较空洞，建议尽量具体化描述</p>
+                                    </div>
+                                    <div class="advice-item-link"><a href="javascript:;">具体化描述怎么写？</a></div>
+                                    <div class="advice-item-btns">
+                                        <a href="javascript:;" class="btns-edit">修改</a>
+                                        <a href="javascript:;" class="btns-ignore">忽略</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="resume-active-more">
-                            <a href="javascript:;" class="check-more-btn">查看更多优化建议</a>
+                            <div class="resume-advice-more">
+                                <a href="javascript:;" class="check-more-btn">查看更多优化建议</a>
+                            </div>
                         </div>
                     </div>
                     <div class="resume-match">
@@ -127,28 +129,30 @@
                                 <span class="btn-icon"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
                             </div>
                         </div>
-                        <div class="resume-match-items">
-                            <div class="resume-match-item">
-                                <div class="match-item-content">
-                                    <p>此岗位看重过去达成的项目运营效果，可加强重点描述</p>
+                        <div class="resume-match-content">
+                            <div class="resume-match-items">
+                                <div class="resume-match-item">
+                                    <div class="match-item-content">
+                                        <p>此岗位看重过去达成的项目运营效果，可加强重点描述</p>
+                                    </div>
+                                    <div class="match-item-btns">
+                                        <a href="javascript:;" class="btns-edit">修改</a>
+                                        <a href="javascript:;" class="btns-ignore">忽略</a>
+                                    </div>
                                 </div>
-                                <div class="match-item-btns">
-                                    <a href="javascript:;" class="btns-edit">修改</a>
-                                    <a href="javascript:;" class="btns-ignore">忽略</a>
+                                <div class="resume-match-item">
+                                    <div class="match-item-content">
+                                        <p>尚未提到、多项目多渠道的管理经验，建议添加，可增加此岗位的匹配度</p>
+                                    </div>
+                                    <div class="match-item-btns">
+                                        <a href="javascript:;" class="btns-edit">修改</a>
+                                        <a href="javascript:;" class="btns-ignore">忽略</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="resume-match-item">
-                                <div class="match-item-content">
-                                    <p>尚未提到、多项目多渠道的管理经验，建议添加，可增加此岗位的匹配度</p>
-                                </div>
-                                <div class="match-item-btns">
-                                    <a href="javascript:;" class="btns-edit">修改</a>
-                                    <a href="javascript:;" class="btns-ignore">忽略</a>
-                                </div>
+                            <div class="resume-match-more">
+                                <a href="javascript:;" class="check-more-btn">查看更多优化建议</a>
                             </div>
-                        </div>
-                        <div class="resume-match-more">
-                            <a href="javascript:;" class="check-more-btn">查看更多优化建议</a>
                         </div>
                     </div>
                 </div>
@@ -285,10 +289,85 @@
                 </div>
             </div>
         </div>
+
+        <!-- 模态框——简历机器人弹窗 -->
+        <div id="resume-robot-modal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-content-title">简历机器人智能优化</div>
+                    <div class="modal-content-price">
+                        <span class="rmb-icon">￥</span>6          
+                    </div>
+                    <div class="modal-content-info">
+                        <span class="time-limit">限时特价：</span>
+                        <span class="origin-price">原价￥19</span>
+                    </div>
+                    <div class="modal-content-btn">
+                        <a href="javascript:;" id="experience-btn">立即体验</a>
+                    </div>
+                    <div class="modal-content-feature-list">
+                        <ul>
+                            <li>
+                                <span class="list-item-icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                <span class="list-item-text">完整简历提升建议</span>
+                            </li>
+                            <li>
+                                <span class="list-item-icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                <span class="list-item-text">简历提升详细攻略</span>
+                            </li>
+                            <li>
+                                <span class="list-item-icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                <span class="list-item-text">完整的职位匹配分析</span>
+                            </li>
+                            <li>
+                                <span class="list-item-icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                <span class="list-item-text">针对性行业及岗位攻略</span>
+                            </li>
+                            <li>
+                                <span class="list-item-icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                <span class="list-item-text">30天无限简历智能优化</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 模态框——确认订单信息弹窗 -->
+        <div id="resume-confirm-modal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="confirm-product-title">确认订单信息</div>
+                    <div class="confirm-product-info">
+                        <div class="product-info-item">
+                            <span class="item-key">产品名称</span>
+                            <span class="item-value">简历机器人智能优化</span>
+                        </div>
+                        <div class="product-info-item">
+                            <span class="item-key">产品价格</span>
+                            <span class="item-value">￥6</span>
+                        </div>
+                        <div class="product-info-item">
+                            <span class="item-key">到期时间</span>
+                            <span class="item-value">2017年10月16日</span>
+                        </div>
+                    </div>
+                    <div class="QR-code"><img src="" alt="二维码" width="151px"/></div>
+                    <div class="pay-way">
+                        <div class="pay-way-text">使用支付宝/微信扫码付款</div>
+                        <div class="pay-way-img">
+                            <img src="" alt="支付宝" width="45px"/>
+                            <img src="" alt="微信" width="45px"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="lib/jquery.min.js"></script>
     <script src="lib/tinymce/tinymce.min.js"></script>
     <script src="lib/tinymce/jquery.tinymce.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
     <script src="js/editor.js"></script> 
 </body>
 </html>

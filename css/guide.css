@@ -9,9 +9,10 @@
 /******************** 页头样式 ********************/
 .header{
     width: 100%;
-    height: 78px;
+    height: 56px;
     margin: 0;
     background: #FFFFFF;
+    border-bottom: 1px solid #F5F5F7;
 }
 .header .header-logo{
     height: 100%;
@@ -23,7 +24,7 @@
 
 .header .header-nav{
     height: 100%;
-    line-height: 78px;
+    line-height: 56px;
 }
 .header .header-nav ul{
     display: flex;
@@ -34,15 +35,15 @@
     margin-right: 53px;
 }
 .header .header-nav ul li.active{
-    height:75px;
-    line-height: 75px;
+    height:53px;
+    line-height: 53px;
     border-bottom: 3px solid #FF4F4C;
 }
 .header .header-nav ul li a{
     color: #404040;
 }
 .header .header-nav ul li a:hover{
-    color: #000000;
+    color: #FF4F4C;
 }
 
 .header .header-personal-center{
@@ -63,8 +64,8 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-left: 22px;
-    margin-right: 16px;
+    margin-left: 24px;
+    margin-right: 24px;
 }
 .header .header-personal-center .header-dividing-line .line{
     height: 30px;
@@ -85,6 +86,7 @@
 }
 .header .header-personal-center .header-personal-center-menu{
     height: 100%;
+    line-height: 56px;
     padding-right: 7px;
 }
 .header .header-personal-center .header-personal-center-menu a{
@@ -350,9 +352,10 @@
     padding-bottom: 43px;
     margin-top: 40px;
 }
-.main .edit-panel .info-footer .info-footer-pre a{ 
+.main .edit-panel .info-footer .info-footer-pre input{ 
     width: 90px;
     height: 40px;
+    line-height: 18px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -361,9 +364,10 @@
     color: #9C9C9C;
     font-size: 16px;
 }
-.main .edit-panel .info-footer .info-footer-save a{
+.main .edit-panel .info-footer .info-footer-save input{
     width: 90px;
     height: 40px;
+    line-height: 18px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -372,10 +376,16 @@
     color: #9C9C9C;
     font-size: 16px;
 }
-.main .edit-panel .info-footer .info-footer-next a,
-.main .edit-panel .info-footer .info-footer-complete a{
+.main .edit-panel .info-footer .info-footer-pre input:hover,
+.main .edit-panel .info-footer .info-footer-save input:hover{
+    background-color: #F5F5F7;
+}
+
+.main .edit-panel .info-footer .info-footer-next input,
+.main .edit-panel .info-footer .info-footer-complete input{
     width: 260px;
     height: 40px;
+    line-height: 18px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -385,8 +395,8 @@
     font-size: 16px;
     background-color: rgb(255, 79, 76);
 }
-.main .edit-panel .info-footer .info-footer-next a:hover,
-.main .edit-panel .info-footer .info-footer-complete a:hover{
+.main .edit-panel .info-footer .info-footer-next input:hover,
+.main .edit-panel .info-footer .info-footer-complete input:hover{
     background-color: rgba(255, 79, 76, 0.85)
 }
 
