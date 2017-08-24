@@ -74,6 +74,11 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     color: #9C9C9C;
 }
 
+input.disabled{
+    background: inherit;
+    border-color: #FFFFFF;
+}
+
 /*select 样式*/
 select {
 
