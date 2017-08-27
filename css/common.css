@@ -57,6 +57,9 @@ input,textarea{
     -moz-appearance: none;
     -webkit-appearance:none;
 }
+textarea{
+    resize: none;
+}
 input:focus,textarea:focus{
     border: 1px solid #FF4F4C;
     background-color: #FFFFFF;
@@ -113,8 +116,8 @@ select {
 .dropdown-menu{
     width: 241px;
     transition: none;
-    -moz-transition: none; /* Firefox 4 */
-    -webkit-transition: none; /* Safari 和 Chrome */
+    -moz-transition: none; 
+    -webkit-transition: none;
     -o-transition: none; 
 }
 .dropdown-menu table{

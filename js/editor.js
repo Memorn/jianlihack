@@ -34,7 +34,14 @@ $(function(){
                 }else{
                     $colorPicker.addClass('hide');
                 }
-            })
+            });
+
+            $('body').on('click',function(e){
+                var $colorPicker = $('.color-picker');
+                if(!$(e.target).parents('.control-bar-color').length){
+                    $colorPicker.addClass('hide');
+                }
+            });
         }
         
         //字体选择器
@@ -45,6 +52,13 @@ $(function(){
                     $fontFamilyList.removeClass('hide');
                 }else{
                     $fontFamilyList.addClass('hide');
+                }
+            });
+
+            $('body').on('click',function(e){
+                var $colorPicker = $('.font-family-selector').find('.selector-list');
+                if(!$(e.target).parents('.font-family-selector').length){
+                    $colorPicker.addClass('hide');
                 }
             });
         }
@@ -59,6 +73,13 @@ $(function(){
                     $fontSizeList.addClass('hide');
                 }
             });
+
+            $('body').on('click',function(e){
+                var $colorPicker = $('.font-size-selector').find('.selector-list');
+                if(!$(e.target).parents('.font-size-selector').length){
+                    $colorPicker.addClass('hide');
+                }
+            });
         }
 
         //行间距大小选择器
@@ -71,16 +92,49 @@ $(function(){
                     $spacingList.addClass('hide');
                 }
             });
+
+            $('body').on('click',function(e){
+                var $colorPicker = $('.spacing-selector').find('.selector-list');
+                if(!$(e.target).parents('.spacing-selector').length){
+                    $colorPicker.addClass('hide');
+                }
+            });
         }
 
         //添加模块
         var addModalSelector = function(){
+            $('.typesetting-selector').on('click',function(){
+                var $addModalList = $('.typesetting-selector').find('.selector-list');
+                if($addModalList.hasClass('hide')){
+                    $addModalList.removeClass('hide');
+                }else{
+                    $addModalList.addClass('hide');
+                }
+            });
+
+            $('body').on('click',function(e){
+                var $colorPicker = $('.typesetting-selector').find('.selector-list');
+                if(!$(e.target).parents('.typesetting-selector').length){
+                    $colorPicker.addClass('hide');
+                }
+            });
+        }
+
+        //排版设置
+        var typesettingSelector = function(){
             $('.add-modal-selector').on('click',function(){
                 var $addModalList = $('.add-modal-selector').find('.selector-list');
                 if($addModalList.hasClass('hide')){
                     $addModalList.removeClass('hide');
                 }else{
                     $addModalList.addClass('hide');
+                }
+            });
+
+            $('body').on('click',function(e){
+                var $colorPicker = $('.add-modal-selector').find('.selector-list');
+                if(!$(e.target).parents('.add-modal-selector').length){
+                    $colorPicker.addClass('hide');
                 }
             });
         }
@@ -90,6 +144,7 @@ $(function(){
         fontSizeSelector();
         spacingSelector();
         addModalSelector();
+        typesettingSelector();
     };
 
     //简历提升建议弹窗
@@ -107,7 +162,103 @@ $(function(){
         });
     };
 
+    //添加简历模块弹窗
+    var showPlateModal= function(){
+        $('.bar-add-btn').on('click',function(){
+            var $this = $(this);
+            $('#add-resume-plate-modal').find('.edit-panel').children().addClass('hide');
+            if($this.parents('.others').length){
+                $('#add-resume-plate-modal').find('.other-info').removeClass('hide');
+            }else{
+                $('#add-resume-plate-modal').find('.edit-panel').children(':not(".other-info")').removeClass('hide')
+            }
+            $('#add-resume-plate-modal').modal('show');
+        })
+    };
+
+    //编辑器textarea实现自适应增高
+    var textareaSelfHeight = function(){
+        var $textarea = $('.expandingArea').find('textarea');
+        $textarea.each(function(){
+            $(this).prev().children('div').html($(this).val());
+        });
+        $textarea.on('keydown',function(){
+            console.log($(this).val);
+            $(this).prev().children('div').html($(this).val());
+        });
+    };
+
+    //点击编辑器中文段出现可编辑框
+    var eidtPlateItem = function(){
+        var $plateItems = $('.resume-editor-plate-item');
+        
+        $plateItems.on('click',function(){
+            $plateItems.removeClass('editable');
+            $(this).addClass('editable')
+        });
+
+        $('body').on('click',function(e){
+            if(!$(e.target).parents('.resume-editor-plate-item').length){
+                $plateItems.removeClass('editable');
+            }
+        });
+    };
+
+    //初始化日期选择器
+    var createTimePicker = function(){
+        $('.time-picker').datetimepicker({
+            language:"zh-CN",
+            format: 'yyyy/mm',
+            minView: 3
+        });
+    };
+
+    //点击“结束时间”出现“至今选择框”
+    var endTimeFocus = function(){
+        $endTimeInputs = $('.end-time');
+        $endTimeInputs.on('focus',function(){
+            var $thisEndTimeInput = $(this);
+            var htmlStr = '<span class="to-date-dot"><span class="to-date-dot-inline"></span></span><span class="to-date-text">至今</span>'
+            var spanToDate = document.createElement('span');
+            var $spanToDate = $(spanToDate);
+            $spanToDate.addClass('to-date');
+            $spanToDate.html(htmlStr);
+
+            var top = $(this).offset().top;
+            var left = $(this).offset().left;
+
+            $spanToDate.css('left',left+85);
+            $spanToDate.css('top',top-5);
+
+            $('body').append($spanToDate);
+
+            $('.to-date').on('click',function(){
+                var $inlineDot = $(this).find('.to-date-dot-inline');
+                if($inlineDot.hasClass('active')){
+                    $inlineDot.removeClass('active');
+                }else{
+                    $inlineDot.addClass('active');
+                    $thisEndTimeInput.val('至今');
+                }
+    
+            });
+
+            $('body').on('click',function(e){
+                if(!$(e.target).parents('.to-date').length && !$(e.target).parents('.end-time').length && !$(e.target).hasClass('end-time')){
+                    $('.to-date').remove();
+                }
+            });
+        });
+
+
+    };
+
+    showPlateModal();
     showRobotModal();
     closeLeftPanel();
     editorControl();
+    textareaSelfHeight();
+    eidtPlateItem();
+    createTimePicker();
+    endTimeFocus();
 });

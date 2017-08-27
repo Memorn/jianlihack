@@ -373,6 +373,26 @@
     line-height: 28px;
 }
 
+/*撤销及前进*/
+.main .main-content .right-panel .right-panel-control-bar .control-bar-undo-redo{
+    display: flex;
+    flex-direction: row;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-undo-redo>div{
+    color: #9C9C9C;
+    cursor: pointer;
+    transition: none;
+    -moz-transition: none; /* Firefox 4 */
+    -webkit-transition: none; /* Safari 和 Chrome */
+    -o-transition: none;  
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-undo-redo>div:hover{
+    color: #FF4F4C;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-undo-redo .redo-btn{
+    margin-left: 10px;
+}
+
 /*颜色选择器*/
 .main .main-content .right-panel .right-panel-control-bar .control-bar-color{
    border: 1px solid #EBEBEB;
@@ -380,7 +400,7 @@
    padding-left: 31px;
    position: relative;
    cursor: pointer;
-   min-width: 105px;
+   min-width: 74px;
 }
 .main .main-content .right-panel .right-panel-control-bar .control-bar-color .bar-color-selector .selector-color{
     display: inline-block;
@@ -399,7 +419,7 @@
 }
 .main .main-content .right-panel .right-panel-control-bar .control-bar-color .color-picker{
     position: absolute;
-    top: 28px;
+    top: 30px;
     left: 0;
     display: inline-flex;
     padding: 7px 10px;
@@ -429,14 +449,14 @@
 .main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-family-selector{
     border: 1px solid #EBEBEB;
     padding: 0 10px; 
-    padding-right: 30px;
+    padding-right: 20px;
     position: relative;
     cursor: pointer;
     height: 100%;
     margin-left: 12px;
     display: inline-flex;
     justify-content: space-between;
-    min-width: 105px;
+    min-width: 80px;
 }
 .main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-family-selector .selector-icon{
     position: absolute;
@@ -449,7 +469,7 @@
     background: #FFFFFF;
     border: 1px solid #D8D8D8;
     width: 100%;
-    top: 28px;
+    top: 30px;
     left: 0px;
     text-align: center;
     z-index: 9;
@@ -461,14 +481,14 @@
 .main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-size-selector{
     border: 1px solid #EBEBEB;
     padding: 0 10px; 
-    padding-right: 30px;
+    padding-right: 20px;
     position: relative;
     cursor: pointer;
     height: 100%;
     margin-left: 12px;
     display: inline-flex;
     justify-content: space-between;
-    min-width: 70px;
+    min-width: 56px;
 }
 .main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-size-selector .selector-icon{
     position: absolute;
@@ -481,7 +501,7 @@
     background: #FFFFFF;
     border: 1px solid #D8D8D8;
     width: 100%;
-    top: 28px;
+    top: 30px;
     left: 0px;
     text-align: center;
     z-index: 9;
@@ -498,14 +518,14 @@
 .main .main-content .right-panel .right-panel-control-bar .control-bar-spacing .spacing-selector{
     border: 1px solid #EBEBEB;
     padding: 0 10px; 
-    padding-right: 30px;
+    padding-right: 20px;
     position: relative;
     cursor: pointer;
     height: 100%;
     margin-left: 12px;
     display: inline-flex;
     justify-content: space-between;
-    min-width: 70px;
+    min-width: 48px;
 }
 .main .main-content .right-panel .right-panel-control-bar .control-bar-spacing .spacing-selector .selector-icon{
     position: absolute;
@@ -518,7 +538,7 @@
     background: #FFFFFF;
     border: 1px solid #D8D8D8;
     width: 100%;
-    top: 28px;
+    top: 30px;
     left: 0px;
     text-align: center;
     z-index: 9;
@@ -535,7 +555,7 @@
     border: 1px solid #EBEBEB;
     border-radius: 2px;
     color: #404040;
-    min-width: 114px;
+    min-width: 100px;
 }
 .main .main-content .right-panel .right-panel-control-bar .control-bar-one-paper a i{
     margin-right: 10px;
@@ -558,7 +578,7 @@
     border: 1px solid #EBEBEB;
     border-radius: 2px;
     color: #404040;
-    min-width: 109px;
+    min-width: 84px;
 }
 .main .main-content .right-panel .right-panel-control-bar .control-bar-sort a i{
     /* color: #404040; */
@@ -590,7 +610,7 @@
     height: 100%;
     display: inline-flex;
     justify-content: space-between;
-    min-width: 110px;
+    min-width: 94px;
 }
 .main .main-content .right-panel .right-panel-control-bar .control-bar-add-modal .add-modal-selector .selector-icon{
     position: absolute;
@@ -604,7 +624,7 @@
     background: #FFFFFF;
     border: 1px solid #D8D8D8;
     width: 100%;
-    top: 28px;
+    top: 30px;
     left: 0px;
     text-align: center;
     z-index: 9;
@@ -613,10 +633,98 @@
     background: #F5F5F7;
 }
 
+/*排版设置*/
+.main .main-content .right-panel .right-panel-control-bar .control-bar-typesetting{
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-typesetting .typesetting-selector{
+    border: 1px solid #EBEBEB;
+    padding: 0 10px; 
+    padding-left: 30px;
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    min-width: 84px;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-typesetting .typesetting-selector .selector-icon{
+    position: absolute;
+    top: 0px;
+    left: 7px;
+    bottom: 0px;
+    color: #D8D8D8;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-typesetting .typesetting-selector .selector-list{
+    position: absolute;
+    background: #FFFFFF;
+    border: 1px solid #D8D8D8;
+    width: 220%;
+    top: 30px;
+    right: 0px;
+    text-align: center;
+    z-index: 9;
+    padding: 12px 0px;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-typesetting .typesetting-selector .selector-list .selector-item{
+    display: flex;
+    flex-direction: column;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-typesetting .typesetting-selector .selector-list .selector-item .item-title{
+    color: #9C9C9C;
+    font-size: 11px;
+    width: 100%;
+    text-align: left;
+    padding-left: 12px;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-typesetting .typesetting-selector .selector-list .selector-item .item-typesetting{
+    display: flex;
+    flex-direction: column;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-typesetting .typesetting-selector .selector-list .selector-item .dividing-line{
+    height: 1px;
+    background: #F5F5F7;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-typesetting .typesetting-selector .selector-list .selector-item .item-typesetting .typesetting-item{
+    width: 100%;
+    height: 44px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 12px;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-typesetting .typesetting-selector .selector-list .selector-item .item-typesetting .typesetting-item:hover{
+    background: #F5F5F7;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-typesetting .typesetting-selector .selector-list .selector-item .item-typesetting .typesetting-item .typesetting-item-img{}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-typesetting .typesetting-selector .selector-list .selector-item .item-typesetting .typesetting-item .typesetting-item-text{
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-typesetting .typesetting-selector .selector-list .selector-item .item-typesetting .typesetting-item .typesetting-item-text .typesetting-item-text-title{
+    line-height: 12px;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-typesetting .typesetting-selector .selector-list .selector-item .item-typesetting .typesetting-item .typesetting-item-text .typesetting-item-text-subtitle{
+    color: #9C9C9C;
+    font-size: 10px;
+    line-height: 10px;
+    margin-top: 5px;
+}
+
+
 /**编辑器主体样式**/
 .main .main-content .right-panel .right-panel-resume-editor{
     width: 100%;
-    height: 1300px;
+    height: 1182px;
     background: #FFFFFF;
     box-shadow: 0 2px 4px rgba(0,0,0,0.06); 
     margin-top: 10px; 
@@ -628,31 +736,136 @@
 }
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-header{
     width: 100%;
-    padding-top: 28px;
+    margin: 0px;
 }
-.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header .editor-header-title{
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header .school-logo{
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header .applicant-info{
+    padding-top: 50px;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header .applicant-info .editor-header-title{
     width: 100%;
     text-align: center;
     font-size: 24px;
 }
-.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header .editor-header-sub-title{
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header .applicant-info .editor-header-sub-title{
     width: 100%;
     text-align: center;
     font-size: 18px;
-    color: #999999;
+    color: #666666;
     margin-top: 5px;
 }
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header .applicant-avatar{
+    padding-top: 25px;
+    padding-right: 0px;
+}
+
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-content{}
-.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate{}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate{
+    padding: 4px;
+    border: 2px solid #FFFFFF;
+    margin-top: 25px;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate:hover{
+    border-color: #50A4FF;
+}
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-title{
     font-size: 18px;
     padding-bottom: 4px;
-    border-bottom: 2px solid #F3F3F3;
-    margin-top: 25px;
-    margin-bottom: 12px;
+    border-bottom: 1px solid #F3F3F3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-title .title-text{}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-title .title-ctrl-bar{
+    display: none;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate:hover .resume-editor-plate-title .title-ctrl-bar{
+    display: block;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-title .title-ctrl-bar>a{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    border: 1px solid #50A4FF;
+    color: #50A4FF;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: none;
+    -moz-transition: none; /* Firefox 4 */
+    -webkit-transition: none; /* Safari 和 Chrome */
+    -o-transition: none; 
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-title .title-ctrl-bar>a:hover{
+    background-color: #50A4FF;
+    color: #FFFFFF;
+}
+
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-title .title-ctrl-bar>a .resume-info-control-popover{
+    color:#FFFFFF;
+    font-size: 12px;
+    position: absolute;
+    background: #404040;
+    width: 88px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    top: -34px;
+    left: -38px;
+    display: none;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-title .title-ctrl-bar>a .resume-info-control-popover .popover-arrow{
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -3px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #404040;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-title .title-ctrl-bar>a:hover .resume-info-control-popover{
+    display: inline-block;
+}
+
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item{
     line-height: 24px;
+    position: relative;
+    margin-top: 12px;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item:hover{
+    background-color: rgba(80, 164, 255, 0.1);
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .resume-editor-palte-item-ctrl-bar{
+    position: absolute;
+    top: 0;
+    right: -30px;
+    display: none;
+    flex-direction: column;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item:hover .resume-editor-palte-item-ctrl-bar{
+    display: flex;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .resume-editor-palte-item-ctrl-bar>a{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background-color:rgba(80, 164, 255, 0.1); 
+    color: #50A4FF;
+    font-size: 12px;
+    cursor: pointer;
+    margin-bottom: 6px;
 }
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .plate-item-tag{}
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .plate-item-tag .tag-first-line{
@@ -667,7 +880,6 @@
 }
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .plate-item-content{
     margin-top: 16px;
-    margin-bottom: 20px;
 }
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .plate-item-content ul{
     list-style: disc inside none;
@@ -690,6 +902,147 @@
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .plate-item-content ul li:last-child{
     margin: 0;
 }
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item input{
+    background: inherit;
+    border: none;
+    padding: 0;
+    border-bottom: 1px solid #FFFFFF;
+    font-size: 16px;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item:hover input{
+    border-bottom:1px solid rgba(80, 164, 255, 0); 
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item input.dashed{
+    border-bottom-style: dashed;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .plate-item-tag .tag-first-line span:nth-child(1){
+    width: 65%;
+    display: inline-block;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .plate-item-tag .tag-first-line span:nth-child(2){
+    width: 20%;
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*‘至今’标签样式*/
+.to-date{
+    position: absolute;
+    width: 58px;
+    height: 30px;
+    padding-left: 5px;
+    background: #FFFFFF;
+    border: 1px solid #B3B3B3;
+    border-radius: 2px;
+    box-shadow: 1px 1px 6px rgba(74, 74, 74, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 99;
+    cursor: pointer;
+}
+.to-date .to-date-dot{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    line-height: 9px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #FF4F4C;
+}
+.to-date .to-date-dot .to-date-dot-inline{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #FFFFFF;
+}
+.to-date .to-date-dot .to-date-dot-inline.active{
+    background: #FF4F4C;
+}
+.to-date .to-date-text{
+    width: 30px;
+    margin-left:5px;
+    display: inline-block;
+    font-size: 14px;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .plate-item-tag .tag-first-line span:nth-child(2) input{
+    width: 45%;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .plate-item-tag .tag-first-line span:nth-child(1) input{
+    width: 100%;
+    display: inline-block;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .plate-item-tag .tag-first-line span:nth-child(2) input,
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .plate-item-tag .tag-second-line span:nth-child(2) input{
+    text-align: right;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .plate-item-tag .tag-first-line span:nth-child(2) input:nth-child(1){
+    text-align: left;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item textarea{
+    background: inherit;
+    border: none;
+    padding: 0;
+    border-bottom: 1px dashed #FFFFFF;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item:hover textarea{
+    border-bottom:1px solid rgba(80, 164, 255, 0); 
+}
+
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item.editable input{
+    border-bottom: 1px dashed rgba(80, 163, 255, 0.50);
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item.editable input:focus{
+    border-bottom-color: #FF4F4C;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item.editable textarea{
+    border-bottom: 1px dashed rgba(80, 163, 255, 0.50);
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item.editable textarea:focus{
+    border-bottom-color: #FF4F4C;
+}
+
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .plate-item-content .expandingArea{
+    position:relative;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .plate-item-content .expandingArea pre{
+    display:block;
+    visibility:hidden;
+    padding-top: 0;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0 !important;
+    line-height: inherit;
+    font-size: inherit;
+    overflow-x: hidden; 
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .plate-item-content .expandingArea pre div{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    display: block;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .plate-item-content .expandingArea textarea{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    overflow:hidden;
+}
+
+
+
+
 
 .main .main-content .right-panel .right-panel-resume-editor .page-footer{
     position: absolute;
@@ -698,6 +1051,210 @@
     color: #FF4F4C;
     font-size: 16px;
 }
+
+/*添加模块弹窗样式*/
+#add-resume-plate-modal .edit-panel{margin-left: 20px;margin-right: 20px;}
+#add-resume-plate-modal .edit-panel .info-title{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 64px;
+}
+#add-resume-plate-modal .edit-panel .info-title input{
+    width: 100%;
+    transition: none;
+    -moz-transition: none; /* Firefox 4 */
+    -webkit-transition: none; /* Safari 和 Chrome */
+    -o-transition: none; 
+}
+#add-resume-plate-modal .edit-panel .info-title input.disabled{
+    width: 130px;
+    text-align: center;
+}
+#add-resume-plate-modal .edit-panel .info-title .info-title-edit-btn{
+    font-size: 10px;
+    cursor: pointer;
+    transition: none;
+    -moz-transition: none; /* Firefox 4 */
+    -webkit-transition: none; /* Safari 和 Chrome */
+    -o-transition: none; 
+}
+#add-resume-plate-modal .edit-panel .info-title .info-title-edit-btn:hover{
+    color: #FF4F4C;
+}
+
+#add-resume-plate-modal .edit-panel .info-content{
+    width: 100%;
+    padding: 0 64px;
+}
+#add-resume-plate-modal .edit-panel .info-content .info-content-item{
+    width: 100%;
+}
+#add-resume-plate-modal .edit-panel .info-content .info-content-item .info-content-item-tag{
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding-bottom: 17px;
+    border-bottom:1px solid #F5F5F7;
+}
+#add-resume-plate-modal .edit-panel .info-content .info-content-item .info-content-item-tag .tag-info{
+    display: flex;
+    flex-direction: column;
+    color: #404040;
+    font-size: 14px;
+}
+#add-resume-plate-modal .edit-panel .info-content .info-content-item .info-content-item-tag .tag-ctrl-bar{
+    text-align: right;
+    padding: 0;
+    color: #DCDCDC;
+}
+#add-resume-plate-modal .edit-panel .info-content .info-content-item .info-content-item-tag .tag-ctrl-bar>span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 23px;
+    text-align: center;
+    border: 1px solid #F5F5F7;
+    cursor: pointer;
+    transition: color 0s;
+    -moz-transition: color 0s; /* Firefox 4 */
+    -webkit-transition: color 0s; /* Safari 和 Chrome */
+    -o-transition: color 0s; 
+}
+#add-resume-plate-modal .edit-panel .info-content .info-content-item .info-content-item-tag .tag-ctrl-bar>span:hover{
+    color: #F86331;
+    border-color: #F86331;
+}
+#add-resume-plate-modal .edit-panel .info-content .info-content-item .info-content-item-form{
+    width: 100%;
+}
+#add-resume-plate-modal .edit-panel .info-content .info-content-item .info-content-item-form .form-input{
+    width: 100%;
+    margin-top: 40px;
+}
+#add-resume-plate-modal .edit-panel .info-content .info-content-item .info-content-item-form .form-input input{
+    width: 100%;
+}
+#add-resume-plate-modal .edit-panel .info-content .info-content-item .info-content-item-form .form-input textarea{
+    width: 100%;
+    height: 364px;
+}
+#add-resume-plate-modal .edit-panel .info-content .info-content-item .info-content-item-form .form-input.two-inputs{
+    display: inline-flex;
+    justify-content: space-between;   
+}
+#add-resume-plate-modal .edit-panel .info-content .info-content-item .info-content-item-form .form-input.two-inputs input,
+#add-resume-plate-modal .edit-panel .info-content .info-content-item .info-content-item-form .form-input.two-inputs select{
+    width: 45%;
+}
+#add-resume-plate-modal .edit-panel .info-content .info-add-item{
+    width: 100%;
+    margin: 30px 0 0 0; 
+}
+#add-resume-plate-modal .edit-panel .info-content .info-add-item .info-add-item-btn{
+    color: #9C9C9C;
+    font-size: 16px;
+}
+#add-resume-plate-modal .edit-panel .info-content .info-add-item .info-add-item-btn i{
+    color: #FF4F4C;
+    margin-right: 7px;
+}
+/*“其他”相关样式*/
+#add-resume-plate-modal .other-info-content-item{
+    margin-top: 30px;
+}
+#add-resume-plate-modal .other-info-content-item .item-label{
+    width: 100%;
+    margin-bottom: 17px;
+
+}
+#add-resume-plate-modal .other-info-content-item .item-label .item-label-plus{
+    color: #FF4F4C
+}
+#add-resume-plate-modal .other-info-content-item .item-content-tag{
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding-bottom: 17px;
+    border-bottom:1px solid #F5F5F7;
+}
+#add-resume-plate-modal .other-info-content-item .item-content-tag .tag-info{
+    padding: 0;
+    color: #404040;
+    font-size: 14px;
+}
+#add-resume-plate-modal .other-info-content-item .item-content-tag .tag-ctrl-bar{
+    text-align: right;
+    padding: 0;
+    color: #DCDCDC;
+}
+#add-resume-plate-modal .other-info-content-item .item-content-tag .tag-ctrl-bar>span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 23px;
+    text-align: center;
+    border: 1px solid #F5F5F7;
+    cursor: pointer;
+}
+#add-resume-plate-modal .other-info-content-item .item-content .item-content-form{
+    margin-top: 24px; 
+    display: flex;
+    justify-content: space-between;
+}
+#add-resume-plate-modal .other-info-content-item .item-content .item-content-form input:nth-child(1){
+    width: 25%
+}
+#add-resume-plate-modal .other-info-content-item .item-content .item-content-form input:nth-child(2){
+    width: 70%
+}
+
+
+#add-resume-plate-modal .edit-panel .info-footer{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 64px;
+    padding-bottom: 43px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+#add-resume-plate-modal .edit-panel .info-footer .info-footer-close input{ 
+    width: 90px;
+    height: 40px;
+    line-height: 18px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #F5F5F7;
+    border-radius: 2px;
+    color: #9C9C9C;
+    font-size: 16px;
+}
+#add-resume-plate-modal .edit-panel .info-footer .info-footer-close input:hover{
+    background-color: #F5F5F7;
+}
+#add-resume-plate-modal .edit-panel .info-footer .info-footer-save input{
+    width: 90px;
+    height: 40px;
+    line-height: 18px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #F5F5F7;
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-size: 16px;
+    background-color: rgb(255, 79, 76);
+}
+#add-resume-plate-modal .edit-panel .info-footer .info-footer-save input:hover{
+    background-color: rgba(255, 79, 76, 0.85)
+}
+
+
+
 
 
 
