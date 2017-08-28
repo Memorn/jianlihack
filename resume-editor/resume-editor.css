@@ -129,7 +129,7 @@ body{
 .resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .resume-editor-palte-item-ctrl-bar{
     position: absolute;
     top: 0;
-    right: -30px;
+    right: -28px;
     display: none;
     flex-direction: column;
 }
@@ -138,7 +138,7 @@ body{
 }
 .resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item .resume-editor-palte-item-ctrl-bar>a{
     display: inline-block;
-    width: 20px;
+    width: 25px;
     height: 20px;
     text-align: center;
     line-height: 20px;
