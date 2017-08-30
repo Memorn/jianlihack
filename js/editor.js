@@ -46,7 +46,7 @@ $(function(){
         
         //字体选择器
         var fontFamilySelector = function(){
-            $('.font-family-selector').on('click',function(){
+            $('.font-family-selector .selector-icon').on('click',function(){
                 var $fontFamilyList = $('.font-family-selector').find('.selector-list');
                 if($fontFamilyList.hasClass('hide')){
                     $fontFamilyList.removeClass('hide');
@@ -65,7 +65,7 @@ $(function(){
 
         //字体大小选择器
         var fontSizeSelector = function(){
-            $('.font-size-selector').on('click',function(){
+            $('.font-size-selector .selector-icon').on('click',function(){
                 var $fontSizeList = $('.font-size-selector').find('.selector-list');
                 if($fontSizeList.hasClass('hide')){
                     $fontSizeList.removeClass('hide');
@@ -84,7 +84,7 @@ $(function(){
 
         //行间距大小选择器
         var spacingSelector = function(){
-            $('.spacing-selector').on('click',function(){
+            $('.spacing-selector .selector-icon').on('click',function(){
                 var $spacingList = $('.spacing-selector').find('.selector-list');
                 if($spacingList.hasClass('hide')){
                     $spacingList.removeClass('hide');
@@ -118,6 +118,13 @@ $(function(){
                     $colorPicker.addClass('hide');
                 }
             });
+
+
+            //弹出添加头像弹窗
+            //弹出添加校徽弹窗
+            $('#add-school-logo').on('click',function(){
+                $('#add-school-logo-modal').modal('show');
+            })
         }
 
         //排版设置
@@ -190,16 +197,19 @@ $(function(){
 
     //点击编辑器中文段出现可编辑框
     var eidtPlateItem = function(){
-        var $plateItems = $('.resume-editor-plate-item');
+        var $plateItems = $('.resume-editor-plate-item.without-form');
         
         $plateItems.on('click',function(){
-            $plateItems.removeClass('editable');
-            $(this).addClass('editable')
+            $('.resume-editor-plate-item.editable').addClass('hide');
+            $('.resume-editor-plate-item.without-form').removeClass('hide');
+            $(this).prev('.editable').removeClass('hide')
+            $(this).addClass('hide');
         });
 
         $('body').on('click',function(e){
             if(!$(e.target).parents('.resume-editor-plate-item').length){
-                $plateItems.removeClass('editable');
+                $('.resume-editor-plate-item.editable').addClass('hide');
+                $('.resume-editor-plate-item.without-form').removeClass('hide');
             }
         });
     };

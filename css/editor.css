@@ -448,21 +448,35 @@
 }
 .main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-family-selector{
     border: 1px solid #EBEBEB;
-    padding: 0 10px; 
-    padding-right: 20px;
+    padding: 0; 
+    padding-right: 15px;
     position: relative;
     cursor: pointer;
     height: 100%;
-    margin-left: 12px;
+    margin-left: 10px;
     display: inline-flex;
     justify-content: space-between;
     min-width: 80px;
 }
+.main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-family-selector .selector-text{
+    display: flex;
+    align-items: center;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-family-selector .selector-text input{
+    max-width: 65px;
+    height: 100%;
+    border: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
 .main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-family-selector .selector-icon{
     position: absolute;
-    right: 7px;
+    right: 0px;
     top: 0px;
     color: #D8D8D8;
+    border-left:1px solid #F5F5F7;
+    width: 15px;
+    text-align: center;
 }
 .main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-family-selector .selector-list{
     position: absolute;
@@ -480,8 +494,8 @@
 
 .main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-size-selector{
     border: 1px solid #EBEBEB;
-    padding: 0 10px; 
-    padding-right: 20px;
+    padding: 0; 
+    padding-right: 15px;
     position: relative;
     cursor: pointer;
     height: 100%;
@@ -490,11 +504,25 @@
     justify-content: space-between;
     min-width: 56px;
 }
+.main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-size-selector .selector-text{
+    display: flex;
+    align-items: center;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-size-selector .selector-text input{
+    max-width: 41px;
+    height: 100%;
+    border: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
 .main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-size-selector .selector-icon{
     position: absolute;
+    right: 0px;
     top: 0px;
-    right: 7px;
     color: #D8D8D8;
+    border-left:1px solid #F5F5F7;
+    width: 15px;
+    text-align: center;
 }
 .main .main-content .right-panel .right-panel-control-bar .control-bar-font .font-size-selector .selector-list{
     position: absolute;
@@ -517,8 +545,8 @@
 }
 .main .main-content .right-panel .right-panel-control-bar .control-bar-spacing .spacing-selector{
     border: 1px solid #EBEBEB;
-    padding: 0 10px; 
-    padding-right: 20px;
+    padding: 0; 
+    padding-right: 15px;
     position: relative;
     cursor: pointer;
     height: 100%;
@@ -527,11 +555,25 @@
     justify-content: space-between;
     min-width: 48px;
 }
+.main .main-content .right-panel .right-panel-control-bar .control-bar-spacing .spacing-selector .selector-text{
+    display: flex;
+    align-items: center;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-spacing .spacing-selector .selector-text input{
+    max-width: 33px;
+    height: 100%;
+    border: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
 .main .main-content .right-panel .right-panel-control-bar .control-bar-spacing .spacing-selector .selector-icon{
     position: absolute;
+    right: 0px;
     top: 0px;
-    right: 7px;
     color: #D8D8D8;
+    border-left:1px solid #F5F5F7;
+    width: 15px;
+    text-align: center;
 }
 .main .main-content .right-panel .right-panel-control-bar .control-bar-spacing .spacing-selector .selector-list{
     position: absolute;
@@ -626,11 +668,18 @@
     width: 100%;
     top: 30px;
     left: 0px;
-    text-align: center;
+    text-align: right;
     z-index: 9;
 }
 .main .main-content .right-panel .right-panel-control-bar .control-bar-add-modal .add-modal-selector .selector-list li:hover{
     background: #F5F5F7;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-add-modal .add-modal-selector .selector-list li{
+    padding-right: 10px;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-bar-add-modal .add-modal-selector .selector-list li .sub-desc{
+    font-size: 7pt;
+    -webkit-text-size-adjust:none; 
 }
 
 /*排版设置*/
@@ -737,30 +786,76 @@
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-header{
     width: 100%;
     margin: 0px;
+    height: 150px;
+    position: relative;
 }
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-header .school-logo{
-    padding-top: 20px;
-    padding-left: 30px;
+    position: absolute;
+    top: 20px;
+    left: 0;
 }
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-header .applicant-info{
+    width: 100%;
     padding-top: 50px;
+    width: auto;
+    text-align: center;
 }
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-header .applicant-info .editor-header-title{
     width: 100%;
-    text-align: center;
     font-size: 24px;
 }
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-header .applicant-info .editor-header-sub-title{
     width: 100%;
-    text-align: center;
     font-size: 18px;
     color: #666666;
     margin-top: 5px;
 }
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-header .applicant-avatar{
-    padding-top: 25px;
-    padding-right: 0px;
+    position: absolute;
+    top: 20px;
+    right: 0;
 }
+
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header.HL-AS{}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header.HL-AS .school-logo{
+    right: 0;
+    left: auto;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header.HL-AS .applicant-info{
+    text-align: left;
+    padding-left: 120px;
+    padding-top: 20px;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header.HL-AS .applicant-avatar{
+    left: 0;
+    right: auto;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header.HL-A{}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header.HL-A .school-logo{
+    display: none;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header.HL-A .applicant-info{
+    text-align: left;
+    padding-top: 20px;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header.HL-A .applicant-avatar{
+    left: auto;
+    right: 0;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header.HL-S{}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header.HL-S .school-logo{
+    right: 0;
+    left: auto;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header.HL-S .applicant-info{
+    text-align: left;
+    padding-top: 20px;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-header.HL-S .applicant-avatar{
+    display: none;
+}
+
+
 
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-content{}
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate{
@@ -841,6 +936,7 @@
     line-height: 24px;
     position: relative;
     margin-top: 12px;
+    font-size: 16px;
 }
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item:hover{
     background-color: rgba(80, 164, 255, 0.1);
@@ -997,7 +1093,7 @@
 }
 
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item.editable input{
-    border-bottom: 1px dashed rgba(80, 163, 255, 0.50);
+    border-bottom-color: rgba(80, 163, 255, 0.50);
 }
 .main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item.editable input:focus{
     border-bottom-color: #FF4F4C;
@@ -1041,7 +1137,19 @@
     overflow:hidden;
 }
 
-
+/*非标单item样式*/
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item.without-form{}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item.without-form .plate-item-tag .tag-first-line span:nth-child(1){
+    width: 50%;
+    display: inline-block;
+}
+.main .main-content .right-panel .right-panel-resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item.without-form .plate-item-tag .tag-first-line span:nth-child(2){
+    width: 50%;
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
 
 
 
@@ -1385,11 +1493,101 @@
     text-align: center;
 }
 
+/*添加校徽弹窗*/
+#add-school-logo-modal{color: #404040;}
+#add-school-logo-modal .modal-content-title{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 14px;
+}
+#add-school-logo-modal .modal-form{
+    display: flex;
+    flex-direction: column;
+    padding: 0 64px;
+}
+#add-school-logo-modal .modal-form .modal-form-item{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#add-school-logo-modal .modal-form .modal-form-item .left{
+    min-width: 68px;
+    text-align: left;
+}
+#add-school-logo-modal .modal-form .modal-form-item .right{
+    width: 404px;
+}
+#add-school-logo-modal .modal-form .modal-form-item .right input{
+    width: 100%;
+}
+#add-school-logo-modal .modal-form .modal-form-item .right .upload-btn{
+    display: inline-block;
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 2px;
+    color: #B3B3B3;
+    border: 1px solid #B3B3B3;
+}
+#add-school-logo-modal .modal-form .modal-form-item .right .school-logo-limit{
+    color: #B3B3B3;
+}
+#add-school-logo-modal .modal-form .modal-form-item.btns{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+#add-school-logo-modal .modal-form .modal-form-item.btns>.modal-form-item-btn{
+    display: inline-block;
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 2px;
+    color: #FFFFFF;
+}
+#add-school-logo-modal .modal-form .modal-form-item.btns>.modal-form-item-btn:nth-child(1){background-color:rgb(248, 99, 49);margin-right: 20px;}
+#add-school-logo-modal .modal-form .modal-form-item.btns>.modal-form-item-btn:nth-child(1):hover{background-color:rgba(248, 99, 49, 0.85)}
+#add-school-logo-modal .modal-form .modal-form-item.btns>.modal-form-item-btn:nth-child(2){background-color: rgb(255, 79, 76)}
+#add-school-logo-modal .modal-form .modal-form-item.btns>.modal-form-item-btn:nth-child(2):hover{background-color: rgba(255, 79, 76, 0.85)}
+#add-school-logo-modal .dividing-line{width: 560px; border-bottom: 1px solid #F5F5F7; margin:28px auto;}
+#add-school-logo-modal .modal-preview{
+    display: flex;
+    flex-direction: column;
+    padding: 0 64px;
+    justify-content: center;
+    align-items: center;
+}
+#add-school-logo-modal .modal-preview .preview-header{
+    margin-bottom: 9px;
+    width: 100%;
+    text-align: left;
+}
+#add-school-logo-modal .modal-preview .preview-img{
+    width: 286px;
+    height: 107px;
+    border-radius: 4px;
+    background-color: #FCFCFC;
+    border: 1px solid #E8E8E8;
+    margin-bottom: 68px;
+}
+#add-school-logo-modal .modal-preview .preview-img img{}
+
 
 
 @media(min-width: 768px){
     #resume-robot-modal .modal-dialog,#resume-confirm-modal .modal-dialog{
         width: 500px;
+    }
+    #add-school-logo-modal .modal-dialog{
+        width: 600px;
     }
 }
 @media(max-width: 768px){

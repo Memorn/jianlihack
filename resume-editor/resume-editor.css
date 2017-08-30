@@ -122,6 +122,7 @@ body{
     line-height: 24px;
     position: relative;
     margin-top: 12px;
+    font-size: 16px;
 }
 .resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item:hover{
     background-color: rgba(80, 164, 255, 0.1);
@@ -319,6 +320,20 @@ body{
     left:0;
     height:100%;
     overflow:hidden;
+}
+
+/*非标单item样式*/
+.resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item.without-form{}
+.resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item.without-form .plate-item-tag .tag-first-line span:nth-child(1){
+    width: 50%;
+    display: inline-block;
+}
+.resume-editor .resume-editor-content .resume-editor-plate .resume-editor-plate-item.without-form .plate-item-tag .tag-first-line span:nth-child(2){
+    width: 50%;
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 
