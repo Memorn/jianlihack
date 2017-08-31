@@ -15,33 +15,87 @@ body{
     border-bottom: 1px solid #FF4F4C;
     overflow: hidden;
 }
+
 .resume-editor .resume-editor-header{
     width: 100%;
     margin: 0px;
+    height: 150px;
+    position: relative;
 }
 .resume-editor .resume-editor-header .school-logo{
-    padding-top: 20px;
-    padding-left: 30px;
+    position: absolute;
+    top: 20px;
+    left: 0;
 }
 .resume-editor .resume-editor-header .applicant-info{
+    width: 100%;
     padding-top: 50px;
+    width: auto;
+    text-align: center;
 }
 .resume-editor .resume-editor-header .applicant-info .editor-header-title{
     width: 100%;
-    text-align: center;
     font-size: 24px;
 }
 .resume-editor .resume-editor-header .applicant-info .editor-header-sub-title{
     width: 100%;
-    text-align: center;
     font-size: 18px;
     color: #666666;
     margin-top: 5px;
 }
 .resume-editor .resume-editor-header .applicant-avatar{
-    padding-top: 25px;
-    padding-right: 0px;
+    position: absolute;
+    top: 20px;
+    right: 0;
 }
+
+.resume-editor .resume-editor-header.HL-AS{}
+.resume-editor .resume-editor-header.HL-AS .school-logo{
+    right: 0;
+    left: auto;
+}
+.resume-editor .resume-editor-header.HL-AS .applicant-info{
+    text-align: left;
+    padding-left: 120px;
+    padding-top: 20px;
+}
+.resume-editor .resume-editor-header.HL-AS .applicant-avatar{
+    left: 0;
+    right: auto;
+}
+.resume-editor .resume-editor-header.HL-A{}
+.resume-editor .resume-editor-header.HL-A .school-logo{
+    display: none;
+}
+.resume-editor .resume-editor-header.HL-A .applicant-info{
+    text-align: left;
+    padding-top: 20px;
+}
+.resume-editor .resume-editor-header.HL-A .applicant-avatar{
+    left: auto;
+    right: 0;
+}
+.resume-editor .resume-editor-header.HL-S{}
+.resume-editor .resume-editor-header.HL-S .school-logo{
+    right: 0;
+    left: auto;
+}
+.resume-editor .resume-editor-header.HL-S .applicant-info{
+    text-align: left;
+    padding-top: 20px;
+}
+.resume-editor .resume-editor-header.HL-S .applicant-avatar{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
 
 .resume-editor .resume-editor-content{}
 .resume-editor .resume-editor-content .resume-editor-plate{

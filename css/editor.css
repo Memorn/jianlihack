@@ -1581,12 +1581,191 @@
 #add-school-logo-modal .modal-preview .preview-img img{}
 
 
+/*添加头像弹窗*/
+#add-avatar-modal{color: #404040;}
+#add-avatar-modal .modal-content-title{
+    width: 100%;
+    height: 70px;
+    font-size: 14px;
+    line-height: 70px;
+    text-align: center;
+}
+#add-avatar-modal .modal-content-main{
+    padding: 0 20px;
+}
+#add-avatar-modal .modal-content-main .modal-content-tabs{
+    border-bottom: 1px solid #F5F5F7;
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+    justify-content: space-between;
+}
+#add-avatar-modal .modal-content-main .modal-content-tabs>div{
+    width: 120px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+#add-avatar-modal .modal-content-main .modal-content-tabs>div .tab-border-bottom{
+    display: none;
+    width: 100%;
+    height: 2px;
+    background: #FF4F4C;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#add-avatar-modal .modal-content-main.choose-pic .modal-content-tabs div:nth-child(1) .tab-border-bottom{
+    display: inline-block;
+}
+#add-avatar-modal .modal-content-main.choose-pic .modal-content-tabs div:nth-child(2) .tab-border-bottom{
+    display: none;
+}
+#add-avatar-modal .modal-content-main.cut-pic .modal-content-tabs div:nth-child(1) .tab-border-bottom{
+    display: none;
+}
+#add-avatar-modal .modal-content-main.cut-pic .modal-content-tabs div:nth-child(2) .tab-border-bottom{
+    display: inline-block;
+}
+
+#add-avatar-modal .modal-content-main .modal-content-panel{width: 100%;}
+#add-avatar-modal .modal-content-main .modal-content-panel>div{
+    display: flex;
+    flex-direction: column;
+}
+
+#add-avatar-modal .modal-content-main.choose-pic .modal-content-panel .modal-content-panel-1{display: block}
+#add-avatar-modal .modal-content-main.choose-pic .modal-content-panel .modal-content-panel-2{display: none}
+#add-avatar-modal .modal-content-main.cut-pic .modal-content-panel .modal-content-panel-1{display: none}
+#add-avatar-modal .modal-content-main.cut-pic .modal-content-panel .modal-content-panel-2{display: block}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-1 .panel-upload-avatar{
+    width: 100%;
+    border-bottom: 1px solid #F5F5F7;
+    padding-top:38px;
+    padding-bottom:38px;
+    padding-left:95px;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-1 .panel-upload-avatar .upload-btn{
+    display: inline-block;
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background: rgb(255, 79, 76);
+    color: #FFFFFF;
+    border-radius: 2px;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-1 .panel-upload-avatar .upload-btn:hover{
+    background-color: rgba(255, 79, 76, 0.85) ;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-1 .panel-upload-avatar .school-logo-limit{
+    display: inline-block;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-1 .panel-faq{
+    width: 100%;
+    padding-bottom: 54px;
+    padding-left: 84px;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-1 .panel-faq .faq-item{
+    width: 402px;
+    margin-top: 24px;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-1 .panel-faq .faq-item .faq-item-title{
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-1 .panel-faq .faq-item .faq-item-title .title-text{}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-1 .panel-faq .faq-item .faq-item-title .title-icon{
+    color: #D8D8D8;
+    cursor: pointer;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-1 .panel-faq .faq-item.active .faq-item-title .title-icon{
+    transform:rotate(180deg);
+    -ms-transform:rotate(180deg); 	/* IE 9 */
+    -moz-transform:rotate(180deg); 	/* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+    -o-transform:rotate(180deg); 
+}
+
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-1 .panel-faq .faq-item .faq-item-text{
+    width: 100%;
+    margin-top: 21px;
+    color: #9C9C9C;
+    display: none;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-1 .panel-faq .faq-item.active .faq-item-text{
+    display: block;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-1 .panel-faq .faq-item .faq-item-text>p{
+    margin: 0;
+    line-height: 20px;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-2 .cut-img-container{
+    width: 100%;
+    height: 342px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-2 .cut-img-container .img-bg{
+    position: relative;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-2 .cut-img-container .img-bg img{
+    min-width: 200px;
+    min-height: 300px;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-2 .cut-img-container .img-bg .img-cutter{
+    width: 198px;
+    height: 238px;
+    border: 1px dashed #9C9C9C;
+    cursor: move;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-2 .modal-content-btns{
+    width: 100%;
+    padding: 0 64px;
+    margin-bottom: 42px;
+    display: flex;
+    justify-content: space-between;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-2 .modal-content-btns>a{
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 2px;
+    font-size: 16px;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-2 .modal-content-btns .btn-pre{
+    color: #9C9C9C;
+    border: 1px solid #F5F5F7;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-2 .modal-content-btns .btn-pre:hover{
+    background: #F5F5F7;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-2 .modal-content-btns .btn-complete{
+    color: #FFFFFF;
+    background: #FF4F4C;
+}
+#add-avatar-modal .modal-content-main .modal-content-panel .modal-content-panel-2 .modal-content-btns .btn-complete:hover{
+    background-color: rgba(255, 79, 76, 0.85);
+}
 
 @media(min-width: 768px){
     #resume-robot-modal .modal-dialog,#resume-confirm-modal .modal-dialog{
         width: 500px;
     }
     #add-school-logo-modal .modal-dialog{
+        width: 600px;
+    }
+    #add-avatar-modal .modal-dialog{
         width: 600px;
     }
 }

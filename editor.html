@@ -230,7 +230,7 @@
                                 <div class="selector-text">添加模块</div>
                                 <div class="selector-list hide">
                                     <ul>
-                                        <li>添加头像</li>
+                                        <li id="add-avatar">添加头像</li>
                                         <li id="add-school-logo">添加校徽</li>
                                         <li>自定义模块</li>
                                         <li>活动经历</li>
@@ -291,7 +291,7 @@
                    <div class="right-panel-resume-editor">
                        <!--
                         头部不同的排版样式对应不同的class
-                        1.居左HL-SA ：HL-SA
+                        1.居左HL-SA ：HL-AS
                         2.居左HL-S ：HL-S
                         3.居左HL-A ：HL-A
                         4.居中：无附加class
@@ -848,7 +848,83 @@
             </div>
         </div>
         <!-- 模态框——添加头像 -->
-
+        <div id="add-avatar-modal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-content-title">添加头像</div>
+                        <div class="modal-content-main choose-pic">
+                            <div class="modal-content-tabs">
+                                <div class="modal-content-tab-1">
+                                    1.选择图片
+                                    <span class="tab-border-bottom"></span>
+                                </div>
+                                <div class="modal-content-tab-2">
+                                    2.剪裁图片 
+                                    <span class="tab-border-bottom"></span>
+                                </div>
+                            </div>
+                            <div class="modal-content-panel">
+                                <div class="modal-content-panel-1">
+                                    <div class="panel-upload-avatar">
+                                        <a href="javascript:;" class="upload-btn">本地上传</a>
+                                        <span class="school-logo-limit">（必须小于1MB）</span>
+                                    </div>
+                                    <div class="panel-faq">
+                                        <div class="faq-item">
+                                            <div class="faq-item-title">
+                                                <span class="title-text">我的简历是否应该放头像？</span>
+                                                <span class="title-icon"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                                            </div>
+                                            <div class="faq-item-text">
+                                                <p>基本上遵守两个原则；</p>
+                                                <p>民企/国企推荐放头像，外企不推荐放头像；</p>
+                                                <p>中文简历推荐放头像，英文简历不推荐放头像；</p>
+                                                <p>如果决定放头像，一定要使用专业照相馆拍摄的登记照/职业照，一定不要用生活照。</p>
+                                            </div>
+                                        </div>
+                                        <div class="faq-item">
+                                            <div class="faq-item-title">
+                                                <span class="title-text">应该放什么样的头像？</span>
+                                                <span class="title-icon"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                                            </div>
+                                            <div class="faq-item-text">
+                                                <p>基本上遵守两个原则；</p>
+                                                <p>民企/国企推荐放头像，外企不推荐放头像；</p>
+                                                <p>中文简历推荐放头像，英文简历不推荐放头像；</p>
+                                                <p>如果决定放头像，一定要使用专业照相馆拍摄的登记照/职业照，一定不要用生活照。</p>
+                                            </div>
+                                        </div>
+                                        <div class="faq-item">
+                                            <div class="faq-item-title">
+                                                <span class="title-text">查看好的头像 v.s 不好的头像案例对比</span>
+                                                <span class="title-icon"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                                            </div>
+                                            <div class="faq-item-text">
+                                                <p>基本上遵守两个原则；</p>
+                                                <p>民企/国企推荐放头像，外企不推荐放头像；</p>
+                                                <p>中文简历推荐放头像，英文简历不推荐放头像；</p>
+                                                <p>如果决定放头像，一定要使用专业照相馆拍摄的登记照/职业照，一定不要用生活照。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-content-panel-2">
+                                    <div class="cut-img-container">
+                                        <div class="img-bg">
+                                            <img src="" alt="头像"/>
+                                            <div class="img-cutter"></div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-content-btns">
+                                        <a href="javascript:;" class="btn-pre">上一步</a>
+                                        <a href="javascript:;" class="btn-complete">完成</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     </div>
     <script src="lib/jquery.min.js"></script>

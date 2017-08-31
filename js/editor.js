@@ -121,10 +121,43 @@ $(function(){
 
 
             //弹出添加头像弹窗
+            $('#add-avatar').on('click',function(){
+                $('#add-avatar-modal').modal('show');
+                
+                var addAvatar = function(){
+                    $('#add-avatar-modal .modal-content-tabs div').on('click', function(){
+                        if($(this).hasClass('modal-content-tab-1')){
+                            $('#add-avatar-modal .modal-content-main').removeClass('cut-pic');
+                            $('#add-avatar-modal .modal-content-main').addClass('choose-pic');
+                        }else{
+                            $('#add-avatar-modal .modal-content-main').removeClass('choose-pic');
+                            $('#add-avatar-modal .modal-content-main').addClass('cut-pic');
+                        }
+                    })    
+
+                    $('#add-avatar-modal').find('.title-icon').on('click', function(){
+                        if($(this).parents('.faq-item').hasClass('active')){
+                            $(this).parents('.faq-item').removeClass('active');
+                        }else{
+                            $(this).parents('.faq-item').addClass('active');
+                        }
+                    });
+
+                    $('#add-avatar-modal .btn-pre').on('click',function(){
+                        $('#add-avatar-modal .modal-content-main').removeClass('cut-pic');
+                        $('#add-avatar-modal .modal-content-main').addClass('choose-pic');
+                    });
+
+                };
+
+                addAvatar();
+            });
+            
+            
             //弹出添加校徽弹窗
             $('#add-school-logo').on('click',function(){
                 $('#add-school-logo-modal').modal('show');
-            })
+            });
         }
 
         //排版设置
