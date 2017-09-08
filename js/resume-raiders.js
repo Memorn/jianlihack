@@ -23,7 +23,7 @@ $(function(){
   //右边panel滚动后固定位置（根据窗口大小）
   var scrollFixedPanel = function(){
       var availHeight = $(window).height()-56-316;
-
+      console.log(availHeight);
       var $rightPanel = $('.right-panel'),
           $rightFixed1 = $('.right-fixed-1'),
           $rightFixed2 = $('.right-fixed-2'),
@@ -103,17 +103,29 @@ $(function(){
         }
       };
 
-      if(availHeight >= 1325){
+      if(availHeight >= 1282){
         $(window).scroll(scrollCallBack(1));
-      }else if(availHeight < 1325 && availHeight >= 1283){
+      }else if(availHeight < 1282 && availHeight >= 1240){
         $(window).scroll(scrollCallBack(2));
-      }else if(availHeight < 1283 && availHeight >= 732){
+      }else if(availHeight < 1240 && availHeight >= 689){
         $(window).scroll(scrollCallBack(3));
-      }else if(availHeight < 732 && availHeight >= 417){
+      }else if(availHeight < 689 && availHeight >= 374){
         $(window).scroll(scrollCallBack(4));
-      }else if(availHeight < 417){
+      }else if(availHeight < 374){
 
       }
+
+    //   if(availHeight >= 1325){
+    //     $(window).scroll(scrollCallBack(1));
+    //   }else if(availHeight < 1325 && availHeight >= 1283){
+    //     $(window).scroll(scrollCallBack(2));
+    //   }else if(availHeight < 1283 && availHeight >= 732){
+    //     $(window).scroll(scrollCallBack(3));
+    //   }else if(availHeight < 732 && availHeight >= 417){
+    //     $(window).scroll(scrollCallBack(4));
+    //   }else if(availHeight < 417){
+
+    //   }
 
   }
 
