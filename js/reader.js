@@ -103,17 +103,30 @@ $(function(){
           }
         };
   
-        if(availHeight >= 1325){
-          $(window).scroll(scrollCallBack(1));
-        }else if(availHeight < 1325 && availHeight >= 1283){
-          $(window).scroll(scrollCallBack(2));
-        }else if(availHeight < 1283 && availHeight >= 732){
-          $(window).scroll(scrollCallBack(3));
-        }else if(availHeight < 732 && availHeight >= 417){
-          $(window).scroll(scrollCallBack(4));
-        }else if(availHeight < 417){
-  
+
+        if(availHeight >= 1282){
+            $(window).scroll(scrollCallBack(1));
+        }else if(availHeight < 1282 && availHeight >= 1240){
+            $(window).scroll(scrollCallBack(2));
+        }else if(availHeight < 1240 && availHeight >= 689){
+            $(window).scroll(scrollCallBack(3));
+        }else if(availHeight < 689 && availHeight >= 374){
+            $(window).scroll(scrollCallBack(4));
+        }else if(availHeight < 374){
+
         }
+
+        // if(availHeight >= 1325){
+        //   $(window).scroll(scrollCallBack(1));
+        // }else if(availHeight < 1325 && availHeight >= 1283){
+        //   $(window).scroll(scrollCallBack(2));
+        // }else if(availHeight < 1283 && availHeight >= 732){
+        //   $(window).scroll(scrollCallBack(3));
+        // }else if(availHeight < 732 && availHeight >= 417){
+        //   $(window).scroll(scrollCallBack(4));
+        // }else if(availHeight < 417){
+  
+        // }
   
     }
   
