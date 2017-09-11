@@ -23,7 +23,6 @@ $(function(){
   //右边panel滚动后固定位置（根据窗口大小）
   var scrollFixedPanel = function(){
       var availHeight = $(window).height()-56-316;
-      console.log(availHeight);
       var $rightPanel = $('.right-panel'),
           $rightFixed1 = $('.right-fixed-1'),
           $rightFixed2 = $('.right-fixed-2'),
@@ -37,6 +36,21 @@ $(function(){
             switch(panelPart){
                 case 1 :
                     if( top >= 48){
+                        $rightFixed2.css({
+                            'position':'relative',
+                            'left': 'auto',
+                            'top': 'auto',
+                        });
+                        $rightFixed3.css({
+                            'position':'relative',
+                            'left': 'auto',
+                            'top': 'auto',
+                        });
+                        $rightFixed4.css({
+                            'position':'relative',
+                            'left': 'auto',
+                            'top': 'auto',
+                        });
                         $rightFixed1.css({
                             'position':'fixed',
                             'left':leftPosition,
@@ -53,6 +67,21 @@ $(function(){
                     break;
                 case 2 :
                     if( top >= 90){
+                        $rightFixed1.css({
+                            'position':'relative',
+                            'left': 'auto',
+                            'top': 'auto',
+                        });
+                        $rightFixed3.css({
+                            'position':'relative',
+                            'left': 'auto',
+                            'top': 'auto',
+                        });
+                        $rightFixed4.css({
+                            'position':'relative',
+                            'left': 'auto',
+                            'top': 'auto',
+                        });
                         $rightFixed2.css({
                             'position':'fixed',
                             'left':leftPosition,
@@ -69,6 +98,21 @@ $(function(){
                     break;
                 case 3 :
                     if( top >= 641){
+                        $rightFixed1.css({
+                            'position':'relative',
+                            'left': 'auto',
+                            'top': 'auto',
+                        });
+                        $rightFixed2.css({
+                            'position':'relative',
+                            'left': 'auto',
+                            'top': 'auto',
+                        });
+                        $rightFixed4.css({
+                            'position':'relative',
+                            'left': 'auto',
+                            'top': 'auto',
+                        });
                         $rightFixed3.css({
                             'position':'fixed',
                             'left':leftPosition,
@@ -85,6 +129,21 @@ $(function(){
                     break;
                 case 4 :
                     if( top >= 956){
+                        $rightFixed1.css({
+                            'position':'relative',
+                            'left': 'auto',
+                            'top': 'auto',
+                        });
+                        $rightFixed2.css({
+                            'position':'relative',
+                            'left': 'auto',
+                            'top': 'auto',
+                        });
+                        $rightFixed3.css({
+                            'position':'relative',
+                            'left': 'auto',
+                            'top': 'auto',
+                        });
                         $rightFixed4.css({
                             'position':'fixed',
                             'left':leftPosition,
@@ -112,7 +171,27 @@ $(function(){
       }else if(availHeight < 689 && availHeight >= 374){
         $(window).scroll(scrollCallBack(4));
       }else if(availHeight < 374){
-
+        $(window).unbind('scroll');
+        $rightFixed1.css({
+            'position':'relative',
+            'left': 'auto',
+            'top': 'auto',
+        });
+        $rightFixed2.css({
+            'position':'relative',
+            'left': 'auto',
+            'top': 'auto',
+        });
+        $rightFixed3.css({
+            'position':'relative',
+            'left': 'auto',
+            'top': 'auto',
+        });
+        $rightFixed4.css({
+            'position':'relative',
+            'left': 'auto',
+            'top': 'auto',
+        });
       }
 
     //   if(availHeight >= 1325){
@@ -127,8 +206,16 @@ $(function(){
 
     //   }
 
-  }
+  };
+
+  //监听窗口大小变化事件
+  var listenWindowResize = function(){
+    $(window).resize(function(){
+        scrollFixedPanel();
+    });
+  };
 
   swiperStart();
   scrollFixedPanel();
+  listenWindowResize();
 });

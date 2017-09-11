@@ -421,6 +421,7 @@
 .footer .footer-content{
     width: 100%;
     padding-top: 38px;
+    max-width: 1004px;
 }
 .footer .footer-content .footer-logo{}
 .footer .footer-links{

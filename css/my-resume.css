@@ -7,7 +7,7 @@
 }
 
 /******************** 页头样式 ********************/
-.header{
+/* .header{
     width: 100%;
     height: 78px;
     margin: 0;
@@ -16,7 +16,6 @@
 .header .header-logo{
     height: 100%;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     padding-left: 32px;
 }
@@ -46,6 +45,112 @@
 }
 .header .header-personal-center .header-personal-center-menu{
     height: 100%;
+    padding-right: 7px;
+}
+.header .header-personal-center .header-personal-center-menu a{
+    color: #404040;
+}
+.header .header-personal-center .header-personal-center-menu a .personal-icon{
+    color: #FF4F4C;
+    font-size: 20px;
+    margin-right: 11px;
+}
+.header .header-personal-center .header-personal-center-menu .dropdown-menu{
+    width: 185px;
+}
+.header .header-personal-center .header-personal-center-menu .dropdown-menu li{
+   
+    height: 52px;
+}
+.header .header-personal-center .header-personal-center-menu .dropdown-menu li a{
+    height: 100%;
+    line-height: 52px;
+}
+.header .header-personal-center .header-personal-center-menu .dropdown-menu li a .menu-item-icon{
+    margin-left: 20px;
+    margin-right: 20px;
+} */
+
+.header{
+    width: 100%;
+    height: 56px;
+    margin: 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid #F5F5F7;
+}
+.header .header-logo{
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-left: 32px;
+}
+
+.header .header-nav{
+    height: 100%;
+    line-height: 56px;
+}
+.header .header-nav ul{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.header .header-nav ul li{
+    margin-right: 53px;
+}
+.header .header-nav ul li.active{
+    height:53px;
+    line-height: 53px;
+    border-bottom: 3px solid #FF4F4C;
+}
+.header .header-nav ul li a{
+    color: #404040;
+}
+.header .header-nav ul li a:hover{
+    color: #FF4F4C;
+}
+
+.header .header-personal-center{
+    height: 100%;
+    line-height: 78px;
+    /* display: inline-flex;
+    flex-direction: row; */
+}
+.header .header-personal-center .header-my-resume{
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .header-personal-center .header-dividing-line{
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+.header .header-personal-center .header-dividing-line .line{
+    height: 30px;
+    border-right: 1px solid #F5F5F7;
+}
+
+.header .header-personal-center .header-my-resume .resume-btn{
+    display: inline-block;
+    width: 120px;
+    height: 36px;
+    color: #FF4F4C;
+    border: 1px solid #FF4F4C;
+    background-color: #FFFFFF;
+}
+.header .header-personal-center .header-my-resume .resume-btn:hover{
+    color: #FFFFFF;
+    background-color: #FF4F4C;
+}
+.header .header-personal-center .header-personal-center-menu{
+    height: 100%;
+    line-height: 56px;
     padding-right: 7px;
 }
 .header .header-personal-center .header-personal-center-menu a{
