@@ -9,54 +9,52 @@
     <link rel="stylesheet" href="lib/swiper-3.4.2.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/invite.css">
 </head>
 <body>
     <div class="container-fluid index-container">
         <div class="header row" id="header">
             <div class="logo col-md-3 col-sm-4 col-xs-4">
                 <a href="javascript:;">
-                    <img src="img/LOGO@2x.png" alt="logo" width="146px" class="logo-fir">
-                    <img src="img/LOGO-SEC@2x.png" alt="logo" width="146px" class="logo-sec hide">
+                    <img src="img/LOGO@2x.png" alt="logo" width="146px" class="logo-fir hidden-xs">
+                    <img src="img/LOGO-SEC@2x.png" alt="logo" width="146px" class="logo-sec hide visible-xs">
                 </a>
-            </div>
-            <div class="info col-md-3 pull-right no-padding-left col-sm-8  col-xs-5">
-                <ul>
-                    <!-- <li class="login-text"><a href="login.html?type=login">登录</a></li> -->
-                    <!-- <li><a class="regist-btn btn" href="login.html?type=reg">免费注册</a></li> -->
-                    <li><a href="my-resume.html" target="_blank" class="resume-btn btn pull-right">我的简历</a></li>
-                </ul>
-            </div>
-            <div class="nav col-md-6 pull-right no-padding-right hidden-sm hidden-xs">
-                <ul class="pull-right">
-                    <li>
-                        <a href="javascript:;">产品介绍</a> 
-                        <span class="nav-border-bottom hide"></span>
-                    </li>
-                    <li>
-                        <a href="resume-raiders.html">简历攻略</a>
-                        <span class="nav-border-bottom hide"></span>
-                    </li>
-                    <li class="no-margin-right">
-                        <a href="tutor.html">导师辅导</a>
-                        <span class="nav-border-bottom hide"></span>
-                    </li>
-                </ul>
             </div>
         </div>
         <div class="main">
             <div class="banner">
-                <h1 class="solgan">
-                    让求职成功率翻倍的专业简历工具
-                </h1>
-                <div class="solgan_sub hidden-xs">超级简历是一款免费，强大的简历制作工具，帮助你快速制作一份完美的简历</div>
-                <div class="create-resume">
-                    <a href="javascript:;" class="btn create-resume-btn">免费生成专业简历</a>
+                <div class="invite-content">
+                    <div class="invite-header">
+                        <div class="invite-title">你的朋友 陈媛媛（abby）邀请你使用超级简历</div>
+                        <div class="invite-sologn">人力资源招聘专家设计并推荐的简历工具</div>
+                    </div>
+                    <div class="invite-form">
+                        <input type="text" placeholder="邮箱"/>
+                        <input type="text" placeholder="密码（不少于6位）"/>
+                        <a href="javascript:;" class="registered-btn">立即注册</a>
+                        <div class="invite-form-desc">
+                            点击「立即注册」按钮将视为您同意茶及建立的<a href="javascript:;">使用条款</a>
+                        </div>
+                    </div>
+                    <div class="invite-footer hidden-xs">
+                        <div class="footer-top row">
+                            <span class="footer-top-line col-md-3 col-xs-2"></span>
+                            <span class="footer-top-text col-md-6 col-xs-8">社交账户快速登录</span>
+                            <span class="footer-top-line col-md-3 col-xs-2"></span>
+                        </div>
+                        <div class="footer-fast-login row">
+                            <div class="footer-fast-login-btn col-md-6 col-xs-6">
+                                <a href="javascript:;"><i class="fa fa-weixin" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="footer-fast-login-btn col-md-6 col-xs-6">
+                                <a href="javascript:;"><i class="fa fa-qq" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="example hidden-sm hidden-xs"></div>
             <div class="pannel">
-                <div class="pannel-top">
+                <div class="pannel-top hidden-xs">
                     <div class="partners">
                         <div class="partners-title">超级简历的用户成功进入了这些公司</div>
                         <div class="partners-company">
@@ -71,66 +69,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="resume-tpl-with-mask">
-                        <div class="mask hide"></div>
-                        <div class="resume-tpl" id="resume-tpl">
-                            <div class="resume-title">选择你的简历模板</div>
-                            <div class="resume-slogan">更合适的模板能大大提高你的求职成功率</div>
-                            <div class="resume-type">
-                                <ul>
-                                    <li>
-                                        <div class="tpl-content">
-                                            <span class="tpl-img"><img src="img/tpl-college.png" alt=""/></span>
-                                            <span class="tpl-title">学生实习模板</span>
-                                            <span class="tpl-desc">此模板试用于学生找实习，第一次工作，或者工作经历比较欠缺的同学</span>
-                                        </div>
-                                        <div class="tpl-choose-lan hide">
-                                            <a href="javascript:;" class="zh">中文模板</a>
-                                            <a href="javascript:;" class="en">英文模板</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                       <div class="tpl-content">
-                                            <span class="tpl-img"><img src="img/tpl-classic.png" alt=""/></span>
-                                            <span class="tpl-title">经典工作模板</span>
-                                            <span class="tpl-desc">此模板适合工作经验一年以上，有工作经验想要变动工作的人士，适用于全行业</span>
-                                       </div>
-                                       <div class="tpl-choose-lan hide">
-                                            <a href="javascript:;" class="zh">中文模板</a>
-                                            <a href="javascript:;" class="en">英文模板</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                       <div class="tpl-content">
-                                            <span class="tpl-img"><img src="img/tpl-investment.png" alt=""/></span>
-                                            <span class="tpl-title">投行咨询模板</span>
-                                            <span class="tpl-desc">此模板针对想要去投行，咨询，四大或外企工作的人士，更多针对性引导和案例</span>
-                                        </div>
-                                        <div class="tpl-choose-lan hide">
-                                            <a href="javascript:;" class="zh">中文模板</a>
-                                            <a href="javascript:;" class="en">英文模板</a>
-                                        </div>
-                                    </li>
-                                    <li class="no-margin-right">
-                                       <div class="tpl-content">
-                                            <span class="tpl-img"><img src="img/tpl-plane.png" alt=""/></span>
-                                            <span class="tpl-title">留学英文模板</span>
-                                            <span class="tpl-desc">此模板适用于想要留学考研的学生</span>
-                                        </div>
-                                        <div class="tpl-choose-lan hide">
-                                            <a href="javascript:;" class="en">英文模板</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="resume-btns">
-                                 <a href="javascript:;" class="insert-resume hidden-xs">导入已有简历</a>
-                                 <a href="javascript:;" class="create-resume no-margin-right hidden-xs">创建新的简历</a> 
-                                 <a href="javascript:;" class="insert-resume hidden-md hidden-sm hidden-lg">导入简历</a>
-                                <a href="javascript:;" class="create-resume no-margin-right hidden-md hidden-sm hidden-lg">创建简历</a> 
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="divide-line hidden-xs"></div>
                 <div class="pannel-content">
@@ -351,6 +290,6 @@
     <script src="lib/jquery.min.js"></script>
     <script src="lib/swiper-3.4.2.min.js"></script>
     <script src="lib/draggabilly.pkgd.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/invite.js"></script>
 </body>
 </html>

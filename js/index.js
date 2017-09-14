@@ -56,7 +56,9 @@ $(function(){
     $draggable.on( 'dragMove', function( event, pointer ) {
         if(flag) {  
             var mouseMoveX = pointer.pageX; 
-            var sliderWidth =  navigator.userAgent.indexOf('Safari') > -1 ? 324 : 425;
+            // var sliderWidth =  navigator.userAgent.indexOf('Safari') > -1 ? 324 : 425;
+            var sliderWidth =  parseInt($('.pic1').css('width'));
+            
             var j = 180 * ((mouseMoveX-mouseDownX)/sliderWidth) + deg;
             
             if(j>=0 && j<=180){
@@ -76,8 +78,8 @@ $(function(){
     })    
   };
 
-  //简历模板hover效果
-  var resumeTplHover = function(){
+  //PC端简历模板hover效果
+  var resumeTplHoverPC = function(){
     $tpls = $('#resume-tpl').find('li');
     $tpls.bind('mouseover',function(){
         $(this).children('.tpl-content').addClass('hide');
@@ -88,7 +90,24 @@ $(function(){
         $(this).children('.tpl-choose-lan').addClass('hide');
       });
   }
+  //移动端简历模板hover效果
+  var resumeTplHoverMobile = function(){
+    $tpls = $('#resume-tpl').find('li');
+    $tpls.bind('click',function(){
+        var $curTpl = $(this);
+        $curTpl.children('.tpl-choose-lan').removeClass('hide');
+        $('.mask').removeClass('hide');
+        $('.resume-tpl-with-mask').on('click', function(e){
+            if($(e.target).hasClass('mask')){
+                $curTpl.children('.tpl-choose-lan').addClass('hide');
+                $('.mask').addClass('hide');
+            }
+        });
 
+        
+    });
+   
+  }
 
 
   //轮播器启动
@@ -142,12 +161,22 @@ $(function(){
     
   };
 
+  //判断是否是移动端浏览器
+
+  var isMobile = function(){
+      if(navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)){
+        resumeTplHoverMobile();
+      }else{
+        resumeTplHoverPC();
+      }
+  };
+
   compatibleFun();
+  isMobile();
 
   swiperStart();
   filpOver();
   headerTrans();
   headerNavHover();
   fliperResume();
-  resumeTplHover();
 });
