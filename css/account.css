@@ -1,0 +1,429 @@
+body{
+    background: #EDEFF4 !important;
+}
+.container{
+    width: 100%;
+    color: rgb(64, 64, 64);
+    padding: 0;
+    padding-bottom: 160px;
+    font-weight: 100;
+}
+
+/******************** 页头样式 ********************/
+.header{
+    width: 100%;
+    height: 56px;
+    margin: 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid #F5F5F7;
+}
+.header .header-logo{
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-left: 32px;
+}
+
+.header .header-nav{
+    /* height: 100%; */
+    line-height: 56px;
+}
+.header .header-nav ul{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.header .header-nav ul li{
+    margin-right: 53px;
+}
+.header .header-nav ul li.active{
+    height:53px;
+    line-height: 53px;
+    border-bottom: 3px solid #FF4F4C;
+}
+.header .header-nav ul li a{
+    color: #404040;
+}
+.header .header-nav ul li a:hover{
+    color: #FF4F4C;
+}
+
+.header .header-personal-center{
+    height: 100%;
+    line-height: 78px;
+    /* display: inline-flex;
+    flex-direction: row; */
+}
+.header .header-personal-center .header-my-resume{
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .header-personal-center .header-dividing-line{
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+.header .header-personal-center .header-dividing-line .line{
+    height: 30px;
+    border-right: 1px solid #F5F5F7;
+}
+
+.header .header-personal-center .header-my-resume .resume-btn{
+    display: inline-block;
+    width: 120px;
+    height: 36px;
+    color: #FF4F4C;
+    border: 1px solid #FF4F4C;
+    background-color: #FFFFFF;
+}
+.header .header-personal-center .header-my-resume .resume-btn:hover{
+    color: #FFFFFF;
+    background-color: #FF4F4C;
+}
+.header .header-personal-center .header-personal-center-menu{
+    height: 100%;
+    line-height: 56px;
+    padding-right: 7px;
+}
+.header .header-personal-center .header-personal-center-menu a{
+    color: #404040;
+}
+.header .header-personal-center .header-personal-center-menu a .personal-icon{
+    color: #FF4F4C;
+    font-size: 20px;
+    margin-right: 11px;
+}
+.header .header-personal-center .header-personal-center-menu .dropdown-menu{
+    width: 185px;
+}
+.header .header-personal-center .header-personal-center-menu .dropdown-menu li{
+    /* padding-left: 40px; */
+    height: 52px;
+}
+.header .header-personal-center .header-personal-center-menu .dropdown-menu li a{
+    height: 100%;
+    line-height: 52px;
+}
+.header .header-personal-center .header-personal-center-menu .dropdown-menu li a .menu-item-icon{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+/******************** 页面主体样式 ********************/
+.main{
+    width: 952px;
+    margin: 0 auto;
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .btn:hover{
+    color: #FFFFFF;
+    background: #FF4F4C;
+}
+.main .left-panel{
+    width: 260px;
+    /* height: 328px; */
+}
+.main .left-panel ul{
+    width: 100%;
+    background: #FFFFFF;
+}
+.main .left-panel ul li{
+    width: 100%;
+    height: 112px;
+    position: relative;
+}
+.main .left-panel ul li .list-item{
+    width: 238.5px;
+    height: 100%;
+    border-bottom: 1px solid #F5F5F7;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666666;
+    font-size: 16px;
+}
+.main .left-panel ul li .list-item a{
+    color: #666666;
+}
+.main .left-panel ul li .list-item .active-border{
+    width: 8px;
+    height: 26px;
+    background: #FF4F4C;
+    position: absolute;
+    top: 50%;
+    margin-top: -13px;
+    left: 56px;
+    display: none;
+}
+.main .left-panel ul li:last-child .list-item{
+    border: none;
+}
+.main .left-panel ul li .list-item.active a{
+    color: #404040;
+}
+.main .left-panel ul li .list-item.active .active-border{
+    display: inline-block;
+}
+
+
+.main .right-panel{
+    width: 672px;
+}
+.main .right-panel-btn{
+    display: inline-block;
+    color: #FF4F4C;
+    text-align: center;
+    border: 1px solid #FF4F4C;
+}
+.main .right-panel-btn:hover{
+    color: #FFFFFF;
+    background: #FF4F4C;
+}
+/*账户信息*/
+.main .right-panel .account-info{
+    width: 100%;
+    padding: 46px 0px 46px 42px;
+    background: #FFFFFF;
+}
+.main .right-panel .account-info .account-info-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.main .right-panel .account-info .account-info-item .item-label{
+    width: 100px;
+    height: 20px;
+    line-height: 20px;
+}
+.main .right-panel .account-info .account-info-item .item-form input{
+    width: 400px;
+    height: 32px;
+}
+/*发送邮件*/
+.main .right-panel .account-info .account-info-item .item-form .btn-send-email{
+    width: 100px;
+    height: 32px;
+    line-height: 32px;
+}
+/*绑定*/
+.main .right-panel .account-info .account-info-item .item-form .item-btn-bind{
+    width: 89px;
+    height: 32px;
+    line-height: 32px;
+}
+/*解绑*/
+.main .right-panel .account-info .account-info-item .item-form .bound .bound-user{
+    display: inline-block;
+    width: 89px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #404040;
+    background: #DEDFE1;
+}
+.main .right-panel .account-info .account-info-item .item-form .bound .item-ben-unbind{
+    display: inline-block;
+    width: 89px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #9C9C9C;
+    background: #FCFCFC;
+    border: 1px solid #DEDFE1;
+}
+.main .right-panel .account-info .save-btn-container{
+    width: 100%;
+    text-align: center;
+    padding-right: 42px;
+    margin-top: 44px;
+}
+.main .right-panel .account-info .save-btn-container a{
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    border-radius: 2px;
+    background: rgb(255, 79, 76);
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 40px;
+}
+.main .right-panel .account-info .save-btn-container a:hover{
+    background-color: rgba(255, 79, 76, 0.85);
+}
+
+/*我的订单*/
+.main .right-panel .my-order{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 48px;
+    background: #FFFFFF;
+}
+.main .right-panel .my-order table{}
+.main .right-panel .my-order table tr{
+    border-bottom: 1px solid #DEDFE1;
+}
+.main .right-panel .my-order table tr th{
+    font-size: 14px;
+    color: #404040;
+    font-weight: 100;
+    padding-bottom: 5px;
+}
+.main .right-panel .my-order table tr td{
+    font-size: 14px;
+    color: #666666;
+    font-weight: 100;
+    height: 36px;
+}
+.main .right-panel .my-order table tr th,
+.main .right-panel .my-order table tr td{
+    width: 135px;
+    text-align: center;
+}   
+.main .right-panel .my-order table tr th:nth-child(1),
+.main .right-panel .my-order table tr td:nth-child(1){
+    text-align: left;
+}
+.main .right-panel .my-order table tr th:last-child,
+.main .right-panel .my-order table tr td:last-child{
+    width: 45px;
+}
+.main .right-panel .my-order table tr td a{
+    color: #50A4FF;
+}
+.main .right-panel .my-order table tr td a:hover{
+    color: #007BFF;
+    text-decoration: underline !important;
+}
+
+/*优惠活动*/
+.main .right-panel .promotions{
+    width: 100%;
+}
+.main .right-panel .promotions input{
+    width: 400px;
+    height: 32px;
+}
+.main .right-panel .promotions .invite{
+    width: 100%;
+    background: #FFFFFF;
+    padding-top: 32px;
+    padding-left: 42px;
+    padding-bottom: 50px;
+}
+.main .right-panel .promotions .invite .invite-title,
+.main .right-panel .promotions .exchange .exchange-title{
+    color: #404040;
+    font-size: 18px;
+    line-height: 25px;
+}
+.main .right-panel .promotions .invite .invite-content{
+    width: 100%;
+    margin-top: 4px;
+}
+.main .right-panel .promotions .invite .invite-content .invite-desc{
+    font-size: 14px;
+    color: #404040;
+}
+.main .right-panel .promotions .invite .invite-content .invite-desc .num{
+    color: #50A4FF;
+}
+.main .right-panel .promotions .invite .invite-content .invite-link{
+    display: flex;
+    margin-top: 22px;
+    margin-bottom: 36px;
+    align-items: center;
+    position: relative;
+}
+.main .right-panel .promotions .invite .invite-content .invite-link>a{
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 6px;
+}
+.main .right-panel .promotions .invite .invite-content .invite-link .qr-code{
+    width: 91px;
+    height: 91px;
+    position: absolute;
+    background: #9c9c9c;
+    right: 47px;
+    top: 0;
+}
+.main .right-panel .promotions .invite .invite-content .invite-link .qr-code>img{}
+.main .right-panel .promotions .invite .invite-content .has-registrant{
+    color: #666666;
+}
+.main .right-panel .promotions .invite .invite-content .has-registrant .registrant-desc{}
+.main .right-panel .promotions .invite .invite-content .has-registrant .registrant-desc p{
+    margin: 0;
+}
+.main .right-panel .promotions .invite .invite-content .has-registrant .registrant-desc .obtain-qualification{}
+.main .right-panel .promotions .invite .invite-content .has-registrant .registrant-desc .obtain-qualification .maturity-date{
+    color: #FF4F4C;
+}
+.main .right-panel .promotions .invite .invite-content .has-registrant .registrant-desc .not-obtain{}
+.main .right-panel .promotions .invite .invite-content .has-registrant .registrant-user{
+    width: 100%;
+    margin-top: 22px;
+    padding-right: 49px;
+}
+.main .right-panel .promotions .invite .invite-content .has-registrant .registrant-user table{
+    width: 100%;
+}
+.main .right-panel .promotions .invite .invite-content .has-registrant .registrant-user table tr{
+    border-bottom: 1px solid #F5F5F7;
+    height: 36px;
+}
+.main .right-panel .promotions .invite .invite-content .has-registrant .registrant-user table tr th{
+    color: #404040;
+}
+.main .right-panel .promotions .invite .invite-content .has-registrant .registrant-user table tr th,
+.main .right-panel .promotions .invite .invite-content .has-registrant .registrant-user table tr td{
+    font-weight: 100;
+}
+.main .right-panel .promotions .invite .invite-content .has-registrant .registrant-user table tr th:nth-child(1),
+.main .right-panel .promotions .invite .invite-content .has-registrant .registrant-user table tr td:nth-child(1){
+    width: 200px;
+    text-align: left;
+}
+.main .right-panel .promotions .invite .invite-content .has-registrant .registrant-user table tr th span,
+.main .right-panel .promotions .invite .invite-content .has-registrant .registrant-user table tr td span{
+    text-align: center;
+    display: inline-block;
+    width: 40%;
+}
+
+
+.main .right-panel .promotions .exchange{
+    width: 100%;
+    height: 165px;
+    background: #FFFFFF;
+    margin-top: 10px;
+    padding-top: 36px;
+    padding-left: 42px;
+}
+.main .right-panel .promotions .exchange .exchange-content{
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+}
+.main .right-panel .promotions .exchange .exchange-content a{
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    margin-left: 6px;
+}
