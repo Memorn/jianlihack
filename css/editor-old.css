@@ -116,24 +116,13 @@
 /******************** 页面主题样式 ********************/
 .main{
     width: 100%;
-    /* max-width: 1440px; */
-    /* margin: 0 auto; */
+    max-width: 1440px;
+    margin: 0 auto;
 }
 .main .main-top{
-    width : 870px;
-    margin: 0 auto;
-    margin-top: 28px;
-    margin-bottom: 28px;
-
-    /* padding-right: 28px; */
-}
-@media(max-width: 1734px){
-    .main .main-top{
-        margin: 0px;
-        margin-left: 448px;
-        margin-top: 28px;
-        margin-bottom: 28px;
-    }
+    width : 100%;
+    margin: 28px 0;
+    padding-right: 28px;
 }
 .main .main-top .main-top-ctrl{
     padding: 0;
@@ -167,17 +156,7 @@
     background-color: rgba(248, 99, 49, 0.85)
 }
 
-.main .main-content{
-    width: 100%;
-    margin: 0;
-    /* padding-right:28px; */
-    position: relative;
-}
-@media(max-width: 1734px){
-    .main .main-content{
-       display: flex;
-    }
-}
+.main .main-content{width: 100%;margin: 0;padding-right:28px}
 
 /***左边简历信息样式***/
 .main .main-content .left-panel{
@@ -185,146 +164,16 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* padding-left: 36px; */
-    padding-left: 0px;
-    padding-right: 0px;
-    position: absolute;
-    width: 428px;
+    padding-left: 36px;
+    padding-right: 20px;
 }
-.main .main-content .left-panel .inteligent-check-bgc{background: rgb(255, 79, 76)}
-.main .main-content .left-panel .fill-in-tips-bgc{background: rgb(248, 99, 49);}
-.main .main-content .left-panel .view-cases-bgc{background: rgb(255, 129, 58);}
-.main .main-content .left-panel .tutor-bgc{background: rgb(5, 66, 118);}
-@media(max-width: 1734px){
-    .main .main-content .left-panel{
-        position: relative;
-        margin-right: 20px;
-    }
-}
-.main .main-content .left-panel .fold-container{
-    display: flex;
-    flex-direction: column;
-}
-.main .main-content .left-panel .fold-container>a{
-    display: flex;
-    position: relative;
-    width: 250px;
-    height: 68px;
-    color: #FFFFFF;
-    justify-content: center;
-    align-items: center;
-    /* line-height: 68px; */
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
-    border-radius: 0 2px 2px 0;
-    margin-bottom: 20px;
-}
-.main .main-content .left-panel .fold-container>a:hover:nth-child(1){
-    background-color: rgba(255, 79, 76, 0.85);
-}
-.main .main-content .left-panel .fold-container>a:hover:nth-child(2){
-    background-color: rgba(248, 99, 49, 0.85);
-}
-.main .main-content .left-panel .fold-container>a:hover:nth-child(3){
-    background-color: rgba(255, 129, 58, 0.85);
-}
-.main .main-content .left-panel .fold-container>a:hover:nth-child(4){
-    background-color: rgba(5, 66, 118, 0.85);
-}
-.main .main-content .left-panel .fold-container>a .unfold-btn{
-    position: absolute;
-    top: 0px;
-    right: 10px;
-    height: 100%;
-    line-height: 68px;
-}
-.main .main-content .left-panel .fold-container>a .num{
-    display: inline-block;
-    width: 18px;
-    height: 20px;
-    text-align: center;
-    border-radius: 50%;
-    position: absolute;
-    right: 0px;
-    top: -10px;
-    font-weight: 100;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
-    background: #FF4F4C;
-    /* font-family: PingFangSC-Semibold; */
-    font-size: 13px;
-    color: #FFFFFF;
-    letter-spacing: 0;
-}
-.main .main-content .left-panel .unfold-container>div>div{
+.main .main-content .left-panel>div{
     background: #FFF;
     width: 100%;
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
     padding: 22px 24px;
 }
-.main .main-content .left-panel .unfold-container .nav-bar{
-    display: flex;
-    height: 68px;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-.main .main-content .left-panel .unfold-container .nav-bar .fold-btn{
-    position: absolute;
-    color: #FFFFFF;
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    line-height: 24px;
-    border-radius: 50%;
-    right: -12px; 
-    background-color: #B3B3B3;
-    font-weight: 100;
-    text-align: center;
-}
-.main .main-content .left-panel .unfold-container .nav-bar .fold-btn:hover{
-    background-color: #666666;
-}
-.main .main-content .left-panel .unfold-container .nav-bar .nav-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 32px;
-    color: #FFFFFF;
-    font-size: 14px;
-    position: relative;
-    border-radius: 2px;
-}
-.main .main-content .left-panel .unfold-container .nav-bar .nav-btn.inteligent-check-bgc:hover{
-    background-color: rgba(255, 79, 76, 0.85);
-}
-.main .main-content .left-panel .unfold-container .nav-bar .nav-btn.fill-in-tips-bgc:hover{
-    background-color: rgba(248, 99, 49, 0.85);    
-}
-.main .main-content .left-panel .unfold-container .nav-bar .nav-btn.view-cases-bgc:hover{
-    background-color: rgba(255, 129, 58, 0.85);    
-}
-.main .main-content .left-panel .unfold-container .nav-bar .nav-btn.tutor-bgc:hover{
-    background-color: rgba(5, 66, 118, 0.85);    
-}
-
-.main .main-content .left-panel .unfold-container .nav-bar .nav-btn .num{
-    display: inline-block;
-    width: 18px;
-    height: 20px;
-    text-align: center;
-    border-radius: 50%;
-    position: absolute;
-    right: 0px;
-    top: -10px;
-    font-weight: 100;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
-    background: #FF4F4C;
-    font-size: 13px;
-    color: #FFFFFF;
-    letter-spacing: 0;
-}
-
 .main .main-content .left-panel .resume-score .resume-score-top{
     display: flex;
     justify-content: flex-start;
@@ -363,7 +212,9 @@
 }
 
 .main .main-content .left-panel .resume-advice,
-.main .main-content .left-panel .resume-match{}
+.main .main-content .left-panel .resume-match{
+
+}
 .main .main-content .left-panel .resume-advice .resume-advice-top,
 .main .main-content .left-panel .resume-match .resume-match-top{
     padding-bottom: 22px;
@@ -493,406 +344,14 @@
     padding-bottom: 0px;
     border-bottom: none;
 }
-/*填写贴士样式*/
-.main .main-content .left-panel .fill-in-tips .fill-in-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .fill-in-title{
-    width: 100%;
-    text-align: center;
-    padding-bottom: 28px;
-    color: #404040;
-    font-size: 14px;
-    font-family: PingFangSC-Semibold;
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .fill-in-selector{
-    width: 78%;
-    position: relative;
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .fill-in-selector .selector-content{
-    width: 100%;
-    height: 32px;
-    border: 1px solid #DEDFE1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .fill-in-selector .selector-content .text{
-    color: #404040;
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .fill-in-selector .selector-content .select-btn{
-    color: #D8D8D8;
-    position: absolute;
-    right: 10px;
-    font-size: 17px;
-    height: 100%;
-    line-height: 32px;
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .fill-in-selector.open .selector-content .select-btn i{
-    transform:rotate(180deg);
-    -ms-transform:rotate(180deg); 	/* IE 9 */
-    -moz-transform:rotate(180deg); 	/* Firefox */
-    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
-    -o-transform:rotate(180deg);
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .fill-in-selector .selector-options{
-    width: 100%;
-    border: 1px solid #DEDFE1;
-    position: absolute;
-    background: #FFFFFF;
-    display: none;
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .fill-in-selector.open .selector-options{
-    display: block;
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .fill-in-selector .selector-options ul{}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .fill-in-selector .selector-options ul li a{
-    display: inline-block;
-    width: 100%;
-    height: 32px;
-    text-align: center;
-    line-height: 32px;
-    color: #404040;
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .fill-in-selector .selector-options ul li a:hover{
-    background: #F5F5F7;
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .tpis{
-    width: 80%;
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .tpis .tip-item{
-    width: 100%;
-    margin-top: 28px;
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .tpis .tip-item .item-title{
-    width: 100%;
-    margin-bottom: 21px;
-    display: flex;
-    justify-content: space-between;
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .tpis .tip-item .item-title .title-text{
-    width: 85%;
-    color: #404040;   
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .tpis .tip-item .item-title .title-btn{
-    color: #D8D8D8;
-    font-size: 17px;
-    cursor: pointer;
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .tpis .tip-item.close-panel .item-title .title-btn i{
-    transform:rotate(180deg);
-    -ms-transform:rotate(180deg); 	/* IE 9 */
-    -moz-transform:rotate(180deg); 	/* Firefox */
-    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
-    -o-transform:rotate(180deg);
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .tpis .tip-item .item-content{
-    width: 100%;
-    color: #9C9C9C;
-    line-height: 23px;
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .tpis .tip-item.close-panel .item-content{
-    display: none;
-}
-.main .main-content .left-panel .fill-in-tips .fill-in-container .tpis .tip-item .item-content p{
-    margin: 0;
-}
-
-.main .main-content .left-panel .view-cases{
-    width: 100%;
-}
-.main .main-content .left-panel .view-cases .cases,
-.main .main-content .left-panel .view-cases .verb-reference{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-}
-.main .main-content .left-panel .view-cases .cases .cases-title,
-.main .main-content .left-panel .view-cases .verb-reference .verb-title{
-    width: 100%;
-    text-align: center;
-    padding-top: 24px;
-    padding-bottom: 28px;
-    color: #404040;
-    font-size: 14px;
-    font-family: PingFangSC-Semibold;
-    position: relative;
-}
-.main .main-content .left-panel .view-cases .cases .cases-title .title-btn,
-.main .main-content .left-panel .view-cases .verb-reference .verb-title .title-btn{
-    position: absolute;
-    right: 15px;
-    top: 24px;
-    color: #9C9C9C;
-    cursor: pointer;
-}
-.main .main-content .left-panel .view-cases .cases.close-panel .cases-title .title-btn,
-.main .main-content .left-panel .view-cases .verb-reference.close-panel .verb-title .title-btn{
-    transform:rotate(180deg);
-    -ms-transform:rotate(180deg); 	/* IE 9 */
-    -moz-transform:rotate(180deg); 	/* Firefox */
-    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
-    -o-transform:rotate(180deg);
-}
-.main .main-content .left-panel .view-cases .cases .case-container,
-.main .main-content .left-panel .view-cases .verb-reference .verb-container{
-    width: 78%;
-}
-.main .main-content .left-panel .view-cases .cases.close-panel .case-container,
-.main .main-content .left-panel .view-cases .verb-reference.close-panel .verb-container{
-    display: none;
-}
-.main .main-content .left-panel .view-cases .cases .cases-selectors,
-.main .main-content .left-panel .view-cases .verb-reference .verb-selectors{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.main .main-content .left-panel .view-cases .selector{
-    width: 44.6%;
-    position: relative;
-} 
-.main .main-content .left-panel .view-cases .selector .selector-content{
-    width: 100%;
-    height: 32px;
-    border: 1px solid #DEDFE1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    padding-left: 24px;
-    padding-right: 14px;
-}
-.main .main-content .left-panel .view-cases .selector .selector-content .text{ color: #404040;}
-.main .main-content .left-panel .view-cases .selector .selector-content .selector-btn{ 
-    color: #D8D8D8;
-    font-size: 17px;
-}
-.main .main-content .left-panel .view-cases .selector.open .selector-content .selector-btn i{
-    transform:rotate(180deg);
-    -ms-transform:rotate(180deg); 	/* IE 9 */
-    -moz-transform:rotate(180deg); 	/* Firefox */
-    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
-    -o-transform:rotate(180deg);
-}
-.main .main-content .left-panel .view-cases .selector .selector-options{
-    width: 100%;
-    border: 1px solid #DEDFE1;
-    position: absolute;
-    background: #FFFFFF;
-    display: none;
-}
-.main .main-content .left-panel .view-cases .selector.open .selector-options{
-    display: block;
-}
-.main .main-content .left-panel .view-cases .selector .selector-options ul li a{
-    display: inline-block;
-    width: 100%;
-    height: 32px;
-    text-align: center;
-    line-height: 32px;
-    color: #404040;
-}
-.main .main-content .left-panel .view-cases .selector .selector-options ul li a:hover{
-    background: #F5F5F7;
-}
-.main .main-content .left-panel .view-cases .cases .case-content{
-    width: 100%;
-    margin-top: 28px;
-    margin-bottom: 34px;
-    font-size: 14px;
-}
-.main .main-content .left-panel .view-cases .cases .case-content .content-title{
-    width: 100%;
-    color: #595959;
-    line-height: 22px;
-    margin-bottom: 5px;
-}
-.main .main-content .left-panel .view-cases .cases .case-content .content-items{
-    width: 100%;
-    color: #666666;
-}
-.main .main-content .left-panel .view-cases .cases .case-content .content-items .item{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;   
-}
-.main .main-content .left-panel .view-cases .cases .case-content .content-items .item .dot{
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #D8D8D8;
-    margin-top: 5px;
-}
-.main .main-content .left-panel .view-cases .cases .case-content .content-items .item p{
-    width: 91%;
-    line-height: 20px;
-}
-.main .main-content .left-panel .view-cases .cases .case-content .content-items .item:last-child{margin: 0px;}
-
-.main .main-content .left-panel .view-cases .verb-reference .verb-contents{
-    width: 100%;
-    padding-left: 20px;
-    margin-top: 28px;
-    margin-bottom: 34px;
-}
-.main .main-content .left-panel .view-cases .verb-reference .verb-contents .verb-item{
-    width: 100%;
-    line-height: 20px;
-    color: #9C9C9C;
-}
-.main .main-content .left-panel .view-cases .verb-reference .verb-contents .verb-item span:nth-child(1){
-    display: inline-block;
-    width: 54%;
-}
-.main .main-content .left-panel .view-cases .verb-reference .verb-contents .verb-item span:nth-child(2){
-    display: inline-block;
-    width: 44%;
-}
-.main .main-content .left-panel .tutor{
-    width: 100%;
-}
-.main .main-content .left-panel .tutor .step-bar{
-    width: 100%;
-    height: 151px;
-    padding: 22px 28px 18px 24px;
-}
-.main .main-content .left-panel .tutor .step-bar .step-title{
-    color: #404040;
-    font-size: 14px;
-    font-family: PingFangSC-Semibold;
-}
-.main .main-content .left-panel .tutor .step-bar .step-line{
-    width: 100%;
-    height: 109px;
-    display: flex;
-    position: relative;
-    justify-content: center;
-}
-.main .main-content .left-panel .tutor .step-bar .step-line .line{
-    width: 80%;
-    height: 0px;
-    margin-top: 37px;
-    border: 1px solid #DEDFE1;
-}
-.main .main-content .left-panel .tutor .step-bar .step-line .step-info{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    top: 26px;
-}
-.main .main-content .left-panel .tutor .step-bar .step-line .step-info .step{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.main .main-content .left-panel .tutor .step-bar .step-line .step-info .step .tab{
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-    text-align: center;
-    border-radius: 50%;
-    color: #FFFFFF;
-    background: #054276;
-    margin-bottom: 22px;
-}
-.main .main-content .left-panel .tutor .step-bar .step-line .step-info .step.step-5 .tab{
-    background-color: #FF4F4C;
-}
-.main .main-content .left-panel .tutor .step-bar .step-line .step-info .step .desc{
-    color: #9C9C9C;
-    font-size: 14px;
-}
-.main .main-content .left-panel .tutor .step-bar .step-line .step-info .step.step-5 .desc{
-    color: #404040;
-}
-.main .main-content .left-panel .tutor .tutor-comments-fir,
-.main .main-content .left-panel .tutor .tutor-comments-sec{
-    width: 100%;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.main .main-content .left-panel .tutor .tutor-comments-title{
-    display: flex;
-    width: 100%;
-    height: 64px;
-    padding-left: 24px;
-    padding-right: 20px;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #EBEBEB;
-}
-.main .main-content .left-panel .tutor .tutor-comments-title .text{
-    font-family: PingFangSC-Semibold;
-    font-size: 14px;
-    color: #4D4D4D;
-    letter-spacing: 0;
-}
-.main .main-content .left-panel .tutor .tutor-comments-title .title-btn{
-    color: #9C9C9C;
-}
-.main .main-content .left-panel .tutor .tutor-comments-fir.close-panel .tutor-comments-title .title-btn i,
-.main .main-content .left-panel .tutor .tutor-comments-sec.close-panel .tutor-comments-title .title-btn i{
-    transform:rotate(180deg);
-    -ms-transform:rotate(180deg); 	/* IE 9 */
-    -moz-transform:rotate(180deg); 	/* Firefox */
-    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
-    -o-transform:rotate(180deg);
-}
-.main .main-content .left-panel .tutor .tutor-comments-content{
-    width: 88.8%;
-    margin-top: 22px;
-    margin-bottom: 32px;
-}
-.main .main-content .left-panel .tutor .tutor-comments-fir.close-panel .tutor-comments-content,
-.main .main-content .left-panel .tutor .tutor-comments-sec.close-panel .tutor-comments-content{
-    display: none;
-}
-.main .main-content .left-panel .tutor .tutor-comments-content p{
-    margin-bottom: 25px;
-}
-.main .main-content .left-panel .tutor .tutor-comments-content p:last-child{margin-bottom: 0px;}
-.main .main-content .left-panel .tutor .tutor-comments-content p .p-title{
-    display: block;
-    font-family: PingFangSC-Semibold;
-    font-size: 14px;
-    color: #1C1C1C;
-    letter-spacing: 0;
-    line-height: 20px;
-}
-.main .main-content .left-panel .tutor .tutor-comments-content p .p-item{
-    line-height: 20px;
-    display: block;
-}
-
 
 /***右边编辑器样式***/
 .main .main-content .right-panel{
-    width: 870px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-left: 0;
     padding-right: 0;
-    margin: 0 auto;
-}
-@media(max-width: 1734px){
-    .main .main-content .right-panel{
-        position: relative;
-        /* margin-right: 20px; */
-        margin: 0px;
-    }
 }
 
 /**编辑器头部控制器样式**/
