@@ -10,8 +10,9 @@ $(function(){
   var headerTrans = function(){
       var $header = $('#header');
       var $body = $('body');
-      setInterval(function(){
-        var windowTop = $body[0].scrollTop;
+
+      function scrollCallBack(){
+        var windowTop = $(window).scrollTop();
         var $imgFir = $('#header').find('.logo-fir'); 
         var $imgSec = $('#header').find('.logo-sec'); 
         if(windowTop > 0){
@@ -23,7 +24,9 @@ $(function(){
             $imgSec.addClass('hide');
             $imgFir.removeClass('hide');
         }
-      },100);
+      }
+
+      $(window).scroll(scrollCallBack);
   };
 
   //header hover 效果
