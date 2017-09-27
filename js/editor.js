@@ -25,6 +25,7 @@ $(function(){
 
         //左侧fold or unfold
         var leftFoldSwitch = function(){
+            var windowWidth = $(document.body).outerWidth(true) + 15;
             //展开
             $('.fold-container').children('a').on('click',unfoldHandle);
             $('.nav-btn').on('click',unfoldHandle);
@@ -47,6 +48,11 @@ $(function(){
                     $('.tutor').siblings().addClass('hide');
                     $('.tutor').removeClass('hide');
                 }
+                if(windowWidth < 1100){
+                    $('.right-panel').css({
+                        'margin-left': '138px'
+                    })
+                }
             }
 
             //收起
@@ -55,6 +61,11 @@ $(function(){
                 $('.unfold-container').addClass('hide');
                 $('.unfold-container').children().addClass('hide');
                 $('.fold-container').removeClass('hide');
+                if(windowWidth < 1100){
+                    $('.right-panel').css({
+                        'margin-left': '0px'
+                    })
+                }
             }
 
             //selector产开收起
@@ -248,6 +259,112 @@ $(function(){
             typesettingSelector();
         };
     
+        //左侧固定控制条吸顶
+        var scrollFixedPanel = function(){
+            function scrollCallBack(){
+                var top = $(window).scrollTop();
+                var $controlBar = $('.right-panel-control-bar');
+                var $controlBarContainer = $('.right-panel-control-bar-container');
+                var $controlBarContainerDownload = $('.right-panel-control-bar-container').children('.control-download');
+                var $editPanel = $('.right-panel-resume-editor');
+                var $leftPanel = $('.left-panel-actual');
+                var $leftPanelPhd = $('.left-panel-placeholder');
+                var $rightPanel = $('.right-panel');
+                
+                var screenWidth = $(document.body).outerWidth(true) + 15;
+               
+                var leftFoldPanelWidth = parseInt($('.fold-container').css('width'));
+                var rightPanelDisplacement = parseInt($('.unfold-container').css('width')) - parseInt($('.fold-container').css('width'));
+              
+                if( top >= 145){
+                    $controlBar.css({
+                        'position':'fixed',
+                        'left': '0px',
+                        'top': '0px',
+                        'z-index':'999'
+                    });
+
+                    $controlBarContainer.css({
+                        'max-width': '1100px',
+                        'float': 'right'
+                    });
+
+                    $controlBarContainerDownload.css('display','inline-block');
+
+                    // $leftPanel.css({
+                    //     'position':'fixed',
+                    //     'left': '0px',
+                    //     'top': '0px',
+                    //     'z-index':'999'
+                    // });
+
+                    // $leftPanelPhd.removeClass('hide');
+
+                    $editPanel.css({
+                        'margin-top': '78px'
+                    });
+
+                }else{
+                    if(screenWidth >= 1738){
+                        $controlBar.css({
+                            'position':'relative',
+                            'left': '0px',
+                            'top': '0px',
+                            'z-index':'9'
+                        });
+                        $controlBarContainer.css({
+                            'max-width': '9999px',
+                            'float': 'none'
+                        });
+                        $controlBarContainerDownload.css('display','none');
+                        // $leftPanel.css({
+                        //     'position':'absolute',
+                        //     'left': 'auto',
+                        //     'top': 'auto',
+                        //     'z-index':'99'
+                        // });
+                        // $leftPanelPhd.addClass('hide');
+                        $editPanel.css({
+                            'margin-top': '10px'
+                        });
+                    }else{
+                        $controlBar.css({
+                            'position':'relative',
+                            'left': '0px',
+                            'top': '0px',
+                            'z-index':'9'
+                        });
+    
+                        $controlBarContainer.css({
+                            'max-width': '9999px',
+                            'float': 'none'
+                        });
+    
+                        $controlBarContainerDownload.css('display','none');
+                        
+                        // $leftPanel.css({
+                        //     'position':'absolute',
+                        //     'left': 'auto',
+                        //     'top': 'auto',
+                        //     'z-index':'99'
+                        // });
+    
+                        // $leftPanelPhd.addClass('hide');
+    
+                        $editPanel.css({
+                            'margin-top': '10px'
+                        });
+    
+                        // $rightPanel.css({
+                        //     'margin': '0'
+                        // }); 
+                    }
+                   
+                }
+            }
+            $(window).scroll(scrollCallBack);
+        };
+
         //简历提升建议弹窗
         var showRobotModal = function(){
             $('.resume-match-more').children('a').on('click',function(){
@@ -357,13 +474,14 @@ $(function(){
     
         };
     
-        showPlateModal();
-        showRobotModal();
         closeLeftPanel();
+        leftFoldSwitch();
         editorControl();
+        scrollFixedPanel();
+        showRobotModal();
+        showPlateModal();
         textareaSelfHeight();
         eidtPlateItem();
         createTimePicker();
         endTimeFocus();
-        leftFoldSwitch();
     });

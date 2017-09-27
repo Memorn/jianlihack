@@ -120,14 +120,13 @@
     /* margin: 0 auto; */
 }
 .main .main-top{
-    width : 870px;
-    margin: 0 auto;
+    width : 100%;
+    /* margin: 0 auto; */
     margin-top: 28px;
     margin-bottom: 28px;
-
     /* padding-right: 28px; */
 }
-@media(max-width: 1734px){
+/* @media(max-width: 1734px){
     .main .main-top{
         margin: 0px;
         margin-left: 448px;
@@ -135,6 +134,21 @@
         margin-bottom: 28px;
     }
 }
+@media(max-width: 1334px){
+    .main .main-top{
+        float: right;
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+}
+@media(max-width: 1024px){
+    .main .main-top{
+        margin: 0px;
+        margin-left: 138px;
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+} */
 .main .main-top .main-top-ctrl{
     padding: 0;
 }
@@ -189,12 +203,27 @@
     padding-left: 0px;
     padding-right: 0px;
     position: absolute;
-    width: 428px;
-}
+    /* width: 428px; */
+    width: 37.08%;
+    margin-top: 88px;
+    margin-right: 20px;
+} 
+/* .main .main-content .left-panel-placeholder{}
+.main .main-content .left-panel-placeholder .fold-container>a{
+    box-shadow: none;
+} */
+/*.main .main-content .left-panel-placeholder .fold-container{
+    width: 230px;
+} */
 .main .main-content .left-panel .inteligent-check-bgc{background: rgb(255, 79, 76)}
 .main .main-content .left-panel .fill-in-tips-bgc{background: rgb(248, 99, 49);}
 .main .main-content .left-panel .view-cases-bgc{background: rgb(255, 129, 58);}
 .main .main-content .left-panel .tutor-bgc{background: rgb(5, 66, 118);}
+@media(max-width: 1100px){
+    .main .main-content .left-panel{
+        /* margin-right: 0px; */
+    }
+}
 @media(max-width: 1734px){
     .main .main-content .left-panel{
         position: relative;
@@ -204,11 +233,17 @@
 .main .main-content .left-panel .fold-container{
     display: flex;
     flex-direction: column;
+    /* width: 250px; */
+    width: 100%;
 }
 .main .main-content .left-panel .fold-container>a{
     display: flex;
     position: relative;
-    width: 250px;
+    /* width: 250px; */
+    /* width: 58.41%; */
+    width: 100%;
+    max-width: 250px;
+    min-width: 118px;
     height: 68px;
     color: #FFFFFF;
     justify-content: center;
@@ -217,6 +252,23 @@
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
     border-radius: 0 2px 2px 0;
     margin-bottom: 20px;
+}
+/* @media(max-width: 1024px){
+    .main .main-content .left-panel{
+        margin-right: 0px;
+    }
+    .main .main-content .left-panel .fold-container>a{
+        position: relative;
+        margin-right: 20px;
+        width: 118px;
+    }
+} */
+@media(max-width: 1154px){
+    .main .main-content .left-panel .fold-container>a{
+        position: relative;
+        margin-right: 20px;
+        /* width: 118px; */
+    }
 }
 .main .main-content .left-panel .fold-container>a:hover:nth-child(1){
     background-color: rgba(255, 79, 76, 0.85);
@@ -254,19 +306,74 @@
     color: #FFFFFF;
     letter-spacing: 0;
 }
+.main .main-content .left-panel .unfold-container{
+    max-width: 428px;
+    min-width: 230px;
+    width: 100%;
+    margin-right: 20px;
+}
 .main .main-content .left-panel .unfold-container>div>div{
     background: #FFF;
     width: 100%;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+    margin-bottom: 10px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
     padding: 22px 24px;
 }
+@media(max-width: 1100px){
+    .main .main-content .left-panel .unfold-container{
+        width: 428px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 99;
+        background: #fbfbfb;
+    }
+    .main .main-content .left-panel .unfold-container>div>div:last-child{
+        margin-bottom: 0px;
+    }
+}
+@media(min-width: 1100px) and (max-width: 1335px){
+/* @media(min-width: 1100px) and (max-width: 1154px){ */
+    .main .main-content .left-panel .unfold-container{
+        /* width: 230px; */
+        position: relative;
+    }
+}
+/* @media(max-width: 1154px){
+    .main .main-content .left-panel .unfold-container{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 99;
+        background: #fbfbfb;
+    }
+    .main .main-content .left-panel .unfold-container>div>div:last-child{
+        margin-bottom: 0px;
+    }
+} */
+/* @media(max-width: 1024px){
+    .main .main-content .left-panel .unfold-container{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 99;
+        background: #fbfbfb;
+    }
+    .main .main-content .left-panel .unfold-container>div>div:last-child{
+        margin-bottom: 0px;
+    }
+} */
 .main .main-content .left-panel .unfold-container .nav-bar{
     display: flex;
     height: 68px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: relative;
+}
+@media(min-width: 1100px) and (max-width: 1154px){
+    .main .main-content .left-panel .unfold-container .nav-bar{
+        padding: 22px 5px;
+    }    
 }
 .main .main-content .left-panel .unfold-container .nav-bar .fold-btn{
     position: absolute;
@@ -280,6 +387,7 @@
     background-color: #B3B3B3;
     font-weight: 100;
     text-align: center;
+    z-index: 99;
 }
 .main .main-content .left-panel .unfold-container .nav-bar .fold-btn:hover{
     background-color: #666666;
@@ -294,6 +402,11 @@
     font-size: 14px;
     position: relative;
     border-radius: 2px;
+}
+@media(min-width: 1100px) and (max-width: 1154px){
+    .main .main-content .left-panel .unfold-container .nav-bar .nav-btn{
+        width: 60px;
+    }    
 }
 .main .main-content .left-panel .unfold-container .nav-bar .nav-btn.inteligent-check-bgc:hover{
     background-color: rgba(255, 79, 76, 0.85);
@@ -880,12 +993,18 @@
 /***右边编辑器样式***/
 .main .main-content .right-panel{
     width: 870px;
+    min-width: 870px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-left: 0;
     padding-right: 0;
     margin: 0 auto;
+
+    transition: none;
+    -moz-transition: none; /* Firefox 4 */
+    -webkit-transition: none; /* Safari 和 Chrome */
+    -o-transition: none;  
 }
 @media(max-width: 1734px){
     .main .main-content .right-panel{
@@ -898,18 +1017,22 @@
 /**编辑器头部控制器样式**/
 .main .main-content .right-panel .right-panel-control-bar{
     width: 100%;
-    min-height: 68px;
     background: #FFFFFF;
     box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    font-size: 12px;
+    margin: 0;
+}
+.main .main-content .right-panel .right-panel-control-bar .right-panel-control-bar-container{
+    width: 100%;
+    min-height: 68px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 20px 22px;
     font-size: 12px;
-    margin: 0;
 }
-.main .main-content .right-panel .right-panel-control-bar>div{
+.main .main-content .right-panel .right-panel-control-bar .right-panel-control-bar-container>div{
     height: 28px;
     line-height: 28px;
 }
@@ -1308,6 +1431,21 @@
     font-size: 10px;
     line-height: 10px;
     margin-top: 5px;
+}
+.main .main-content .right-panel .right-panel-control-bar .control-download{
+    display: none;
+}
+.main .main-content .right-panel .right-panel-control-bar  .control-download-btn{
+    display: inline-block;
+    width: 100px;
+    height: 32px;
+    color: #fff;
+    background: #50A4FF;
+    margin-right: 20px;
+    margin-left: 50px;
+    border-radius: 2px;
+    line-height: 32px;
+    text-align: center;
 }
 
 
