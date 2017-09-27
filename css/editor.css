@@ -1060,6 +1060,8 @@
 }
 .main .main-content .right-panel .right-panel-control-bar .right-panel-control-bar-container{
     width: 100%;
+    /* min-width: 870px; */
+    /* width: 870px; */
     min-height: 68px;
     display: flex;
     flex-direction: row;
@@ -2494,7 +2496,7 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        padding: 20px 22px;
+        /* padding: 20px 22px; */
         font-size: 12px;
         margin: 0;
         flex-wrap: wrap;
