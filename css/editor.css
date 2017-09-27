@@ -205,9 +205,10 @@
     position: absolute;
     /* width: 428px; */
     max-width: 428px;
-    width: 37.08%;
+    /* width: 37.08%; */
+    width: 21.08%;
     margin-top: 88px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     /* position: absolute; */
 } 
 /* .main .main-content .left-panel-placeholder{}
@@ -229,7 +230,7 @@
 @media(max-width: 1734px){
     .main .main-content .left-panel{
         position: relative;
-        margin-right: 20px;
+        /* margin-right: 20px; */
     }
 }
 .main .main-content .left-panel .fold-container{
@@ -244,7 +245,7 @@
     /* width: 250px; */
     /* width: 58.41%; */
     width: 100%;
-    max-width: 250px;
+    max-width: 230px;
     min-width: 118px;
     height: 68px;
     color: #FFFFFF;
