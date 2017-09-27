@@ -63,7 +63,7 @@ $(function(){
                 $('.fold-container').removeClass('hide');
                 if(windowWidth < 1100){
                     $('.right-panel').css({
-                        'margin-left': '0px'
+                        'margin-left': '10px'
                     })
                 }
             }
@@ -344,7 +344,7 @@ $(function(){
                 var $leftPanel = $('.left-panel-actual');
                 var screenWidth = $(document.body).outerWidth(true) + 15;
 
-                if(screenWidth < 1300){
+                if(screenWidth < 1300 && screenWidth > 993){
                     // console.log(screenWidth);
                     var leftPanelWidth = (screenWidth - 870) + 'px';
                     console.log(leftPanelWidth)

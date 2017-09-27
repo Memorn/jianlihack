@@ -282,6 +282,11 @@
         /* width: 118px; */
     }
 }
+@media(min-width: 1126px){
+    .main .main-content .left-panel .fold-container>a{
+        width: 250px;
+    }
+}
 .main .main-content .left-panel .fold-container>a:hover:nth-child(1){
     background-color: rgba(255, 79, 76, 0.85);
 }
@@ -1026,7 +1031,11 @@
     -webkit-transition: none; /* Safari 和 Chrome */
     -o-transition: none;  
 }
-
+@media(max-width: 1125px){
+    .main .main-content .right-panel{
+        margin-left: 10px !important;
+    }
+}
 @media(max-width: 1440px){
     .main .main-content .right-panel{
         position: relative;
