@@ -187,6 +187,11 @@
     /* padding-right:28px; */
     position: relative;
 }
+/* @media(max-width: 1440px){
+    .main .main-content{
+       display: flex;
+    }
+} */
 @media(max-width: 1734px){
     .main .main-content{
        display: flex;
@@ -206,9 +211,10 @@
     /* width: 428px; */
     max-width: 428px;
     /* width: 37.08%; */
-    width: 21.08%;
+    /* width: 21.08%; */
     margin-top: 88px;
     margin-right: 20px;
+    /* margin-right: 20px; */
     /* position: absolute; */
 } 
 
@@ -216,15 +222,24 @@
 .main .main-content .left-panel .fill-in-tips-bgc{background: rgb(248, 99, 49);}
 .main .main-content .left-panel .view-cases-bgc{background: rgb(255, 129, 58);}
 .main .main-content .left-panel .tutor-bgc{background: rgb(5, 66, 118);}
+@media(min-width: 1120px) and ( max-width: 1240px){
+    .main .main-content .left-panel{
+        margin-right: 5px;
+    }
+}
 @media(max-width: 1120px){
     .main .main-content .left-panel{
         margin-right: 0px;
     }
 }
+/* @media(max-width: 1440px){
+    .main .main-content .left-panel{
+        position: relative;
+    }
+} */
 @media(max-width: 1734px){
     .main .main-content .left-panel{
         position: relative;
-        /* margin-right: 20px; */
     }
 }
 .main .main-content .left-panel .fold-container{
@@ -876,6 +891,12 @@
     height: 151px;
     padding: 22px 28px 18px 24px;
 }
+@media(max-width: 1377px){
+    .main .main-content .left-panel .tutor .step-bar{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
 .main .main-content .left-panel .tutor .step-bar .step-title{
     color: #404040;
     font-size: 14px;
@@ -1006,7 +1027,7 @@
     -o-transition: none;  
 }
 
-@media(max-width: 1320px){
+@media(max-width: 1440px){
     .main .main-content .right-panel{
         position: relative;
         /* margin-right: 20px; */

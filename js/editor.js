@@ -268,7 +268,6 @@ $(function(){
                 var $controlBarContainerDownload = $('.right-panel-control-bar-container').children('.control-download');
                 var $editPanel = $('.right-panel-resume-editor');
                 var $leftPanel = $('.left-panel-actual');
-                var $leftPanelPhd = $('.left-panel-placeholder');
                 var $rightPanel = $('.right-panel');
                 
                 var screenWidth = $(document.body).outerWidth(true) + 15;
@@ -291,15 +290,6 @@ $(function(){
 
                     $controlBarContainerDownload.css('display','inline-block');
 
-                    // $leftPanel.css({
-                    //     'position':'fixed',
-                    //     'left': '0px',
-                    //     'top': '0px',
-                    //     'z-index':'999'
-                    // });
-
-                    // $leftPanelPhd.removeClass('hide');
-
                     $editPanel.css({
                         'margin-top': '78px'
                     });
@@ -317,13 +307,7 @@ $(function(){
                             'float': 'none'
                         });
                         $controlBarContainerDownload.css('display','none');
-                        // $leftPanel.css({
-                        //     'position':'absolute',
-                        //     'left': 'auto',
-                        //     'top': 'auto',
-                        //     'z-index':'99'
-                        // });
-                        // $leftPanelPhd.addClass('hide');
+                        
                         $editPanel.css({
                             'margin-top': '10px'
                         });
@@ -342,27 +326,32 @@ $(function(){
     
                         $controlBarContainerDownload.css('display','none');
                         
-                        // $leftPanel.css({
-                        //     'position':'absolute',
-                        //     'left': 'auto',
-                        //     'top': 'auto',
-                        //     'z-index':'99'
-                        // });
-    
-                        // $leftPanelPhd.addClass('hide');
-    
                         $editPanel.css({
                             'margin-top': '10px'
                         });
-    
-                        // $rightPanel.css({
-                        //     'margin': '0'
-                        // }); 
+                        
                     }
                    
                 }
             }
             $(window).scroll(scrollCallBack);
+        };
+
+        //根据窗口变化指定左侧panel宽度
+        var leftPanelWidth = function(){
+            
+            $(window).resize(function(){
+                var $leftPanel = $('.left-panel-actual');
+                var screenWidth = $(document.body).outerWidth(true) + 15;
+
+                if(screenWidth < 1300){
+                    // console.log(screenWidth);
+                    var leftPanelWidth = (screenWidth - 870) + 'px';
+                    console.log(leftPanelWidth)
+                    $leftPanel.css('width',leftPanelWidth);
+                }
+
+            });
         };
 
         //简历提升建议弹窗
@@ -478,6 +467,7 @@ $(function(){
         leftFoldSwitch();
         editorControl();
         scrollFixedPanel();
+        leftPanelWidth();
         showRobotModal();
         showPlateModal();
         textareaSelfHeight();
