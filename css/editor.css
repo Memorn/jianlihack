@@ -204,9 +204,11 @@
     padding-right: 0px;
     position: absolute;
     /* width: 428px; */
+    max-width: 428px;
     width: 37.08%;
     margin-top: 88px;
     margin-right: 20px;
+    /* position: absolute; */
 } 
 /* .main .main-content .left-panel-placeholder{}
 .main .main-content .left-panel-placeholder .fold-container>a{
@@ -1006,13 +1008,20 @@
     -webkit-transition: none; /* Safari 和 Chrome */
     -o-transition: none;  
 }
-@media(max-width: 1734px){
+
+@media(max-width: 1320px){
     .main .main-content .right-panel{
         position: relative;
         /* margin-right: 20px; */
         margin: 0px;
     }
 }
+/* @media(max-width: 1734px){
+    .main .main-content .right-panel{
+        position: relative;
+        margin: 0px;
+    }
+} */
 
 /**编辑器头部控制器样式**/
 .main .main-content .right-panel .right-panel-control-bar{
