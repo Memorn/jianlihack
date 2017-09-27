@@ -208,23 +208,17 @@
     /* width: 37.08%; */
     width: 21.08%;
     margin-top: 88px;
-    /* margin-right: 20px; */
+    margin-right: 20px;
     /* position: absolute; */
 } 
-/* .main .main-content .left-panel-placeholder{}
-.main .main-content .left-panel-placeholder .fold-container>a{
-    box-shadow: none;
-} */
-/*.main .main-content .left-panel-placeholder .fold-container{
-    width: 230px;
-} */
+
 .main .main-content .left-panel .inteligent-check-bgc{background: rgb(255, 79, 76)}
 .main .main-content .left-panel .fill-in-tips-bgc{background: rgb(248, 99, 49);}
 .main .main-content .left-panel .view-cases-bgc{background: rgb(255, 129, 58);}
 .main .main-content .left-panel .tutor-bgc{background: rgb(5, 66, 118);}
-@media(max-width: 1100px){
+@media(max-width: 1120px){
     .main .main-content .left-panel{
-        /* margin-right: 0px; */
+        margin-right: 0px;
     }
 }
 @media(max-width: 1734px){
