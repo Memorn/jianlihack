@@ -28,6 +28,13 @@ $(function(){
             $rightFixed2 = $('.right-fixed-2'),
             $rightFixed3 = $('.right-fixed-3'),
             $rightFixed4 = $('.right-fixed-4');
+
+            fix1Height = parseInt($rightFixed1.css('height')), //1282
+            fix2Height = parseInt($rightFixed2.css('height')), //1240
+            fix3Height = parseInt($rightFixed3.css('height')), //689
+            fix4Height = parseInt($rightFixed4.css('height')), //374
+  
+            hotTopicHeight = parseInt($('.hot-topic').css('height'));
   
         function scrollCallBack(panelPart){
           return function(){
@@ -97,7 +104,7 @@ $(function(){
                       };
                       break;
                   case 3 :
-                      if( top >= 641){
+                      if( top >= 641+10+hotTopicHeight){
                           $rightFixed1.css({
                               'position':'relative',
                               'left': 'auto',
@@ -163,15 +170,15 @@ $(function(){
         };
   
 
-        if(availHeight >= 1282){
+        if(availHeight >= fix1Height){
             $(window).scroll(scrollCallBack(1));
-        }else if(availHeight < 1282 && availHeight >= 1240){
+        }else if(availHeight < fix1Height && availHeight >= fix2Height){
             $(window).scroll(scrollCallBack(2));
-        }else if(availHeight < 1240 && availHeight >= 689){
+        }else if(availHeight < fix2Height && availHeight >= fix3Height){
             $(window).scroll(scrollCallBack(3));
-        }else if(availHeight < 689 && availHeight >= 374){
+        }else if(availHeight < fix3Height && availHeight >= fix4Height){
             $(window).scroll(scrollCallBack(4));
-        }else if(availHeight < 374){
+        }else if(availHeight < fix4Height){
             $(window).unbind('scroll');
             $rightFixed1.css({
                 'position':'relative',

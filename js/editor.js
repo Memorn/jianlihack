@@ -262,6 +262,11 @@ $(function(){
         //左侧固定控制条吸顶
         var scrollFixedPanel = function(){
             function scrollCallBack(){
+                //移动端不生效
+                var windowWidth = window.innerWidth;
+                if(windowWidth < 768){
+                    return;
+                }
                 var top = $(window).scrollTop();
                 var $controlBar = $('.right-panel-control-bar');
                 var $controlBarContainer = $('.right-panel-control-bar-container');
@@ -463,6 +468,37 @@ $(function(){
     
         };
     
+
+        /***********移动端相关方法**********/
+        //控制左边导航栏
+        var mobileNavCtrl = function(){
+            var $navBtn = $('#mobile-nav-btn'),
+                $mobileNav = $('#mobile-nav');
+            
+            $navBtn.on('click',function(){
+                $mobileNav.removeClass('hide');
+                document.documentElement.style.overflow='hidden';
+                $('.mobile-nav-mask').on('click',function(event){
+                    $mobileNav.addClass('hide');
+                    document.documentElement.style.overflow='auto';
+                });
+            });
+        }
+        //控制检查部分
+        var checkPanelCtrl = function(){
+            var $mbChkOpenBtn = $('#mobile-check-open-btn'),
+                $mbChkCloseBtn = $('#mobile-check-close-btn');
+
+            $mbChkOpenBtn.on('click',function(event){
+                $(event.target).parent().addClass('hide');
+                $(event.target).parent().siblings('.check-open').removeClass('hide');
+            });
+            $mbChkCloseBtn.on('click',function(event){
+                $(event.target).parents('.check-open').addClass('hide');
+                $(event.target).parents('.check-open').siblings('.check-close').removeClass('hide');
+            });
+        }
+
         closeLeftPanel();
         leftFoldSwitch();
         editorControl();
@@ -474,4 +510,6 @@ $(function(){
         eidtPlateItem();
         createTimePicker();
         endTimeFocus();
+        mobileNavCtrl();
+        checkPanelCtrl();
     });

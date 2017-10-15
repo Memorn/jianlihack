@@ -6,6 +6,7 @@ $(function(){
         var mySwiper = new Swiper ('#feedback-swiper', {
             direction: 'horizontal',
             loop: true,
+            autoplay: 10000,
             // 如果需要分页器
             pagination: '.swiper-pagination',
         });
