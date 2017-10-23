@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="header row">
+        <div class="header row hidden-xs">
             <div class="header-logo col-md-3 col-xs-6">
                 <a href="index.html">
                     <img src="img/LOGO-SEC@2x.png" width="115px" alt="LOGO"/>
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="main row">
-            <div class="left-panel col-md-3">
+            <div class="left-panel col-md-3 hidden-xs">
                 <ul>
                     <li>
                         <div class="left-panel-item active">
@@ -128,172 +128,321 @@
                     </div>
                 </div>
             </div>
-            <div class="edit-panel col-md-5">
+            <div class="edit-panel col-md-5 col-xs-12">
                 <div class="basic-info">
-                    <div class="info-title">
+                    <div class="info-title hidden-xs title-pc">
                         <input type="text" class="disabled" disabled value="基本信息"/>
                         <span class="info-title-edit-btn"><i class="fa fa-pencil" aria-hidden="true"></i></span>
                     </div>
-                    <div class="info-content">
-                        <div class="info-content-item">
-                            <div class="info-content-item-form">
-                                <div class="form-input no-margin-top">
-                                    <input type="text" placeholder="简历名称（简历用途/申请的工作，如：贝恩咨询PTA实习）"/>
-                                </div>
-                                <div class="form-input">
-                                    <input type="text" placeholder="所申请工作的招聘链接（URL）"/>
-                                </div>
-                                <div class="form-input">
-                                    <input type="text" placeholder="姓名（可填写中英文，如：陈媛媛Abbey）"/>
-                                </div>
-                                <div class="form-input">
-                                    <input type="text" placeholder="手机号码"/>
-                                </div>
-                                <div class="form-input">
-                                    <input type="text" placeholder="邮箱"/>
-                                </div>
-                                <div class="form-input">
-                                    <input type="text" placeholder="地址（纸质offer的收件地址）"/>
-                                </div>
+                    <div class="title-mobile visible-xs">
+                        <div class="title-header">
+                            <div class="nav-btn"><a href="javascript:;" class="mobile-nav-btn"><i class="fa fa-align-justify" aria-hidden="true"></i></a></div>
+                            <div class="title-header-text">基础信息</div>
+                            <div class="next-btn"><a href="javascript:;" class="mobile-next-btn">下一步</a></div>
+                        </div>
+                        <div class="title-nav">
+                            <div class="nav-item active">
+                                <a href="javascript:;" class="edit-container-btn">内容编辑</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="javascript:;" class="tips-btn">填写贴士</a>
                             </div>
                         </div>
                     </div>
-                    <div class="info-footer row">
-                        <div class="info-footer-save col-md-3"><input type="submit" value="保存"/></div>
-                        <div class="info-footer-next col-md-6 col-md-offset-3"><input type="submit" value="下一步：教育经历"/></div>
+                    <div class="mobile-edit-container">
+                        <div class="info-content">
+                            <div class="info-content-item">
+                                <div class="info-content-item-form">
+                                    <div class="form-input no-margin-top">
+                                        <input type="text" placeholder="简历名称（简历用途/申请的工作，如：贝恩咨询PTA实习）"/>
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" placeholder="所申请工作的招聘链接（URL）"/>
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" placeholder="姓名（可填写中英文，如：陈媛媛Abbey）"/>
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" placeholder="手机号码"/>
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" placeholder="邮箱"/>
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" placeholder="地址（纸质offer的收件地址）"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-footer row">
+                            <div class="info-footer-save col-md-3"><input type="submit" value="保存"/></div>
+                            <div class="info-footer-next col-md-6 col-md-offset-3"><input type="submit" value="下一步：教育经历"/></div>
+                        </div>
+                    </div>
+                    <div class="mobile-tips hide">
+                        <div class="tips-item active">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
+                        <div class="tips-item">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
+                        <div class="tips-item">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="educate-info hide">
-                    <div class="info-title">
+                    <div class="info-title hidden-xs">
                         <input type="text" class="disabled" disabled value="教育经历"/>
                         <span class="info-title-edit-btn"><i class="fa fa-pencil" aria-hidden="true"></i></span>
                     </div>
-                    <div class="info-content">
-                        <div class="info-content-item">
-                            <div class="info-content-item-form">
-                                <div class="form-input no-margin-top">
-                                    <input type="text" placeholder="学校名称"/>
+                    <div class="title-mobile visible-xs">
+                        <div class="title-header">
+                            <div class="nav-btn">
+                                <a href="javascript:;" class="mobile-nav-btn"><i class="fa fa-align-justify" aria-hidden="true"></i></a>
+                                <a href="javascript:;" class="prev-btn mobile-pre-btn">上一步</a>
+                            </div>
+                            <div class="title-header-text">教育经历</div>
+                            <div class="next-btn"><a href="javascript:;" class="mobile-next-btn">下一步</a></div>
+                        </div>
+                        <div class="title-nav">
+                            <div class="nav-item">
+                                <a href="javascript:;" class="common-verb-btn">常用动词</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="javascript:;" class="view-case-btn">查看案例</a>
+                            </div>
+                            <div class="nav-item active">
+                                <a href="javascript:;" class="edit-container-btn">内容编辑</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="javascript:;" class="tips-btn">填写贴士</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-edit-container">
+                        <div class="info-content">
+                            <div class="info-content-item">
+                                <div class="info-content-item-form">
+                                    <div class="form-input no-margin-top">
+                                        <input type="text" placeholder="学校名称"/>
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" placeholder="所属专业"/>
+                                    </div>
+                                    <div class="form-input two-inputs">
+                                        <input type="text" placeholder="学历"/>
+                                        <input type="text" placeholder="毕业时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" placeholder="GPA：xx/4.0"/>
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" placeholder="荣誉（如有）"/>
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" placeholder="相关课程（如有）"/>
+                                    </div>
                                 </div>
-                                <div class="form-input">
-                                    <input type="text" placeholder="所属专业"/>
+                            </div>
+                            <div class="info-add-item">
+                                <a href="javascript:;" class="info-add-item-btn"><i class="fa fa-plus" aria-hidden="true"></i>添加更多教育经历</a>
+                            </div>
+                        </div>
+                        <div class="info-footer row">
+                            <div class="info-footer-pre col-md-3 hidden-xs"><input type="submit" value="上一步"/></div>
+                            <div class="info-footer-save col-md-3"><input type="submit" value="保存"/></div>
+                            <div class="info-footer-next col-md-6"><input type="submit" value="下一步：工作经历"/></div>
+                        </div>
+                    </div>
+                    <div class="mobile-tips hide">
+                        <div class="tips-item active">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
+                        <div class="tips-item">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
+                        <div class="tips-item">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="common-verb hide">
+                        <div class="select-container">
+                            <select name="" id="">
+                                <option value="">个人成就</option>
+                                <option value="">个人成就</option>
+                                <option value="">个人成就</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">中英文对照</option>
+                                <option value="">中英文对照</option>
+                                <option value="">中英文对照</option>
+                            </select>
+                        </div>
+                        <div class="verb-list">
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-case hide">
+                        <div class="select-container">
+                            <select name="" id="">
+                                <option value="">实习工作经历</option>
+                                <option value="">实习工作经历</option>
+                                <option value="">实习工作经历</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">投行</option>
+                                <option value="">投行</option>
+                                <option value="">投行</option>
+                            </select>
+                        </div>
+                        <div class="case-container">
+                            <div class="case-header">
+                                <div class="company-name">XXX证券</div>
+                                <div class="position-info">
+                                    <span class="position">兼职项目助理</span>
+                                    <span class="department">投资银行事业部</span>
                                 </div>
-                                <div class="form-input two-inputs">
-                                    <input type="text" placeholder="学历"/>
-                                    <input type="text" placeholder="毕业时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
+                            </div>
+                            <div class="case-content">
+                                <div class="case-item">
+                                    <span class="dot"></span>
+                                    <span class="case-item-text">
+                                        通过在各种渠道（包括WIND、上市公司年报、发债主体评级、报告产业信息网等）获取所需资料，独立撰写61页的电子行业研究报告
+                                    </span>
                                 </div>
-                                <div class="form-input">
-                                    <input type="text" placeholder="GPA：xx/4.0"/>
-                                </div>
-                                <div class="form-input">
-                                    <input type="text" placeholder="荣誉（如有）"/>
-                                </div>
-                                <div class="form-input">
-                                    <input type="text" placeholder="相关课程（如有）"/>
+                                <div class="case-item">
+                                    <span class="dot"></span>
+                                    <span class="case-item-text">
+                                        通过在各种渠道（包括WIND、上市公司年报、发债主体评级、报告产业信息网等）获取所需资料，独立撰写61页的电子行业研究报告
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                        <div class="info-add-item">
-                            <a href="javascript:;" class="info-add-item-btn"><i class="fa fa-plus" aria-hidden="true"></i>添加更多教育经历</a>
-                        </div>
-                    </div>
-                    <div class="info-footer row">
-                        <div class="info-footer-pre col-md-3"><input type="submit" value="上一步"/></div>
-                        <div class="info-footer-save col-md-3"><input type="submit" value="保存"/></div>
-                        <div class="info-footer-next col-md-6"><input type="submit" value="下一步：工作经历"/></div>
                     </div>
                 </div>
                 <div class="work-info hide">
-                    <div class="info-title">
+                    <div class="info-title hidden-xs">
                         <input type="text" class="disabled" disabled value="工作经历"/>
                         <span class="info-title-edit-btn"><i class="fa fa-pencil" aria-hidden="true"></i></span>
                     </div>
-                    <div class="info-content">
-                        <div class="info-content-item">
-                            <div class="info-content-item-tag row">
-                                <div class="tag-info col-md-6">
-                                    <span class="tag-info-title">普华永道会计事务所</span>
-                                    <span class="tag-info-desc">分析师（2016 - 至今）</span>
-                                </div>
-                                <div class="tag-ctrl-bar col-md-6">
-                                    <span class="tag-ahead-btn"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></span>
-                                    <span class="tag-back-btn"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></span>
-                                    <span class="tag-del-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-                                </div>
+                    <div class="title-mobile visible-xs">
+                        <div class="title-header">
+                            <div class="nav-btn">
+                                <a href="javascript:;" class="mobile-nav-btn"><i class="fa fa-align-justify" aria-hidden="true"></i></a>
+                                <a href="javascript:;" class="prev-btn mobile-pre-btn">上一步</a>
                             </div>
-                            <div class="info-content-item-form">
-                                <div class="form-input two-inputs no-margin-top">
-                                    <input type="text" placeholder="公司名称"/>
-                                    <select name="" id="">
-                                        <option value="" disabled selected>所在城市</option>
-                                    </select>
-                                </div>
-                                <div class="form-input two-inputs">
-                                    <input type="text" placeholder="你的职位"/>
-                                    <select name="" id="">
-                                        <option value="" disabled selected>所在部门</option>
-                                    </select>
-                                </div>
-                                <div class="form-input two-inputs">
-                                    <input type="text" placeholder="起始时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
-                                    <input type="text" placeholder="结束时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
-                                </div>
-                                <div class="form-input">
-                                    <textarea name="" id="" placeholder="工作内容"></textarea>
-                                </div>
-                            </div>
+                            <div class="title-header-text">工作经历</div>
+                            <div class="next-btn"><a href="javascript:;" class="mobile-next-btn">下一步</a></div>
                         </div>
-                        <div class="info-content-item">
-                            <div class="info-content-item-tag row">
-                                <div class="tag-info col-md-6">
-                                    <span class="tag-info-title">普华永道会计事务所</span>
-                                    <span class="tag-info-desc">分析师（2016 - 至今）</span>
-                                </div>
-                                <div class="tag-ctrl-bar col-md-6">
-                                    <span class="tag-ahead-btn"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></span>
-                                    <span class="tag-back-btn"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></span>
-                                    <span class="tag-del-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-                                </div>
+                        <div class="title-nav">
+                            <div class="nav-item">
+                                <a href="javascript:;" class="common-verb-btn">常用动词</a>
                             </div>
-                            <div class="info-content-item-form hide">
-                                <div class="form-input two-inputs no-margin-top">
-                                    <input type="text" placeholder="公司名称"/>
-                                    <select name="" id="">
-                                        <option value="" disabled selected>所在城市</option>
-                                    </select>
-                                </div>
-                                <div class="form-input two-inputs">
-                                    <input type="text" placeholder="你的职位"/>
-                                    <select name="" id="">
-                                        <option value="" disabled selected>所在部门</option>
-                                    </select>
-                                </div>
-                                <div class="form-input two-inputs">
-                                    <input type="text" placeholder="起始时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
-                                    <input type="text" placeholder="结束时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
-                                </div>
-                                <div class="form-input">
-                                    <textarea name="" id="" placeholder="工作内容"></textarea>
-                                </div>
+                            <div class="nav-item">
+                                <a href="javascript:;" class="view-case-btn">查看案例</a>
                             </div>
-                        </div>
-                        <div class="info-add-item">
-                            <a href="javascript:;" class="info-add-item-btn"><i class="fa fa-plus" aria-hidden="true"></i>添加更多工作经历</a>
+                            <div class="nav-item active">
+                                <a href="javascript:;" class="edit-container-btn">内容编辑</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="javascript:;" class="tips-btn">填写贴士</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="info-footer row">
-                        <div class="info-footer-pre col-md-3"><input type="submit" value="上一步"/></div>
-                        <div class="info-footer-save col-md-3"><input type="submit" value="保存"/></div>
-                        <div class="info-footer-next col-md-6"><input type="submit" value="下一步：活动经历"/></div>
-                    </div>
-                </div>
-                <div class="activity-info hide">
-                        <div class="info-title">
-                            <input type="text" class="disabled" disabled value="活动经历"/>
-                            <span class="info-title-edit-btn"><i class="fa fa-pencil" aria-hidden="true"></i></span>
-                        </div>
+                    <div class="mobile-edit-container">
                         <div class="info-content">
                             <div class="info-content-item">
-                                <!-- <div class="info-content-item-tag row hide">
+                                <div class="info-content-item-tag row">
                                     <div class="tag-info col-md-6">
                                         <span class="tag-info-title">普华永道会计事务所</span>
                                         <span class="tag-info-desc">分析师（2016 - 至今）</span>
@@ -303,7 +452,239 @@
                                         <span class="tag-back-btn"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></span>
                                         <span class="tag-del-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
                                     </div>
-                                </div> -->
+                                </div>
+                                <div class="info-content-item-form">
+                                    <div class="form-input two-inputs no-margin-top">
+                                        <input type="text" placeholder="公司名称"/>
+                                        <select name="" id="">
+                                            <option value="" disabled selected>所在城市</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-input two-inputs">
+                                        <input type="text" placeholder="你的职位"/>
+                                        <select name="" id="">
+                                            <option value="" disabled selected>所在部门</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-input two-inputs">
+                                        <input type="text" placeholder="起始时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
+                                        <input type="text" placeholder="结束时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
+                                    </div>
+                                    <div class="form-input">
+                                        <textarea name="" id="" placeholder="工作内容"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-content-item">
+                                <div class="info-content-item-tag row">
+                                    <div class="tag-info col-md-6">
+                                        <span class="tag-info-title">普华永道会计事务所</span>
+                                        <span class="tag-info-desc">分析师（2016 - 至今）</span>
+                                    </div>
+                                    <div class="tag-ctrl-bar col-md-6">
+                                        <span class="tag-ahead-btn"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></span>
+                                        <span class="tag-back-btn"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></span>
+                                        <span class="tag-del-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                    </div>
+                                </div>
+                                <div class="info-content-item-form hide">
+                                    <div class="form-input two-inputs no-margin-top">
+                                        <input type="text" placeholder="公司名称"/>
+                                        <select name="" id="">
+                                            <option value="" disabled selected>所在城市</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-input two-inputs">
+                                        <input type="text" placeholder="你的职位"/>
+                                        <select name="" id="">
+                                            <option value="" disabled selected>所在部门</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-input two-inputs">
+                                        <input type="text" placeholder="起始时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
+                                        <input type="text" placeholder="结束时间" class="time-picker" data-date-format="yyyy-mm-dd"/>
+                                    </div>
+                                    <div class="form-input">
+                                        <textarea name="" id="" placeholder="工作内容"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-add-item">
+                                <a href="javascript:;" class="info-add-item-btn"><i class="fa fa-plus" aria-hidden="true"></i>添加更多工作经历</a>
+                            </div>
+                        </div>
+                        <div class="info-footer row">
+                            <div class="info-footer-pre col-md-3 hidden-xs"><input type="submit" value="上一步"/></div>
+                            <div class="info-footer-save col-md-3"><input type="submit" value="保存"/></div>
+                            <div class="info-footer-next col-md-6"><input type="submit" value="下一步：活动经历"/></div>
+                        </div>
+                    </div>
+                    <div class="mobile-tips hide">
+                        <div class="tips-item active">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
+                        <div class="tips-item">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
+                        <div class="tips-item">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="common-verb hide">
+                        <div class="select-container">
+                            <select name="" id="">
+                                <option value="">个人成就</option>
+                                <option value="">个人成就</option>
+                                <option value="">个人成就</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">中英文对照</option>
+                                <option value="">中英文对照</option>
+                                <option value="">中英文对照</option>
+                            </select>
+                        </div>
+                        <div class="verb-list">
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-case hide">
+                        <div class="select-container">
+                            <select name="" id="">
+                                <option value="">实习工作经历</option>
+                                <option value="">实习工作经历</option>
+                                <option value="">实习工作经历</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">投行</option>
+                                <option value="">投行</option>
+                                <option value="">投行</option>
+                            </select>
+                        </div>
+                        <div class="case-container">
+                            <div class="case-header">
+                                <div class="company-name">XXX证券</div>
+                                <div class="position-info">
+                                    <span class="position">兼职项目助理</span>
+                                    <span class="department">投资银行事业部</span>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <div class="case-item">
+                                    <span class="dot"></span>
+                                    <span class="case-item-text">
+                                        通过在各种渠道（包括WIND、上市公司年报、发债主体评级、报告产业信息网等）获取所需资料，独立撰写61页的电子行业研究报告
+                                    </span>
+                                </div>
+                                <div class="case-item">
+                                    <span class="dot"></span>
+                                    <span class="case-item-text">
+                                        通过在各种渠道（包括WIND、上市公司年报、发债主体评级、报告产业信息网等）获取所需资料，独立撰写61页的电子行业研究报告
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-info hide">
+                    <div class="info-title hidden-xs">
+                        <input type="text" class="disabled" disabled value="活动经历"/>
+                        <span class="info-title-edit-btn"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                    </div>
+                    <div class="title-mobile visible-xs">
+                        <div class="title-header">
+                            <div class="nav-btn">
+                                <a href="javascript:;" class="mobile-nav-btn"><i class="fa fa-align-justify" aria-hidden="true"></i></a>
+                                <a href="javascript:;" class="prev-btn mobile-pre-btn">上一步</a>
+                            </div>
+                            <div class="title-header-text">活动经历</div>
+                            <div class="next-btn"><a href="javascript:;" class="mobile-next-btn">下一步</a></div>
+                        </div>
+                        <div class="title-nav">
+                            <div class="nav-item">
+                                <a href="javascript:;" class="common-verb-btn">常用动词</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="javascript:;" class="view-case-btn">查看案例</a>
+                            </div>
+                            <div class="nav-item active">
+                                <a href="javascript:;" class="edit-container-btn">内容编辑</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="javascript:;" class="tips-btn">填写贴士</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-edit-container">
+                        <div class="info-content">
+                            <div class="info-content-item">
                                 <div class="info-content-item-form">
                                     <div class="form-input two-inputs no-margin-top">
                                         <input type="text" placeholder="组织/活动名称"/>
@@ -331,16 +712,175 @@
                             </div>
                         </div>
                         <div class="info-footer row">
-                            <div class="info-footer-pre col-md-3"><input type="submit" value="上一步"/></div>
+                            <div class="info-footer-pre col-md-3 hidden-xs"><input type="submit" value="上一步"/></div>
                             <div class="info-footer-save col-md-3"><input type="submit" value="保存"/></div>
                             <div class="info-footer-next col-md-6"><input type="submit" value="下一步：其他"/></div>
                         </div>
+                    </div>
+                    <div class="mobile-tips hide">
+                        <div class="tips-item active">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
+                        <div class="tips-item">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
+                        <div class="tips-item">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="common-verb hide">
+                        <div class="select-container">
+                            <select name="" id="">
+                                <option value="">个人成就</option>
+                                <option value="">个人成就</option>
+                                <option value="">个人成就</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">中英文对照</option>
+                                <option value="">中英文对照</option>
+                                <option value="">中英文对照</option>
+                            </select>
+                        </div>
+                        <div class="verb-list">
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-case hide">
+                        <div class="select-container">
+                            <select name="" id="">
+                                <option value="">实习工作经历</option>
+                                <option value="">实习工作经历</option>
+                                <option value="">实习工作经历</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">投行</option>
+                                <option value="">投行</option>
+                                <option value="">投行</option>
+                            </select>
+                        </div>
+                        <div class="case-container">
+                            <div class="case-header">
+                                <div class="company-name">XXX证券</div>
+                                <div class="position-info">
+                                    <span class="position">兼职项目助理</span>
+                                    <span class="department">投资银行事业部</span>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <div class="case-item">
+                                    <span class="dot"></span>
+                                    <span class="case-item-text">
+                                        通过在各种渠道（包括WIND、上市公司年报、发债主体评级、报告产业信息网等）获取所需资料，独立撰写61页的电子行业研究报告
+                                    </span>
+                                </div>
+                                <div class="case-item">
+                                    <span class="dot"></span>
+                                    <span class="case-item-text">
+                                        通过在各种渠道（包括WIND、上市公司年报、发债主体评级、报告产业信息网等）获取所需资料，独立撰写61页的电子行业研究报告
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="other-info hide">
-                        <div class="info-title">
-                            <input type="text" class="disabled" disabled value="其他"/>
-                            <span class="info-title-edit-btn"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                    <div class="info-title hidden-xs">
+                        <input type="text" class="disabled" disabled value="其他"/>
+                        <span class="info-title-edit-btn"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                    </div>
+                    <div class="title-mobile visible-xs">
+                        <div class="title-header">
+                            <div class="nav-btn">
+                                <a href="javascript:;" class="mobile-nav-btn"><i class="fa fa-align-justify" aria-hidden="true"></i></a>
+                                <a href="javascript:;" class="prev-btn mobile-pre-btn">上一步</a>
+                            </div>
+                            <div class="title-header-text">其他</div>
+                            <div class="next-btn"><a href="javascript:;">完成</a></div>
                         </div>
+                        <div class="title-nav">
+                            <div class="nav-item">
+                                <a href="javascript:;" class="common-verb-btn">常用动词</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="javascript:;" class="view-case-btn">查看案例</a>
+                            </div>
+                            <div class="nav-item active">
+                                <a href="javascript:;" class="edit-container-btn">内容编辑</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="javascript:;" class="tips-btn">填写贴士</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-edit-container">
                         <div class="info-content">
                             <div class="other-info-content-item no-margin-top">
                                 <div class="item-label">
@@ -424,52 +964,346 @@
                             </div>
                         </div>
                         <div class="info-footer row">
-                            <div class="info-footer-pre col-md-3"><input type="submit" value="上一步"/></div>
+                            <div class="info-footer-pre col-md-3 hidden-xs"><input type="submit" value="上一步"/></div>
                             <div class="info-footer-save col-md-3"><input type="submit" value="保存"/></div>
                             <div class="info-footer-complete col-md-6"><input type="submit" value="完成"/></div>
+                        </div>                        
+                    </div>
+                    <div class="mobile-tips hide">
+                        <div class="tips-item active">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
                         </div>
+                        <div class="tips-item">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
+                        <div class="tips-item">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="common-verb hide">
+                        <div class="select-container">
+                            <select name="" id="">
+                                <option value="">个人成就</option>
+                                <option value="">个人成就</option>
+                                <option value="">个人成就</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">中英文对照</option>
+                                <option value="">中英文对照</option>
+                                <option value="">中英文对照</option>
+                            </select>
+                        </div>
+                        <div class="verb-list">
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-case hide">
+                        <div class="select-container">
+                            <select name="" id="">
+                                <option value="">实习工作经历</option>
+                                <option value="">实习工作经历</option>
+                                <option value="">实习工作经历</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">投行</option>
+                                <option value="">投行</option>
+                                <option value="">投行</option>
+                            </select>
+                        </div>
+                        <div class="case-container">
+                            <div class="case-header">
+                                <div class="company-name">XXX证券</div>
+                                <div class="position-info">
+                                    <span class="position">兼职项目助理</span>
+                                    <span class="department">投资银行事业部</span>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <div class="case-item">
+                                    <span class="dot"></span>
+                                    <span class="case-item-text">
+                                        通过在各种渠道（包括WIND、上市公司年报、发债主体评级、报告产业信息网等）获取所需资料，独立撰写61页的电子行业研究报告
+                                    </span>
+                                </div>
+                                <div class="case-item">
+                                    <span class="dot"></span>
+                                    <span class="case-item-text">
+                                        通过在各种渠道（包括WIND、上市公司年报、发债主体评级、报告产业信息网等）获取所需资料，独立撰写61页的电子行业研究报告
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="customize-info hide">
-                    <div class="info-title">
-                            <input type="text" class="disabled" disabled value="自定义模块"/>
-                            <span class="info-title-edit-btn"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                    <div class="info-title hidden-xs">
+                        <input type="text" class="disabled" disabled value="自定义模块"/>
+                        <span class="info-title-edit-btn"><i class="fa fa-pencil" aria-hidden="true"></i></span>
                     </div>
-                    <div class="info-content">
-                        <div class="info-content-item">
-                            <div class="info-content-item-form">
-                                <div class="form-input two-inputs no-margin-top">
-                                    <input type="text" placeholder="组织/活动名称"/>
-                                    <select name="" id="">
-                                        <option value="" disabled selected>所在城市</option>
-                                    </select>
-                                </div>
-                                <div class="form-input two-inputs">
-                                    <input type="text" placeholder="你的职位"/>
-                                    <select name="" id="">
-                                        <option value="" disabled selected>所在部门</option>
-                                    </select>
-                                </div>
-                                <div class="form-input two-inputs">
-                                    <input type="text" placeholder="起始时间"/>
-                                    <input type="text" placeholder="结束时间"/>
-                                </div>
-                                <div class="form-input">
-                                    <textarea name="" id="" placeholder="工作内容"></textarea>
-                                </div>
+                    <div class="title-mobile visible-xs">
+                        <div class="title-header">
+                            <div class="nav-btn">
+                                <a href="javascript:;" class="mobile-nav-btn"><i class="fa fa-align-justify" aria-hidden="true"></i></a>
+                                <a href="javascript:;" class="prev-btn mobile-pre-btn">上一步</a>
                             </div>
-                            <div class="info-add-item">
-                                <a href="javascript:;" class="info-add-item-btn"><i class="fa fa-plus" aria-hidden="true"></i>添加更多条目</a>
+                            <div class="title-header-text">自定义模块</div>
+                            <div class="next-btn"><a href="javascript:;" class="mobile-next-btn">下一步</a></div>
+                        </div>
+                        <div class="title-nav">
+                            <div class="nav-item">
+                                <a href="javascript:;" class="common-verb-btn">常用动词</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="javascript:;" class="view-case-btn">查看案例</a>
+                            </div>
+                            <div class="nav-item active">
+                                <a href="javascript:;" class="edit-container-btn">内容编辑</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="javascript:;" class="tips-btn">填写贴士</a>
                             </div>
                         </div>
                     </div>
-                    <div class="info-footer row">
-                        <div class="info-footer-pre col-md-3"><input type="submit" value="上一步"/></div>
-                        <div class="info-footer-save col-md-3"><input type="submit" value="保存"/></div>
-                        <div class="info-footer-next col-md-6"><input type="submit" value="完成"/></div>
+
+                    <div class="mobile-edit-container">
+                        <div class="info-content">
+                            <div class="info-content-item">
+                                <div class="info-content-item-form">
+                                    <div class="form-input two-inputs no-margin-top">
+                                        <input type="text" placeholder="组织/活动名称"/>
+                                        <select name="" id="">
+                                            <option value="" disabled selected>所在城市</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-input two-inputs">
+                                        <input type="text" placeholder="你的职位"/>
+                                        <select name="" id="">
+                                            <option value="" disabled selected>所在部门</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-input two-inputs">
+                                        <input type="text" placeholder="起始时间"/>
+                                        <input type="text" placeholder="结束时间"/>
+                                    </div>
+                                    <div class="form-input">
+                                        <textarea name="" id="" placeholder="工作内容"></textarea>
+                                    </div>
+                                </div>
+                                <div class="info-add-item">
+                                    <a href="javascript:;" class="info-add-item-btn"><i class="fa fa-plus" aria-hidden="true"></i>添加更多条目</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-footer row">
+                            <div class="info-footer-pre col-md-3 hidden-xs"><input type="submit" value="上一步"/></div>
+                            <div class="info-footer-save col-md-3"><input type="submit" value="保存"/></div>
+                            <div class="info-footer-next col-md-6"><input type="submit" value="完成"/></div>
+                        </div>                      
+                    </div>
+                    <div class="mobile-tips hide">
+                        <div class="tips-item active">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
+                        <div class="tips-item">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
+                        <div class="tips-item">
+                            <div class="tips-item-title">
+                                <span class="tips-item-title-text">不是项目制的工作经历怎么写？</span>
+                                <span class="tips-item-title-icon pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="tips-item-desc">
+                                <p>回顾工作时间完成最大的成绩，描述所取得的成绩（不要写“获得领导嘉奖”之类的原因，无法数据化描述读起来还没有说服力）。</p>
+                                <p>尽可能用数据说明成绩，突出分析能力、团队协作能力、解决问题能力等工作上所需的专业素质。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="common-verb hide">
+                        <div class="select-container">
+                            <select name="" id="">
+                                <option value="">个人成就</option>
+                                <option value="">个人成就</option>
+                                <option value="">个人成就</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">中英文对照</option>
+                                <option value="">中英文对照</option>
+                                <option value="">中英文对照</option>
+                            </select>
+                        </div>
+                        <div class="verb-list">
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                            <div class="verb-item">
+                                <span class="verb-item-left">Accelerated</span>
+                                <span class="verb-item-right">加快</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-case hide">
+                        <div class="select-container">
+                            <select name="" id="">
+                                <option value="">实习工作经历</option>
+                                <option value="">实习工作经历</option>
+                                <option value="">实习工作经历</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">投行</option>
+                                <option value="">投行</option>
+                                <option value="">投行</option>
+                            </select>
+                        </div>
+                        <div class="case-container">
+                            <div class="case-header">
+                                <div class="company-name">XXX证券</div>
+                                <div class="position-info">
+                                    <span class="position">兼职项目助理</span>
+                                    <span class="department">投资银行事业部</span>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <div class="case-item">
+                                    <span class="dot"></span>
+                                    <span class="case-item-text">
+                                        通过在各种渠道（包括WIND、上市公司年报、发债主体评级、报告产业信息网等）获取所需资料，独立撰写61页的电子行业研究报告
+                                    </span>
+                                </div>
+                                <div class="case-item">
+                                    <span class="dot"></span>
+                                    <span class="case-item-text">
+                                        通过在各种渠道（包括WIND、上市公司年报、发债主体评级、报告产业信息网等）获取所需资料，独立撰写61页的电子行业研究报告
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="right-panel col-md-3">
+            <div class="right-panel col-md-3 hidden-xs">
                 <div class="tips-title">
                     填写贴士
                 </div>
@@ -526,6 +1360,41 @@
             保存成功！
         </div>
     </div>
+    <div id="mobile-nav" class="mobile-nav hide">
+            <div class="mobile-nav-mask"></div>
+            <div class="mobile-nav-container">
+                <div class="mobile-nav-header">
+                    <span class="header-logo">
+                        <img src="img/LOGO-SEC@2x.png" alt="">
+                    </span>
+                </div>
+                <div class="mobile-nav-list">
+                    <ul>
+                        <li>
+                            <a href="javascript:;">引导填写</a>
+                        </li>
+                        <li class="active">
+                            <a href="javascript:;">预览编辑</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">导师辅导</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">我的订单</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><i class="fa fa-gift"></i>获取优惠</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">账户设置</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">登出</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     <script src="lib/jquery.min.js"></script>
     <script src="lib/bootstrap.min.js"></script>
     <script src="lib/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.js"></script>

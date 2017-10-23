@@ -66,7 +66,7 @@ $(function(){
                 $editPanelItems.each(function(index,el){
                     $(el).addClass('hide');
                 });
-                $this.parent().parent().parent().next().removeClass('hide');
+                $this.parent().parent().parent().parent().next().removeClass('hide');
             });
         });
     };
@@ -163,7 +163,106 @@ $(function(){
         // }
     }
 
+    /***********移动端相关方法**********/
 
+    //控制左边导航栏
+    var mobileNavCtrl = function(){
+        var $navBtn = $('.mobile-nav-btn'),
+        $mobileNav = $('#mobile-nav');
+
+        $navBtn.on('click',function(){
+            console.log(1);
+            $mobileNav.removeClass('hide');
+            document.documentElement.style.overflow='hidden';
+            $('.mobile-nav-mask').on('click',function(event){
+                $mobileNav.addClass('hide');
+                document.documentElement.style.overflow='auto';
+            });
+        });
+    }
+
+    var mobilePreAndNext = function(){
+         var $preBtn = $('.mobile-pre-btn'),
+             $nextBtn = $('.mobile-next-btn'),
+             $editPanelItems = $('.edit-panel').children('div');
+
+        $preBtn.each(function(index,el){
+            var $this = $(el),
+            curItemIndex = index;
+
+            $this.on('click',function(){    
+                //editPanel切换
+                $editPanelItems.each(function(index,el){
+                    $(el).addClass('hide');
+                });
+                $this.parent().parent().parent().parent().prev().removeClass('hide');
+            });
+        });
+
+        $nextBtn.each(function(index,el){
+            var $this = $(el),
+            curItemIndex = index;
+
+            $this.on('click',function(){
+                //editPanel切换
+                $editPanelItems.each(function(index,el){
+                    $(el).addClass('hide');
+                });
+                $this.parent().parent().parent().parent().next().removeClass('hide');
+            });
+        });
+    };
+
+    var mobileTabChange = function(){
+        var $editContainerBtn = $('.edit-container-btn'), 
+            $commonVerbBtn = $('.common-verb-btn'), 
+            $viewCaseBtn = $('.view-case-btn'),
+            $tipsBtn = $('.tips-btn'),
+            
+            $editContainer = $('.mobile-edit-container'),
+            $commonVerb = $('.mobile-tips'),
+            $viewCase = $('.common-verb'),
+            $tips = $('.view-case');
+        
+        $editContainerBtn.on('click',function(el){
+            $(el.target).parents('.title-nav').children('.nav-item').removeClass('active');
+            $(el.target).parent('.nav-item').addClass('active');
+
+            $(el.target).parents('.title-mobile').siblings('.mobile-edit-container').removeClass('hide');
+            $(el.target).parents('.title-mobile').siblings('.mobile-tips').addClass('hide');
+            $(el.target).parents('.title-mobile').siblings('.common-verb').addClass('hide');
+            $(el.target).parents('.title-mobile').siblings('.view-case').addClass('hide');
+        }); 
+        $commonVerbBtn.on('click',function(el){
+            $(el.target).parents('.title-nav').children('.nav-item').removeClass('active');
+            $(el.target).parent('.nav-item').addClass('active');
+
+            $(el.target).parents('.title-mobile').siblings('.mobile-edit-container').addClass('hide');
+            $(el.target).parents('.title-mobile').siblings('.mobile-tips').addClass('hide');
+            $(el.target).parents('.title-mobile').siblings('.common-verb').removeClass('hide');
+            $(el.target).parents('.title-mobile').siblings('.view-case').addClass('hide');
+        });  
+        $viewCaseBtn.on('click',function(el){
+            $(el.target).parents('.title-nav').children('.nav-item').removeClass('active');
+            $(el.target).parent('.nav-item').addClass('active');
+
+            $(el.target).parents('.title-mobile').siblings('.mobile-edit-container').addClass('hide');
+            $(el.target).parents('.title-mobile').siblings('.mobile-tips').addClass('hide');
+            $(el.target).parents('.title-mobile').siblings('.common-verb').addClass('hide');
+            $(el.target).parents('.title-mobile').siblings('.view-case').removeClass('hide');
+        }); 
+        $tipsBtn.on('click',function(el){
+            $(el.target).parents('.title-nav').children('.nav-item').removeClass('active');
+            $(el.target).parent('.nav-item').addClass('active');
+
+            $(el.target).parents('.title-mobile').siblings('.mobile-edit-container').addClass('hide');
+            $(el.target).parents('.title-mobile').siblings('.mobile-tips').removeClass('hide');
+            $(el.target).parents('.title-mobile').siblings('.common-verb').addClass('hide');
+            $(el.target).parents('.title-mobile').siblings('.view-case').addClass('hide');
+        }); 
+
+     
+    }
 
 
     //执行方法
@@ -175,4 +274,8 @@ $(function(){
     editPanelTitle();
     showConfirmModal();
     showSaveModal();
+
+    mobilePreAndNext();
+    mobileNavCtrl();
+    mobileTabChange();
 });
