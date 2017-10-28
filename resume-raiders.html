@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>简历黑客</title>
     <link rel="stylesheet" href="lib/bootstrap.min.css">
@@ -15,12 +15,12 @@
     <div class="container">
         <div class="header">
             <div class="header-container row">
-                <div class="header-logo col-md-3 col-xs-6">
+                <div class="header-logo col-md-3">
                     <a href="index.html">
                         <img src="img/LOGO-SEC@2x.png" width="115px" alt="LOGO"/>
                     </a>
                 </div>
-                <div class="header-nav col-md-6 hidden-xs hidden-sm">
+                <div class="header-nav col-md-6 hidden-xs hidden-sm hidden-xs">
                     <ul>
                         <li>
                             <a href="guide.html">产品介绍</a>
@@ -32,7 +32,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="header-personal-center col-md-3 col-xs-6">
+                <div class="header-personal-center col-md-3 col-xs-6 hidden-xs">
                     <div class="header-personal-center-menu dropdown pull-right">
                         <a href="javascript:;" class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="personal-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
@@ -77,26 +77,68 @@
                         <a href="my-resume.html" target="_blank" class="resume-btn btn pull-right">我的简历</a>
                     </div>
                 </div>
+                <div class="visible-xs search-input">
+                    <input type="text" placeholder="搜索关键字"/>
+                </div>
             </div>
         </div>
         <div class="main-container">
-            <div class="bread-crumbs">
+            <div class="bread-crumbs hidden-xs">
                 <a href="index.html">首页</a> > <a href="resume-raiders.html">简历攻略</a>
             </div>
             <div class="main-panel-container">
                 <div class="left-panel">
+                    <div class="mobile-artical-tab visible-xs">
+                        <ul>
+                            <li class="active">
+                                <a href="javascript:;">推荐</a>
+                                <span class="border-bottom"></span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">简历库</a>
+                                <span class="border-bottom"></span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">投行咨询</a>
+                                <span class="border-bottom"></span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">面试经验</a>
+                                <span class="border-bottom"></span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">留学</a>
+                                <span class="border-bottom"></span>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><i class="fa fa-align-justify" aria-hidden="true"></i></a>
+                            </li>
+                            <!-- <li>
+                                <a href="javascript:;">职场问题</a>
+                                <span class="border-bottom"></span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">成功案例</a>
+                                <span class="border-bottom"></span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">互联网</a>
+                                <span class="border-bottom"></span>
+                            </li> -->
+                        </ul>
+                    </div>
                     <div class="swiper-container" id="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"><img src="img/givr1@2x.png" alt=""></div>
                             <div class="swiper-slide"><img src="img/givr1@2x.png" alt=""></div>
                             <div class="swiper-slide"><img src="img/givr1@2x.png" alt=""></div>
                         </div>
-                        <a href="javascript:;" id="swiper-btn-left"></a>
-                        <a href="javascript:;" id="swiper-btn-right"></a>
+                        <a href="javascript:;" id="swiper-btn-left" class="hidden-xs"></a>
+                        <a href="javascript:;" id="swiper-btn-right" class="hidden-xs"></a>
                         <div class="swiper-pagination"></div>
                     </div>
                     <div class="artical-container">
-                        <div class="artical-tab">
+                        <div class="artical-tab hidden-xs">
                             <ul>
                                 <li class="active">
                                     <a href="javascript:;">推荐</a>
@@ -137,8 +179,23 @@
                                 <div class="item-pic"><img src="img/Bitmap@2x.png" alt=""/></div>
                                 <div class="item-text">
                                     <div class="item-text-title"><a href="reader.html">关于电器专业就业，不同单位之间都是什么关系？</a></div>
-                                    <div class="item-text-desc">
+                                    <div class="item-text-desc hidden-xs">
                                         国务院推行”电力改革“，国家电力公司被重组拆分为五大发电集团和两大电网公司，是谓发输分离，关于两大电网两大电网指的是国家电网公司和南方电网公司，诸如国网电科院、国网经研究...
+                                    </div>
+                                    <div class="visible-xs reading-amount">
+                                        阅读 <span class="num">100000+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="artical-item">
+                                <div class="item-pic"><img src="img/Bitmap@2x.png" alt=""/></div>
+                                <div class="item-text">
+                                    <div class="item-text-title"><a href="reader.html">关于电器专业就业</a></div>
+                                    <div class="item-text-desc hidden-xs">
+                                        国务院推行”电力改革“，国家电力公司被重组拆分为五大发电集团和两大电网公司，是谓发输分离，关于两大电网两大电网指的是国家电网公司和南方电网公司，诸如国网电科院、国网经研究...
+                                    </div>
+                                    <div class="visible-xs reading-amount">
+                                        阅读 <span class="num">100000+</span>
                                     </div>
                                 </div>
                             </div>
@@ -146,8 +203,11 @@
                                 <div class="item-pic"><img src="img/Bitmap@2x.png" alt=""/></div>
                                 <div class="item-text">
                                     <div class="item-text-title"><a href="reader.html">关于电器专业就业，不同单位之间都是什么关系？</a></div>
-                                    <div class="item-text-desc">
+                                    <div class="item-text-desc hidden-xs">
                                         国务院推行”电力改革“，国家电力公司被重组拆分为五大发电集团和两大电网公司，是谓发输分离，关于两大电网两大电网指的是国家电网公司和南方电网公司，诸如国网电科院、国网经研究...
+                                    </div>
+                                    <div class="visible-xs reading-amount">
+                                        阅读 <span class="num">100000+</span>
                                     </div>
                                 </div>
                             </div>
@@ -155,8 +215,11 @@
                                 <div class="item-pic"><img src="img/Bitmap@2x.png" alt=""/></div>
                                 <div class="item-text">
                                     <div class="item-text-title"><a href="reader.html">关于电器专业就业，不同单位之间都是什么关系？</a></div>
-                                    <div class="item-text-desc">
+                                    <div class="item-text-desc hidden-xs">
                                         国务院推行”电力改革“，国家电力公司被重组拆分为五大发电集团和两大电网公司，是谓发输分离，关于两大电网两大电网指的是国家电网公司和南方电网公司，诸如国网电科院、国网经研究...
+                                    </div>
+                                    <div class="visible-xs reading-amount">
+                                        阅读 <span class="num">100000+</span>
                                     </div>
                                 </div>
                             </div>
@@ -164,8 +227,11 @@
                                 <div class="item-pic"><img src="img/Bitmap@2x.png" alt=""/></div>
                                 <div class="item-text">
                                     <div class="item-text-title"><a href="reader.html">关于电器专业就业，不同单位之间都是什么关系？</a></div>
-                                    <div class="item-text-desc">
+                                    <div class="item-text-desc hidden-xs">
                                         国务院推行”电力改革“，国家电力公司被重组拆分为五大发电集团和两大电网公司，是谓发输分离，关于两大电网两大电网指的是国家电网公司和南方电网公司，诸如国网电科院、国网经研究...
+                                    </div>
+                                    <div class="visible-xs reading-amount">
+                                        阅读 <span class="num">100000+</span>
                                     </div>
                                 </div>
                             </div>
@@ -173,8 +239,11 @@
                                 <div class="item-pic"><img src="img/Bitmap@2x.png" alt=""/></div>
                                 <div class="item-text">
                                     <div class="item-text-title"><a href="reader.html">关于电器专业就业，不同单位之间都是什么关系？</a></div>
-                                    <div class="item-text-desc">
+                                    <div class="item-text-desc hidden-xs">
                                         国务院推行”电力改革“，国家电力公司被重组拆分为五大发电集团和两大电网公司，是谓发输分离，关于两大电网两大电网指的是国家电网公司和南方电网公司，诸如国网电科院、国网经研究...
+                                    </div>
+                                    <div class="visible-xs reading-amount">
+                                        阅读 <span class="num">100000+</span>
                                     </div>
                                 </div>
                             </div>
@@ -182,8 +251,11 @@
                                 <div class="item-pic"><img src="img/Bitmap@2x.png" alt=""/></div>
                                 <div class="item-text">
                                     <div class="item-text-title"><a href="reader.html">关于电器专业就业，不同单位之间都是什么关系？</a></div>
-                                    <div class="item-text-desc">
+                                    <div class="item-text-desc hidden-xs">
                                         国务院推行”电力改革“，国家电力公司被重组拆分为五大发电集团和两大电网公司，是谓发输分离，关于两大电网两大电网指的是国家电网公司和南方电网公司，诸如国网电科院、国网经研究...
+                                    </div>
+                                    <div class="visible-xs reading-amount">
+                                        阅读 <span class="num">100000+</span>
                                     </div>
                                 </div>
                             </div>
@@ -191,8 +263,11 @@
                                 <div class="item-pic"><img src="img/Bitmap@2x.png" alt=""/></div>
                                 <div class="item-text">
                                     <div class="item-text-title"><a href="reader.html">关于电器专业就业，不同单位之间都是什么关系？</a></div>
-                                    <div class="item-text-desc">
+                                    <div class="item-text-desc hidden-xs">
                                         国务院推行”电力改革“，国家电力公司被重组拆分为五大发电集团和两大电网公司，是谓发输分离，关于两大电网两大电网指的是国家电网公司和南方电网公司，诸如国网电科院、国网经研究...
+                                    </div>
+                                    <div class="visible-xs reading-amount">
+                                        阅读 <span class="num">100000+</span>
                                     </div>
                                 </div>
                             </div>
@@ -200,27 +275,63 @@
                                 <div class="item-pic"><img src="img/Bitmap@2x.png" alt=""/></div>
                                 <div class="item-text">
                                     <div class="item-text-title"><a href="reader.html">关于电器专业就业，不同单位之间都是什么关系？</a></div>
-                                    <div class="item-text-desc">
+                                    <div class="item-text-desc hidden-xs">
                                         国务院推行”电力改革“，国家电力公司被重组拆分为五大发电集团和两大电网公司，是谓发输分离，关于两大电网两大电网指的是国家电网公司和南方电网公司，诸如国网电科院、国网经研究...
                                     </div>
-                                </div>
-                            </div>
-                            <div class="artical-item">
-                                <div class="item-pic"><img src="img/Bitmap@2x.png" alt=""/></div>
-                                <div class="item-text">
-                                    <div class="item-text-title"><a href="reader.html">关于电器专业就业，不同单位之间都是什么关系？</a></div>
-                                    <div class="item-text-desc">
-                                        国务院推行”电力改革“，国家电力公司被重组拆分为五大发电集团和两大电网公司，是谓发输分离，关于两大电网两大电网指的是国家电网公司和南方电网公司，诸如国网电科院、国网经研究...
+                                    <div class="visible-xs reading-amount">
+                                        阅读 <span class="num">100000+</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="check-more">
+                    <div class="check-more hidden-xs">
                         <a href="javascript:;" class="check-more-btn">查看更多 <i class="fa fa-sort-desc" aria-hidden="true"></i></a>
                     </div>   
+
+                    <div class="visible-xs mobile-resume-template">
+                        <div class="resume-template-title">简历模板</div>
+                        <div class="resume-template-content">
+                            <div class="resume-template-item">
+                                <div class="item-intro">
+                                    <div class="item-intro-pic"><img src="img/tpl-college.png" alt=""/></div>
+                                    <div class="item-intro-content">
+                                        <div class="item-intro-title">学生实习模板</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resume-template-item">
+                                <div class="item-intro">
+                                    <div class="item-intro-pic"><img src="img/tpl-classic.png" alt=""/></div>
+                                    <div class="item-intro-content">
+                                        <div class="item-intro-title">经典工作模板</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resume-template-item">
+                                <div class="item-intro">
+                                    <div class="item-intro-pic"><img src="img/tpl-investment.png" alt=""/></div>
+                                    <div class="item-intro-content">
+                                        <div class="item-intro-title">投行咨询模板</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resume-template-item">
+                                <div class="item-intro">
+                                    <div class="item-intro-pic"><img src="img/tpl-plane.png" alt=""/></div>
+                                    <div class="item-intro-content">
+                                        <div class="item-intro-title">留学英文模板</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visible-xs fast-entrance">
+                        现在就用超级简历获得面试
+                        <a href="login.html" class="fast-entrance-btn">免费注册</a>
+                    </div>
                 </div>
-                <div class="right-panel">
+                <div class="right-panel hidden-xs">
                     <div class="right-fixed-1">
                         <div class="search-bar">
                             <input type="text" placeholder="搜索..."/>
